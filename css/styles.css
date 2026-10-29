@@ -516,7 +516,8 @@ p+p {
   margin-top: 28px;
 }
 
-.center .btn-row {
+.center .btn-row,
+.btn-row.center {
   justify-content: center;
 }
 
@@ -1250,19 +1251,12 @@ tbody tr:hover {
   display: none;
 }
 
-.finder:has(#g-kids:checked):has(input[name="exp"]:checked) .r-family {
-  display: block;
-}
-
-.finder:has(#g-func:checked):has(#e-new:checked) .r-starter {
-  display: block;
-}
-
-.finder:has(#g-func:checked):has(#e-pro:checked) .r-maker {
-  display: block;
-}
-
-.finder:has(#g-deco:checked):has(input[name="exp"]:checked) .r-silk {
+.finder:has(#g-kids:checked):has(#e-new:checked) .r-family-kit,
+.finder:has(#g-func:checked):has(#e-new:checked) .r-starter-kit,
+.finder:has(#g-deco:checked):has(#e-new:checked) .r-gift-kit,
+.finder:has(#g-kids:checked):has(#e-pro:checked) .r-family,
+.finder:has(#g-func:checked):has(#e-pro:checked) .r-maker,
+.finder:has(#g-deco:checked):has(#e-pro:checked) .r-silk {
   display: block;
 }
 
@@ -2370,4 +2364,81 @@ h3 {
 .sample-note {
   font-size: 0.75rem;
   color: var(--ink-soft);
+}
+
+/* ---------- Filo One printer illustration ---------- */
+.printer-art {
+  width: 100%;
+  max-width: 360px;
+}
+
+.hero-art .printer-art {
+  width: 86%;
+  margin: 7% auto 0;
+}
+
+/* ---------- Weekly Challenge stamp card ---------- */
+.stamp-card {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.stamp-card i {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px dashed var(--line);
+  display: grid;
+  place-items: center;
+}
+
+.stamp-card i.on {
+  background: var(--brand-text);
+  border: 2px solid var(--brand-text);
+}
+
+.stamp-card i.prize {
+  border: 2px solid var(--brand-text);
+}
+
+.stamp-card b {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  color: var(--brand-text);
+}
+
+.stamp-card i.on b {
+  color: var(--on-brand);
+}
+
+@media (max-width: 700px) {
+  .stamp-card {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ---------- "Print" in the Filo Print wordmark ---------- */
+.logo-sub {
+  margin-left: -4px;
+  font-weight: 500;
+  color: var(--brand-text);
+}
+
+.site-footer .logo-sub {
+  color: #e2be93;
+}
+
+.nav-links a.btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) and (min-width: 921px) {
+  .nav-links {
+    gap: 16px;
+  }
 }
