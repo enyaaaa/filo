@@ -17,20 +17,20 @@
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   color-scheme: light;
   --ink: #1d1b18;
-  --ink-soft: #6b645a;
-  --paper: #f5f1ea;
+  --ink-soft: #4d4741;
+  --paper: #e7ddcc;
   --card: #fffdf9;
-  --line: #e6dfd3;
-  --mint: #efe5d6;
+  --line: #c6b79f;
+  --mint: #e2ccad;
   --amber-soft: #f8ecd9;
   --green: #1d1b18;
   --on-brand: #f7f2ea;
   --green-dark: #6e4a22;
-  --brand-text: #8a5f30;
-  --tag-amber: #8a5300;
+  --brand-text: #6c4317;
+  --tag-amber: #7a4600;
   --inverse: #1d1b18;
   --hover: #faf6ef;
-  --header-bg: rgba(245, 241, 234, 0.88);
+  --header-bg: rgba(231, 221, 204, 0.88);
   --shadow: 0 14px 34px rgba(60, 45, 25, 0.08);
   --grid: rgba(29, 27, 24, 0.045);
   --glow: rgba(201, 160, 110, 0.22);
@@ -53,11 +53,11 @@
 :root:has(#theme-toggle:checked) {
   color-scheme: dark;
   --ink: #efe8dd;
-  --ink-soft: #a89f92;
-  --paper: #12110f;
-  --card: #1b1916;
-  --line: #2e2a25;
-  --mint: #2a2219;
+  --ink-soft: #b5ac9f;
+  --paper: #11100e;
+  --card: #221e1a;
+  --line: #4a4238;
+  --mint: #3d3123;
   --amber-soft: #2c2316;
   --green: #d9b38a;
   --on-brand: #1a1410;
@@ -66,7 +66,7 @@
   --tag-amber: #f2c487;
   --inverse: #0b0a09;
   --hover: #211e1a;
-  --header-bg: rgba(18, 17, 15, 0.86);
+  --header-bg: rgba(17, 16, 14, 0.86);
   --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
   --grid: rgba(255, 240, 220, 0.04);
   --glow: rgba(217, 179, 138, 0.14);
@@ -90,11 +90,11 @@
   :root {
     color-scheme: dark;
     --ink: #efe8dd;
-    --ink-soft: #a89f92;
-    --paper: #12110f;
-    --card: #1b1916;
-    --line: #2e2a25;
-    --mint: #2a2219;
+    --ink-soft: #b5ac9f;
+    --paper: #11100e;
+    --card: #221e1a;
+    --line: #4a4238;
+    --mint: #3d3123;
     --amber-soft: #2c2316;
     --green: #d9b38a;
     --on-brand: #1a1410;
@@ -103,7 +103,7 @@
     --tag-amber: #f2c487;
     --inverse: #0b0a09;
     --hover: #211e1a;
-    --header-bg: rgba(18, 17, 15, 0.86);
+    --header-bg: rgba(17, 16, 14, 0.86);
     --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
     --grid: rgba(255, 240, 220, 0.04);
     --glow: rgba(217, 179, 138, 0.14);
@@ -126,20 +126,20 @@
   :root:has(#theme-toggle:checked) {
     color-scheme: light;
     --ink: #1d1b18;
-    --ink-soft: #6b645a;
-    --paper: #f5f1ea;
+    --ink-soft: #4d4741;
+    --paper: #e7ddcc;
     --card: #fffdf9;
-    --line: #e6dfd3;
-    --mint: #efe5d6;
+    --line: #c6b79f;
+    --mint: #e2ccad;
     --amber-soft: #f8ecd9;
     --green: #1d1b18;
     --on-brand: #f7f2ea;
     --green-dark: #6e4a22;
-    --brand-text: #8a5f30;
-    --tag-amber: #8a5300;
+    --brand-text: #6c4317;
+    --tag-amber: #7a4600;
     --inverse: #1d1b18;
     --hover: #faf6ef;
-    --header-bg: rgba(245, 241, 234, 0.88);
+    --header-bg: rgba(231, 221, 204, 0.88);
     --shadow: 0 14px 34px rgba(60, 45, 25, 0.08);
     --grid: rgba(29, 27, 24, 0.045);
     --glow: rgba(201, 160, 110, 0.22);
@@ -649,6 +649,11 @@ p+p {
 .card .icon svg {
   width: 28px;
   height: 28px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .card p {
@@ -2289,4 +2294,80 @@ h3 {
 .result .btn-primary {
   background: #e2be93;
   color: #1a1410;
+}
+
+/* ---------- Deals, ratings and reviews ---------- */
+.price s {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-right: 6px;
+}
+
+.save {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--tag-amber);
+  margin-bottom: 4px;
+}
+
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.rating strong {
+  color: var(--ink);
+}
+
+.stars {
+  color: var(--amber);
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+}
+
+.sample-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px dashed var(--ink-soft);
+  border-radius: 999px;
+}
+
+.reviews {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.review {
+  margin: 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--brand-text);
+}
+
+.review p {
+  font-size: 0.95rem;
+}
+
+.review cite {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+.sample-note {
+  font-size: 0.75rem;
+  color: var(--ink-soft);
 }
