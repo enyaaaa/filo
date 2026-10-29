@@ -1,160 +1,411 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-SG">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo</title>
-  <meta name="description" content="Join Filo Club: free project files, a Refila Bag for your scraps and a S$3 Shopee welcome voucher. PDPA-compliant sign-up.">
-  <meta name="keywords" content="join Filo, free STL starter pack, filament voucher Singapore, Filo Club sign up">
-  <meta property="og:title" content="Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo">
-  <meta property="og:description" content="Join Filo Club: free project files, a Refila Bag for your scraps and a S$3 Shopee welcome voucher. PDPA-compliant sign-up.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23cfa57a'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="announce">New here? <a href="join.html">Join Filo Club</a> for a free starter project pack and a S$3 Shopee welcome voucher.</div>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="logo" href="index.html" aria-label="Filo home"><svg viewBox="0 0 40 40" aria-hidden="true" class="logo-mark"><circle cx="20" cy="20" r="17.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M25.5 11.5c-4.2-1.2-7.5.6-7.5 5.2V30" fill="none" stroke="var(--brand-text)" stroke-width="3" stroke-linecap="round"/><path d="M13.5 19h10" fill="none" stroke="var(--brand-text)" stroke-width="3" stroke-linecap="round"/></svg>Filo</a>
-      <input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Switch between light and dark theme">
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
-      <ul class="nav-links">
-        <li><a href="product.html">Filament</a></li>
-        <li><a href="bundles.html">Bundles</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="refila.html">Refila</a></li>
-        <li><a href="rewards.html">Rewards</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="btn btn-primary btn-sm" href="join.html">Join Filo Club</a></li>
-      </ul>
-      <div class="nav-tools">
-        <label for="theme-toggle" class="theme-btn" title="Switch light / dark theme"><span class="i-moon" aria-hidden="true">&#9790;</span><span class="i-sun" aria-hidden="true">&#9728;</span><span class="sr-only">Switch theme</span></label>
-        <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main">
-
-    <section class="page-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="index.html">Home</a> / Join Filo Club</p>
-        <span class="eyebrow">Join Filo Club &middot; free</span>
-        <h1>Get your starter pack.</h1>
-        <p class="lead">Sign up in under a minute. You'll get free project files, a Refila Bag for your scraps, a S$3 welcome voucher for our Shopee store and your own Filo Points account.</p>
-      </div>
-    </section>
-    <section class="section" style="padding-top:0">
-      <div class="container split" style="align-items:start">
-        <form class="form" action="https://formsubmit.co/YOUR-TEAM-EMAIL@example.com" method="POST">
-          <!-- FormSubmit config: replace the email above, and set _next to your live thank-you URL -->
-          <input type="hidden" name="_subject" value="New Filo Club sign-up">
-          <input type="hidden" name="_next" value="https://YOUR-USERNAME.github.io/YOUR-REPO/thank-you.html">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-          <div class="pdpa-box"><strong>Your data, your choice.</strong> We only collect what we need to run Filo Club and send your starter pack. Read our <a href="privacy.html">Privacy Policy</a> to see how we protect it under Singapore's PDPA.</div>
-
-          <div class="form-row">
-            <div class="field"><label for="name">Full name <span class="req">*</span></label><input type="text" id="name" name="name" required autocomplete="name"></div>
-            <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required autocomplete="email"><p class="hint">We'll send your voucher code here.</p></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label for="postal">Postal code <span class="req">*</span></label><input type="text" id="postal" name="postal_code" required pattern="[0-9]{6}" inputmode="numeric" maxlength="6" title="6-digit Singapore postal code"><p class="hint">For posting your Refila Bag. 6 digits.</p></div>
-            <div class="field"><label for="printer">Your printer</label>
-              <select id="printer" name="printer">
-                <option value="">Select (optional)</option>
-                <option>Bambu Lab</option><option>Creality</option><option>Prusa</option><option>Elegoo</option><option>Anycubic</option><option>Other</option><option>I don't have one yet</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <span class="label">I'm interested in <span class="muted small">(optional)</span></span>
-            <div class="chips">
-              <label><input type="checkbox" name="interest" value="family"> Family projects</label>
-              <label><input type="checkbox" name="interest" value="maker"> Maker builds</label>
-              <label><input type="checkbox" name="interest" value="refila"> Refila take-back</label>
-              <label><input type="checkbox" name="interest" value="bundles"> Bundle deals</label>
-            </div>
-          </div>
-          <div class="field"><label for="message">Questions or comments</label><textarea id="message" name="message" rows="3" maxlength="500"></textarea></div>
-
-          <label class="consent"><input type="checkbox" name="pdpa_consent" value="yes" required>
-            <span><strong>Required:</strong> I consent to Filo collecting, using and storing my name, email and postal code to create my Filo Club account, send my starter pack and Refila Bag, and administer Filo Points, as described in the <a href="privacy.html">Privacy Policy</a>. <span class="req">*</span></span></label>
-          <label class="consent"><input type="checkbox" name="marketing_consent" value="yes">
-            <span><strong>Optional:</strong> Send me new project files, bundle offers and Filo Club updates by email. I can unsubscribe at any time.</span></label>
-
-          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:10px">Join Filo Club</button>
-          <p class="hint center" style="margin-top:12px">Fields marked * are required. You can withdraw consent at any time by emailing dpo@filo.sg.</p>
-        </form>
-
-        <div>
-          <h2>What you'll get</h2>
-          <ul class="checklist">
-            <li><strong>S$3 welcome voucher</strong> for the Filo Shopee store</li>
-            <li><strong>Starter project pack</strong>: 10 tested model files</li>
-            <li><strong>Free Refila Bag</strong> posted to you for scraps and spools</li>
-            <li><strong>Filo Points account</strong> to track returns and rewards</li>
-          </ul>
-          <div class="card" style="margin-top:30px">
-            <h3>Just have a question?</h3>
-            <p>Use the comments box and leave the marketing option unticked. We reply within one working day. You can also message our Shopee store directly.</p>
-          </div>
-          <div class="card" style="margin-top:20px">
-            <h3>Why we ask for each field</h3>
-            <p class="small"><strong>Name and email:</strong> your account and voucher. <strong>Postal code:</strong> posting your Refila Bag. <strong>Printer and interests:</strong> optional, so we can send you relevant projects. Nothing else.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="logo" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" class="logo-mark"><circle cx="20" cy="20" r="17.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M25.5 11.5c-4.2-1.2-7.5.6-7.5 5.2V30" fill="none" stroke="var(--brand-text)" stroke-width="3" stroke-linecap="round"/><path d="M13.5 19h10" fill="none" stroke="var(--brand-text)" stroke-width="3" stroke-linecap="round"/></svg>Filo</a>
-          <p>PLA+ filament for families, makers and anyone who'd rather their scraps didn't end up in the bin. Print it. Love it. Loop it.</p>
-          <a class="btn btn-shopee btn-sm" style="margin-top:18px" href="https://shopee.sg/?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noopener">Visit our Shopee store</a>
-        </div>
-        <div>
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="product.html">PLA+ Filament</a></li>
-            <li><a href="bundles.html">Bundles</a></li>
-            <li><a href="guide.html">Filament Finder</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Make &amp; Refila</h4>
-          <ul>
-            <li><a href="projects.html">Projects &amp; free models</a></li>
-            <li><a href="refila.html">Refila take-back</a></li>
-            <li><a href="rewards.html">Filo Rewards</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">Our story</a></li>
-            <li><a href="join.html">Join / Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
-            <li><a href="team.html">Project team</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Filo. All rights reserved.</span>
-        <span><a href="privacy.html">Privacy</a> &middot; <a href="team.html">Team</a></span>
-      </div>
-      <p class="notice">Filo and Refila are student concept brands created for an NTU web design project. Shopee is a trademark of its respective owner; checkout links open Shopee Singapore.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo</title>
+    <meta
+      name="description"
+      content="Join Filo Club: free project files, a Refila Bag for your scraps and a S$3 Shopee welcome voucher. PDPA-compliant sign-up."
+    />
+    <meta
+      name="keywords"
+      content="join Filo, free STL starter pack, filament voucher Singapore, Filo Club sign up"
+    />
+    <meta
+      property="og:title"
+      content="Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo"
+    />
+    <meta
+      property="og:description"
+      content="Join Filo Club: free project files, a Refila Bag for your scraps and a S$3 Shopee welcome voucher. PDPA-compliant sign-up."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23cfa57a'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="announce">
+      New here? <a href="join.html">Join Filo Club</a> for a free starter
+      project pack and a S$3 Shopee welcome voucher.
     </div>
-  </footer>
-</body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a class="logo" href="index.html" aria-label="Filo home"
+          ><svg viewBox="0 0 40 40" aria-hidden="true" class="logo-mark">
+            <circle
+              cx="20"
+              cy="20"
+              r="17.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+            />
+            <path
+              d="M25.5 11.5c-4.2-1.2-7.5.6-7.5 5.2V30"
+              fill="none"
+              stroke="var(--brand-text)"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M13.5 19h10"
+              fill="none"
+              stroke="var(--brand-text)"
+              stroke-width="3"
+              stroke-linecap="round"
+            /></svg
+          >Filo</a
+        >
+        <input
+          type="checkbox"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Switch between light and dark theme"
+        />
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Open menu"
+        />
+        <ul class="nav-links">
+          <li><a href="product.html">Filament</a></li>
+          <li><a href="bundles.html">Bundles</a></li>
+          <li><a href="guide.html">Guide</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="refila.html">Refila</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a class="btn btn-primary btn-sm" href="join.html"
+              >Join Filo Club</a
+            >
+          </li>
+        </ul>
+        <div class="nav-tools">
+          <label
+            for="theme-toggle"
+            class="theme-btn"
+            title="Switch light / dark theme"
+            ><span class="i-moon" aria-hidden="true">&#9790;</span
+            ><span class="i-sun" aria-hidden="true">&#9728;</span
+            ><span class="sr-only">Switch theme</span></label
+          >
+          <label for="nav-toggle" class="nav-burger" aria-hidden="true"
+            ><span></span
+          ></label>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="breadcrumb">
+            <a href="index.html">Home</a> / Join Filo Club
+          </p>
+          <span class="eyebrow">Join Filo Club &middot; free</span>
+          <h1>Get your starter pack.</h1>
+          <p class="lead">
+            Sign up in under a minute. You'll get free project files, a Refila
+            Bag for your scraps, a S$3 welcome voucher for our Shopee store and
+            your own Filo Points account.
+          </p>
+        </div>
+      </section>
+      <section class="section" style="padding-top: 40px">
+        <div class="container split" style="align-items: start">
+          <form
+            class="form"
+            action="https://formsubmit.co/YOUR-TEAM-EMAIL@example.com"
+            method="POST"
+          >
+            <!-- FormSubmit config: replace the email above, and set _next to your live thank-you URL -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Filo Club sign-up"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://YOUR-USERNAME.github.io/YOUR-REPO/thank-you.html"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="text"
+              name="_honey"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <div class="pdpa-box">
+              <strong>Your data, your choice.</strong> We only collect what we
+              need to run Filo Club and send your starter pack. Read our
+              <a href="privacy.html">Privacy Policy</a> to see how we protect it
+              under Singapore's PDPA.
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name <span class="req">*</span></label
+                ><input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label
+                ><input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+                <p class="hint">We'll send your voucher code here.</p>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="postal"
+                  >Postal code <span class="req">*</span></label
+                ><input
+                  type="text"
+                  id="postal"
+                  name="postal_code"
+                  required
+                  pattern="[0-9]{6}"
+                  inputmode="numeric"
+                  maxlength="6"
+                  title="6-digit Singapore postal code"
+                />
+                <p class="hint">For posting your Refila Bag. 6 digits.</p>
+              </div>
+              <div class="field">
+                <label for="printer">Your printer</label>
+                <select id="printer" name="printer">
+                  <option value="">Select (optional)</option>
+                  <option>Bambu Lab</option>
+                  <option>Creality</option>
+                  <option>Prusa</option>
+                  <option>Elegoo</option>
+                  <option>Anycubic</option>
+                  <option>Other</option>
+                  <option>I don't have one yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label"
+                >I'm interested in
+                <span class="muted small">(optional)</span></span
+              >
+              <div class="chips">
+                <label
+                  ><input type="checkbox" name="interest" value="family" />
+                  Family projects</label
+                >
+                <label
+                  ><input type="checkbox" name="interest" value="maker" /> Maker
+                  builds</label
+                >
+                <label
+                  ><input type="checkbox" name="interest" value="refila" />
+                  Refila take-back</label
+                >
+                <label
+                  ><input type="checkbox" name="interest" value="bundles" />
+                  Bundle deals</label
+                >
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Questions or comments</label
+              ><textarea
+                id="message"
+                name="message"
+                rows="3"
+                maxlength="500"
+              ></textarea>
+            </div>
+
+            <label class="consent"
+              ><input
+                type="checkbox"
+                name="pdpa_consent"
+                value="yes"
+                required
+              />
+              <span
+                ><strong>Required:</strong> I consent to Filo collecting, using
+                and storing my name, email and postal code to create my Filo
+                Club account, send my starter pack and Refila Bag, and
+                administer Filo Points, as described in the
+                <a href="privacy.html">Privacy Policy</a>.
+                <span class="req">*</span></span
+              ></label
+            >
+            <label class="consent"
+              ><input type="checkbox" name="marketing_consent" value="yes" />
+              <span
+                ><strong>Optional:</strong> Send me new project files, bundle
+                offers and Filo Club updates by email. I can unsubscribe at any
+                time.</span
+              ></label
+            >
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+              style="width: 100%; margin-top: 10px"
+            >
+              Join Filo Club
+            </button>
+            <p class="hint center" style="margin-top: 12px">
+              Fields marked * are required. You can withdraw consent at any time
+              by emailing dpo@filo.sg.
+            </p>
+          </form>
+
+          <div>
+            <h2>What you'll get</h2>
+            <ul class="checklist">
+              <li>
+                <strong>S$3 welcome voucher</strong> for the Filo Shopee store
+              </li>
+              <li>
+                <strong>Starter project pack</strong>: 10 tested model files
+              </li>
+              <li>
+                <strong>Free Refila Bag</strong> posted to you for scraps and
+                spools
+              </li>
+              <li>
+                <strong>Filo Points account</strong> to track returns and
+                rewards
+              </li>
+            </ul>
+            <div class="card" style="margin-top: 30px">
+              <h3>Just have a question?</h3>
+              <p>
+                Use the comments box and leave the marketing option unticked. We
+                reply within one working day. You can also message our Shopee
+                store directly.
+              </p>
+            </div>
+            <div class="card" style="margin-top: 20px">
+              <h3>Why we ask for each field</h3>
+              <p class="small">
+                <strong>Name and email:</strong> your account and voucher.
+                <strong>Postal code:</strong> posting your Refila Bag.
+                <strong>Printer and interests:</strong> optional, so we can send
+                you relevant projects. Nothing else.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="logo" href="index.html"
+              ><svg viewBox="0 0 40 40" aria-hidden="true" class="logo-mark">
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="17.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                />
+                <path
+                  d="M25.5 11.5c-4.2-1.2-7.5.6-7.5 5.2V30"
+                  fill="none"
+                  stroke="var(--brand-text)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13.5 19h10"
+                  fill="none"
+                  stroke="var(--brand-text)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                /></svg
+              >Filo</a
+            >
+            <p>
+              PLA+ filament for families, makers and anyone who'd rather their
+              scraps didn't end up in the bin. Print it. Love it. Loop it.
+            </p>
+            <a
+              class="btn btn-shopee btn-sm"
+              style="margin-top: 18px"
+              href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
+              target="_blank"
+              rel="noopener"
+              >Visit our Shopee store</a
+            >
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="product.html">PLA+ Filament</a></li>
+              <li><a href="bundles.html">Bundles</a></li>
+              <li><a href="guide.html">Filament Finder</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Make &amp; Refila</h4>
+            <ul>
+              <li><a href="projects.html">Projects &amp; free models</a></li>
+              <li><a href="refila.html">Refila take-back</a></li>
+              <li><a href="rewards.html">Filo Rewards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">Our story</a></li>
+              <li><a href="join.html">Join / Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
+              <li><a href="team.html">Project team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Filo. All rights reserved.</span>
+          <span
+            ><a href="privacy.html">Privacy</a> &middot;
+            <a href="team.html">Team</a></span
+          >
+        </div>
+        <p class="notice">
+          Filo and Refila are student concept brands created for an NTU web
+          design project. Shopee is a trademark of its respective owner;
+          checkout links open Shopee Singapore.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
