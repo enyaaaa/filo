@@ -2785,7 +2785,6 @@ tr:last-child th {
 .page-hero .split h1 {
   font-size: clamp(2.2rem, 3.6vw, 3.2rem);
 }
-
 /* Realistic spool on product.html */
 .spool-real {
   display: block;
@@ -3091,7 +3090,7 @@ tr:last-child th {
   stroke-linejoin: round;
 }
 
-.section.dark .value-link {
+/* .section.dark .value-link {
   margin-top: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -3103,4 +3102,4 @@ tr:last-child th {
 
 .page-hero .lead+.lead {
   margin-top: 14px;
-}
+} */
