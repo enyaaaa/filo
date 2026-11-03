@@ -1,5 +1,5 @@
 /* =========================================================
-   FilaLoop — shared stylesheet
+   Filo Print — shared stylesheet
    Fonts: Space Grotesk (headings), Inter (body)
    ========================================================= */
 :root {
@@ -300,7 +300,7 @@ p+p {
 
 /* ---------- Announcement bar ---------- */
 .announce {
-  background: var(--inverse);
+  background: var(--green);
   color: #eef3ef;
   font-size: 0.88rem;
   text-align: center;
@@ -308,8 +308,12 @@ p+p {
 }
 
 .announce a {
-  color: var(--amber);
+  color: var(--paper);
   font-weight: 600;
+}
+
+.announce strong {
+  letter-spacing: 0.04em;
 }
 
 /* ---------- Header / Nav (CSS-only mobile toggle) ---------- */
@@ -370,9 +374,20 @@ p+p {
   border-color: var(--brand-text);
 }
 
-.nav-toggle,
 .nav-burger {
   display: none;
+}
+
+/* Visually hidden but still focusable, so keyboard users can open the menu */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle:focus-visible~.nav-tools .nav-burger {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
 }
 
 @media (max-width: 920px) {
@@ -560,6 +575,15 @@ p+p {
   margin: 9% auto 0;
 }
 
+.hero-art img {
+  position: relative;
+  display: block;
+  width: 86%;
+  height: auto;
+  margin: 7% auto 0;
+  z-index: 1;
+}
+
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -577,7 +601,7 @@ p+p {
 }
 
 .page-hero {
-  padding: 64px 0 48px;
+  padding: 48px 0 48px;
 }
 
 .page-hero .lead {
@@ -1012,8 +1036,8 @@ tbody tr:hover {
 }
 
 .bundle .spools i {
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 6px solid rgba(0, 0, 0, 0.12);
   display: block;
@@ -1021,7 +1045,7 @@ tbody tr:hover {
 
 .bundle ul {
   list-style: none;
-  margin: 16px 0 22px;
+  margin: 16px 0 16px;
   flex: 1;
 }
 
@@ -1037,7 +1061,7 @@ tbody tr:hover {
 }
 
 .bundle.popular::after {
-  content: "Most popular";
+  content: "Best value";
   position: absolute;
   top: -13px;
   right: 22px;
@@ -1049,6 +1073,10 @@ tbody tr:hover {
   border-radius: 6px;
 }
 
+.bundle-target{
+  display: flex;
+  justify-content:space-between;
+}
 /* ---------- Tabs (CSS-only, radio based) ---------- */
 .tabs input {
   position: absolute;
@@ -1854,7 +1882,9 @@ th,
 
 .hero,
 .page-hero {
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+background-image:
+    linear-gradient(var(--grid) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px);
   background-size: 56px 56px;
   background-position: center top;
 }
@@ -1935,7 +1965,7 @@ th,
 
 /* Product stage: technical configurator layout */
 .product-stage {
-  padding: 20px 24px 28px 92px;
+  /* padding: 20px 24px 28px 92px; */
   background: radial-gradient(circle at 55% 52%, var(--glow), transparent 60%), var(--card);
   min-height: 520px;
 }
@@ -1943,7 +1973,7 @@ th,
 .stage-bar {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -2441,4 +2471,636 @@ h3 {
   .nav-links {
     gap: 16px;
   }
+}
+
+/* =========================================================
+   Index page update
+   ========================================================= */
+
+/* Hero price line */
+.hero-price {
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.hero-price strong {
+  color: var(--ink);
+  font-size: 1.25rem;
+}
+
+/* Badges are now a <ul> */
+ul.badges {
+  list-style: none;
+  padding: 0;
+}
+
+/* Spacing utilities (replace inline styles) */
+.mt-sm {
+  margin-top: 12px;
+}
+
+.mt-md {
+  margin-top: 24px;
+}
+
+.mt-lg {
+  margin-top: 34px;
+}
+
+.mb-md {
+  margin-bottom: 28px;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+/* Comparison table: row headers look like the old first column */
+tbody th[scope="row"] {
+  background: transparent;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+tr:last-child th {
+  border-bottom: 0;
+}
+
+/* Kit badge text set per card with data-badge="..." */
+.bundle.popular[data-badge]::after {
+  content: attr(data-badge);
+}
+
+/* "What you'll print in week one" */
+.first-prints {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.first-prints li {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.first-prints strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+}
+
+.first-prints span {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+/* Weekly Challenge stats */
+.stats.stats-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stat span {
+  display: block;
+}
+
+/* Brown links were low-contrast on the dark section */
+.section.dark a:not(.btn) {
+  color: var(--amber);
+}
+
+/* FAQ column width */
+.faq-wrap {
+  max-width: 780px;
+}
+
+/* Final CTA banner (replaces inline styles) */
+.cta-banner h2 {
+  margin-bottom: 0.3em;
+}
+
+.cta-banner .btn-row {
+  margin-top: 0;
+}
+
+/* =========================================================
+   First-month cards styled as tear-off calendar pages
+   ========================================================= */
+.cal-cards {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0 0;
+  /* room for the binding rings */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.cal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 5px 0 -2px var(--card), 0 5px 0 -1px var(--line);
+  /* page underneath */
+  transition: transform 0.2s;
+}
+
+.cal-card:hover {
+  transform: translateY(-4px) rotate(-0.6deg);
+}
+
+/* Binding rings */
+.cal-card::before,
+.cal-card::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 9px;
+  height: 22px;
+  border-radius: 5px;
+  background: var(--ink);
+  border: 2px solid var(--paper);
+}
+
+.cal-card::before {
+  left: 26%;
+}
+
+.cal-card::after {
+  right: 26%;
+}
+
+.cal-card p {
+  margin: 0;
+}
+
+/* Coloured header strip, like the month bar on a desk calendar */
+.cal-card .cal-card-head {
+  padding: 12px 18px 10px;
+  border-radius: 11px 11px 0 0;
+  background: var(--brand-text);
+  color: var(--on-brand);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* The big date */
+.cal-card .cal-card-num {
+  padding: 18px 18px 14px;
+  border-bottom: 1px dashed var(--line);
+  /* tear line */
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.6rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: var(--ink);
+}
+
+.cal-card-body {
+  padding: 16px 20px 22px;
+}
+
+.cal-card-body h3 {
+  font-size: 1.1rem;
+}
+
+.cal-card-body p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .cal-cards {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cal-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cal-card:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   Printer page: setup walkthrough
+   ========================================================= */
+.setup-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.setup-steps .step-time {
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--amber);
+}
+/* =========================================================
+   Photos
+   ========================================================= */
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.photo-wide {
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
+.project .thumb:has(img) {
+  display: block;
+  background: none;
+}
+
+.project .thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.thumb-glow img {
+  object-position: 50% 35%;
+}
+
+.bundle-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.faq .photo {
+  margin-top: 14px;
+}
+.step-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+} 
+/* .product-shot {
+  background: #f7f4ef;
+  border-radius: var(--radius);
+  padding: 24px;
+} */
+
+.product-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.page-hero .split h1 {
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+}
+
+/* Realistic spool on product.html */
+.spool-real {
+  display: block;
+  width: 82%;
+  margin: 24px auto 0;
+  overflow: visible;
+}
+
+.spool-real .fil-fill {
+  fill: var(--fil);
+  transition: fill .35s;
+}
+
+.spool-real .fil-stroke {
+  stroke: var(--fil);
+  transition: stroke .35s;
+}
+
+.spool-real .face {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.stage-art:hover .spool-real .face {
+  transform: rotate(60deg);
+}
+
+.picker:has(#c-silk:checked) .spool-real .sheen {
+  opacity: 1;
+}
+/* Product page photos */
+.photo-figure {
+  margin: 0;
+}
+
+.photo-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.why-pla {
+  align-items: start;
+}
+
+.why-pla .grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 520px) {
+  .why-pla .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Refila: pilot goals strip */
+.pilot {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 24px 40px;
+  align-items: center;
+}
+
+.stats.pilot-stats {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 760px) {
+  .pilot {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .stats.pilot-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Rewards page
+   ========================================================= */
+
+/* Points calculator: each ticked box adds to a CSS counter */
+.calc-wrap {
+  counter-reset: pts;
+}
+
+.calc-grid {
+  align-items: start;
+}
+
+.calc {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.calc input {
+  position: absolute;
+  opacity: 0;
+}
+
+.calc label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+
+/* Custom tick box */
+.calc label::before {
+  content: "";
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--on-brand);
+}
+
+.calc label span {
+  flex: 1;
+}
+
+.calc label small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.calc label b {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.calc input:checked+label {
+  border-color: var(--brand-text);
+}
+
+.calc input:checked+label::before {
+  content: "\2713";
+  background: var(--brand-text);
+  border-color: var(--brand-text);
+}
+
+.calc input:checked+label b {
+  color: var(--brand-text);
+}
+
+.calc input:focus-visible+label {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* The maths */
+#e-bag:checked+label {
+  counter-increment: pts 150;
+}
+
+#e-spool:checked+label {
+  counter-increment: pts 120;
+}
+
+#e-buy:checked+label {
+  counter-increment: pts 120;
+}
+
+#e-feature:checked+label {
+  counter-increment: pts 30;
+}
+
+.calc-result {
+  position: sticky;
+  top: 100px;
+}
+
+.calc-total {
+  margin: 4px 0 8px;
+}
+
+.calc-pts::before {
+  content: counter(pts);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.calc-unit {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Which reward the total unlocks (200+ = any two of the first three; 400+ = all four) */
+.calc-reward,
+.calc-stamps {
+  display: none;
+}
+
+.calc-wrap .r-none {
+  display: block;
+}
+
+.calc-wrap:is(:has(#e-bag:checked):has(#e-spool:checked),
+  :has(#e-bag:checked):has(#e-buy:checked),
+  :has(#e-spool:checked):has(#e-buy:checked)) .r-none {
+  display: none;
+}
+
+.calc-wrap:is(:has(#e-bag:checked):has(#e-spool:checked),
+  :has(#e-bag:checked):has(#e-buy:checked),
+  :has(#e-spool:checked):has(#e-buy:checked)) .r-200 {
+  display: block;
+}
+
+.calc-wrap:has(#e-bag:checked):has(#e-spool:checked):has(#e-buy:checked):has(#e-feature:checked) .r-200 {
+  display: none;
+}
+
+.calc-wrap:has(#e-bag:checked):has(#e-spool:checked):has(#e-buy:checked):has(#e-feature:checked) .r-400 {
+  display: block;
+}
+
+.calc-wrap:has(#e-challenge:checked) .calc-stamps {
+  display: block;
+}
+
+/* Story timeline: three steps instead of four */
+.steps.steps-3 {
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 860px) {
+  .steps.steps-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tier highlight (replaces the inline colour) */
+.tier.feature .num {
+  color: var(--amber);
+}
+
+/* =========================================================
+   About page: value cards with icons (no step numbers)
+   ========================================================= */
+.value {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.value h3 {
+  margin: 0 0 8px;
+}
+
+.value p {
+  flex: 1;
+}
+
+.value-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(240, 163, 58, 0.15);
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+}
+
+.value-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.section.dark .value-link {
+  margin-top: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section.dark .value-link:hover {
+  text-decoration: underline;
+}
+
+.page-hero .lead+.lead {
+  margin-top: 14px;
 }
