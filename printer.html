@@ -1,261 +1,894 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-SG">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Filo One 3D Printer with Filament Included | Singapore | Filo Print</title>
-  <meta name="description" content="Filo One: a beginner-friendly 3D printer with auto bed levelling, 300 mm/s printing, Wi-Fi and filament included in every kit. 12-month local warranty, Shopee checkout.">
-  <meta name="keywords" content="3D printer Singapore, beginner 3D printer, 3D printer with filament, auto levelling 3D printer, Filo One">
-  <meta property="og:title" content="Filo One 3D Printer with Filament Included | Filo Print">
-  <meta property="og:description" content="A beginner-friendly 3D printer with filament in the box, a new project every week and a 12-month local warranty.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='10' fill='%231d1b18'/%3E%3Cpath d='M11 15h26M10.5 37.5h27' stroke='%23f5f1ea' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='19' y='10.5' width='10' height='9' rx='2' fill='%23f5f1ea'/%3E%3Cpath d='M22 19.5h4l-2 3z' fill='%23f5f1ea'/%3E%3Crect x='19.5' y='24' width='9' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='16.5' y='28' width='15' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='15' y='32' width='18' height='3' rx='1' fill='%23cfa57a'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="announce">Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379 with 2 kg of filament in the box.</div>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="logo" href="index.html" aria-label="Filo Print home"><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark"><rect x="5" y="5" width="38" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M11 15h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="19" y="11" width="10" height="8.5" rx="2" fill="currentColor"/><path d="M22 19.5h4l-2 3z" fill="currentColor"/><rect x="19.5" y="24" width="9" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="16.5" y="28" width="15" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="15" y="32" width="18" height="2.8" rx="1" fill="var(--brand-text)"/><path d="M10.5 37.5h27" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Filo<span class="logo-sub">Print</span></a>
-      <input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Switch between light and dark theme">
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
-      <ul class="nav-links">
-        <li><a href="printer.html" aria-current="page">Printer</a></li>
-        <li><a href="bundles.html">Kits</a></li>
-        <li><a href="product.html">Refills</a></li>
-        <li><a href="challenge.html">Challenge</a></li>
-        <li><a href="refila.html">Refila</a></li>
-        <li><a href="rewards.html">Rewards</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="btn btn-primary btn-sm" href="join.html">Join Filo Club</a></li>
-      </ul>
-      <div class="nav-tools">
-        <label for="theme-toggle" class="theme-btn" title="Switch light / dark theme"><span class="i-moon" aria-hidden="true">&#9790;</span><span class="i-sun" aria-hidden="true">&#9728;</span><span class="sr-only">Switch theme</span></label>
-        <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
-      </div>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>
+      Filo One 3D Printer: Specs, Setup &amp; Running Costs | Filo Print
+    </title>
+    <meta
+      name="description"
+      content="Filo One specs: 220 × 220 × 250 mm build volume, auto bed levelling, direct drive, about 48 dB quiet mode. 15-minute setup, about S$1 a print. S$349 on Shopee."
+    />
+    <link rel="canonical" href="https://www.filoprint.example/printer.html" />
+    <meta
+      property="og:title"
+      content="Filo One 3D Printer: Specs, Setup &amp; Running Costs"
+    />
+    <meta
+      property="og:description"
+      content="Auto-levelling, quiet, direct-drive. From box to first print in 15 minutes, and about S$1 a print to run."
+    />
+    <meta property="og:type" content="product" />
+    <meta
+      property="og:url"
+      content="https://www.filoprint.example/printer.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.filoprint.example/assets/filoONE.png"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='10' fill='%231d1b18'/%3E%3Cpath d='M11 15h26M10.5 37.5h27' stroke='%23f5f1ea' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='19' y='10.5' width='10' height='9' rx='2' fill='%23f5f1ea'/%3E%3Cpath d='M22 19.5h4l-2 3z' fill='%23f5f1ea'/%3E%3Crect x='19.5' y='24' width='9' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='16.5' y='28' width='15' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='15' y='32' width='18' height='3' rx='1' fill='%23cfa57a'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <main id="main">
+    <!-- Product details live here, on the product page, not on the home page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.filoprint.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Filo One printer",
+                "item": "https://www.filoprint.example/printer.html"
+              }
+            ]
+          },
+          {
+            "@type": "Product",
+            "name": "Filo One",
+            "category": "3D printer",
+            "brand": {
+              "@type": "Brand",
+              "name": "Filo Print"
+            },
+            "description": "Beginner FDM 3D printer with automatic bed levelling, 220 × 220 × 250 mm build volume, direct-drive extruder, up to 300 mm/s printing and a 12-month Singapore warranty.",
+            "image": "https://www.filoprint.example/assets/filoONE.png",
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Build volume",
+                "value": "220 × 220 × 250 mm"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Maximum print speed",
+                "value": "300 mm/s"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Filament diameter",
+                "value": "1.75 mm"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Noise (quiet mode)",
+                "value": "About 48 dB"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "349.00",
+              "priceCurrency": "SGD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I have to use Filo filament?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Filo One takes any 1.75 mm PLA, PLA+, PETG or TPU. Filo PLA+ simply comes with a tested profile in the Filo app, so there is nothing to tune."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the biggest thing I can print?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Anything up to 220 × 220 × 250 mm in one piece, about the size of a shoebox standing on its end. Larger models can be split into parts and glued."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How loud is it in an HDB flat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "About 48 dB in quiet mode, similar to a quiet fridge. Most owners print in the living room or a study, and quiet mode is fine to leave running overnight."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if the power trips mid-print?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Filo One saves its position. When power returns, it asks whether to resume, so a long print isn’t lost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it safe to use around kids?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, with an adult nearby. The nozzle reaches 300°C and the bed 100°C, so keep hands away while it prints. The Family Kit includes a printable safety checklist for children."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What maintenance does it need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wipe the build plate with isopropyl alcohol every few prints and keep filament dry. A spare 0.4 mm nozzle and tool kit are in the box for the occasional clog."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if something breaks?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Every Filo One has a 12-month warranty. Message our Shopee store and we’ll arrange a repair or replacement in Singapore, not overseas."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <section class="page-hero">
-      <div class="container">
-        <p class="breadcrumb"><a href="index.html">Home</a> / Printer</p>
-      </div>
-      <div class="container split">
-        <div class="panel"><svg class="printer-art" viewBox="0 0 240 230" role="img" aria-label="Filo One 3D printer printing a vase" style="--fil:#cfa57a">
-  <path d="M196 52 C 170 26, 118 34, 110 78" fill="none" stroke="var(--fil)" stroke-width="3" stroke-linecap="round"/>
-  <rect x="174" y="34" width="16" height="150" rx="5" class="sp-flange" stroke-width="3"/>
-  <rect x="28" y="180" width="176" height="36" rx="9" class="sp-flange" stroke-width="3"/>
-  <rect x="42" y="191" width="36" height="14" rx="3" class="sp-line"/>
-  <circle cx="186" cy="198" r="5" class="sp-line"/>
-  <rect x="46" y="168" width="128" height="12" rx="3" class="sp-hub" stroke-width="3"/>
-  <rect x="98" y="134" width="26" height="34" rx="4" class="fil"/>
-  <path d="M104 136v30M111 136v30M118 136v30" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
-  <rect x="52" y="90" width="138" height="12" rx="4" class="sp-flange" stroke-width="3"/>
-  <rect x="94" y="78" width="34" height="38" rx="7" class="sp-line"/>
-  <path d="M106 116h10l-5 9z" class="sp-line"/>
-  <circle cx="111" cy="92" r="5" class="fil"/>
-  <g class="spin" style="transform-box:fill-box">
-    <circle cx="210" cy="72" r="22" class="sp-flange" stroke-width="3"/>
-    <circle cx="210" cy="72" r="16" class="fil"/>
-    <circle cx="210" cy="72" r="6" class="sp-hub" stroke-width="3"/>
-  </g>
-</svg></div>
-        <div>
-          <span class="eyebrow">Filo One &middot; 3D printer</span>
-          <h1>The printer that comes ready to print.</h1>
-          <p class="lead">Filo One levels itself, prints at up to 300 mm/s and arrives with filament in the box. Unbox it, load the first spool and print this week&rsquo;s challenge tonight.</p>
-          <div class="price"><s><span class="sr-only">Usual price: </span>S$399</s> S$349 <small>launch price</small></div>
-          <p class="small muted">Spread the cost with SPayLater instalments at Shopee checkout. Seen a similar printer cheaper in a Singapore Shopee store? We&rsquo;ll match it.</p>
-          <ul class="checklist">
-            <li>Set up in about 15 minutes, with automatic bed levelling</li>
-            <li>220 &times; 220 &times; 250 mm build volume</li>
-            <li>Filament runout sensor and a refill reminder in the Filo app</li>
-            <li>12-month local warranty, with repairs handled in Singapore</li>
-          </ul>
-          <div class="btn-row">
-            <a class="btn btn-shopee" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=printer_hero" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
-            <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+    <!-- The time-limited deal lives here, where every visitor sees it first -->
+    <div class="announce">
+      11.11 only: extra S$11 off any Filo One kit with code
+      <strong>FILO1111</strong> in our
+      <a
+        href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_1111"
+        target="_blank"
+        rel="noopener"
+        >Shopee store</a
+      >.
+    </div>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a class="logo" href="index.html" aria-label="Filo Print home"
+          ><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark">
+            <rect
+              x="5"
+              y="5"
+              width="38"
+              height="38"
+              rx="8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.6"
+            />
+            <path
+              d="M11 15h26"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            />
+            <rect
+              x="19"
+              y="11"
+              width="10"
+              height="8.5"
+              rx="2"
+              fill="currentColor"
+            />
+            <path d="M22 19.5h4l-2 3z" fill="currentColor" />
+            <rect
+              x="19.5"
+              y="24"
+              width="9"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <rect
+              x="16.5"
+              y="28"
+              width="15"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <rect
+              x="15"
+              y="32"
+              width="18"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <path
+              d="M10.5 37.5h27"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            /></svg
+          >Filo<span class="logo-sub">Print</span></a
+        >
+        <input
+          type="checkbox"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Switch between light and dark theme"
+        />
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Open menu"
+        />
+        <ul class="nav-links">
+          <li><a href="printer.html" aria-current="page">Printer</a></li>
+          <li><a href="bundles.html">Kits</a></li>
+          <li><a href="product.html">Refills</a></li>
+          <li><a href="challenge.html">Challenge</a></li>
+          <li><a href="refila.html">Refila</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- Plain link now: Shopee is the one filled button on this page -->
+          <li><a href="join.html">Join Filo Club</a></li>
+        </ul>
+        <div class="nav-tools">
+          <label
+            for="theme-toggle"
+            class="theme-btn"
+            title="Switch light / dark theme"
+            ><span class="i-moon" aria-hidden="true">&#9790;</span
+            ><span class="i-sun" aria-hidden="true">&#9728;</span
+            ><span class="sr-only">Switch theme</span></label
+          >
+          <label for="nav-toggle" class="nav-burger"
+            ><span aria-hidden="true"></span
+            ><span class="sr-only">Menu</span></label
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- HERO: about the machine itself -->
+      <section class="page-hero">
+        <div class="container">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Printer</p>
+        </div>
+        <div class="container split">
+          <div class="panel">
+            <div class="product-shot">
+              <img
+                src="assets/img/filo-one-hero.png"
+                alt="Filo One 3D printer with silver frame, grey print head and black build plate"
+                width="1000"
+                height="1000"
+                fetchpriority="high"
+              />
+            </div>
           </div>
-          <p class="small muted" style="margin-top:14px">Most people buy a kit: the <a href="bundles.html">Starter Kit</a> adds 2 kg of filament for S$30 more.</p>
-          <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">Rated</span><strong>4.8</strong> out of 5 from 84 Shopee ratings <span class="sample-tag">Sample</span></p>
+          <div>
+            <span class="eyebrow">Filo One 3D printer</span>
+            <h1>The printer that comes ready to print.</h1>
+            <p class="lead">
+              A shoebox-sized build area, a bed that levels itself and a quiet
+              mode you can sleep through.
+            </p>
+            <div class="price">S$349 <small>launch price</small></div>
+            <p class="rating">
+              <span class="stars" aria-hidden="true"
+                >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+              >
+              <strong>4.8</strong> out of 5 from 84 Shopee ratings
+              <!-- <span class="sample-tag">Sample</span> -->
+            </p>
+            <ul class="checklist">
+              <li>220 &times; 220 &times; 250 mm build volume</li>
+              <li>Automatic bed levelling, set up in about 15 minutes</li>
+              <li>About 48 dB in quiet mode</li>
+              <li>12-month warranty, repaired in Singapore</li>
+            </ul>
+            <div class="btn-row">
+              <a
+                class="btn btn-shopee"
+                href="…your existing Shopee link…"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo One on Shopee</a
+              >
+              <a class="btn btn-ghost" href="#specs">See full specs</a>
+            </div>
+            <p class="small muted mt-sm">
+              Most people buy a kit: the
+              <a href="bundles.html">Starter Kit</a> adds 2 kg of filament for
+              S$30 more. SPayLater available at checkout.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section alt">
-      <div class="container">
-        <span class="eyebrow">Why Filo One?</span>
-        <h2>Less setting up. More printing.</h2>
-        <div class="grid grid-4" style="margin-top:28px">
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Printing in 15 minutes</h3><p>It arrives mostly assembled and levels its own bed, so your first print starts the same evening.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg></div><h3>Fast enough for weekly projects</h3><p>Up to 300 mm/s. A keychain takes about 20 minutes and a phone stand under an hour.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Filament in every kit</h3><p>Every kit includes Filo PLA+ with settings already tuned for this printer. No guessing on day one.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 17h4"/></svg></div><h3>Never runs dry mid-print</h3><p>The Filo app estimates what&rsquo;s left on the spool and reminds you to reorder before you run out.</p></div>
+      <!-- FEATURES: each spec, then what it means for you (FAB) -->
+      <section class="section">
+        <div class="container">
+          <span class="eyebrow">What each feature does for you</span>
+          <h2>Specs in plain English.</h2>
+          <div class="grid grid-3 mt-lg">
+            <article class="card">
+              <span class="tag">Automatic bed levelling</span>
+              <h3>No paper under the nozzle.</h3>
+              <p>
+                Filo One probes its own bed and sets the nozzle height, the step
+                that makes most beginners give up. Tap Level in the app and walk
+                away.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Direct-drive extruder, up to 300&deg;C</span>
+              <h3>It prints more than PLA.</h3>
+              <p>
+                The motor sits right above the nozzle, so it can push flexible
+                TPU for phone cases and grips, and handle PETG for tougher
+                parts.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Textured PEI plate, magnetic</span>
+              <h3>Prints pop off when it cools.</h3>
+              <p>
+                Lift the plate off, flex it and the print releases. No scraping,
+                no glue stick, and the texture hides the bottom layer.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Power-loss resume + runout sensor</span>
+              <h3>A tripped breaker won&rsquo;t ruin a 4-hour print.</h3>
+              <p>
+                If power cuts out or the spool runs dry, Filo One pauses and
+                saves its place. Fix it, tap Resume and it carries on.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">About 48 dB in quiet mode</span>
+              <h3>Quiet enough for an HDB living room.</h3>
+              <p>
+                Roughly a quiet fridge. Leave it printing in the study while
+                you&rsquo;re on a call or asleep.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">300 mm/s peak, 150 mm/s typical</span>
+              <h3>Most prints finish while you&rsquo;re still excited.</h3>
+              <p>
+                We quote both numbers because peak speed is only part of the
+                story. At everyday settings a keychain still takes about 20
+                minutes.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <span class="eyebrow">Built to print more</span>
-        <h2>One printer. A new reason to use it every week.</h2>
-        <p class="lead" style="margin-bottom:28px">A printer that sits idle is wasted money. We built everything around Filo One to keep it busy.</p>
-        <div class="steps">
-          <div class="step"><h3>Unbox</h3><p>Your kit includes filament, beginner models and a Refila Bag.</p></div>
-          <div class="step"><h3>Print</h3><p>A new <a href="challenge.html">Weekly Challenge</a> model appears in the app every Monday.</p></div>
-          <div class="step"><h3>Refill</h3><p>The <a href="bundles.html#refill">Refill Plan</a> sends a voucher before your spool runs low.</p></div>
-          <div class="step"><h3>Return</h3><p>Scraps and empty spools go to <a href="refila.html">Refila</a> for points off your next roll.</p></div>
+      <!-- SETUP: proves the "15 minutes" claim, step by step -->
+      <!-- TODO: check these steps against the real quick-start card -->
+      <section class="section alt">
+        <div class="container">
+          <span class="eyebrow">From box to first print</span>
+          <h2>Set up in 15 minutes. Here&rsquo;s every step.</h2>
+          <ol class="steps setup-steps mt-lg">
+            <li class="step">
+              <img
+                class="step-img"
+                src="assets/img/setup-1-unbox.webp"
+                alt="Lifting Filo One out of its box, with orange transport clips still on the frame"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <p class="step-time">0&ndash;3 min</p>
+              <h3>Unbox</h3>
+              <p>
+                Lift Filo One out, remove the orange transport clips and attach
+                the top frame with the four screws provided.
+              </p>
+            </li>
+            <li class="step">
+              <img
+                class="step-img"
+                src="assets/img/setup-2-pair.webp"
+                alt="Scanning the quick-start card's QR code with a phone to pair the printer"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <p class="step-time">3&ndash;6 min</p>
+              <h3>Plug in and pair</h3>
+              <p>
+                Scan the QR code on the quick-start card. The Filo app connects
+                the printer to your Wi-Fi.
+              </p>
+            </li>
+            <li class="step">
+              <img
+                class="step-img"
+                src="assets/img/setup-3-load.webp"
+                alt="Hanging a cream PLA+ spool on Filo One and feeding filament into the print head"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <p class="step-time">6&ndash;10 min</p>
+              <h3>Load filament</h3>
+              <p>
+                Hang the spool, feed the end into the extruder and pick
+                &ldquo;Filo PLA+&rdquo; in the app. Settings load automatically.
+              </p>
+            </li>
+            <li class="step">
+              <img
+                class="step-img"
+                src="assets/img/setup-4-level-print.webp"
+                alt="Filo One printing the first layers of a terracotta dinosaur keychain"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <p class="step-time">10&ndash;15 min</p>
+              <h3>Level and print</h3>
+              <p>
+                Tap Level. The printer checks its bed in about five minutes,
+                then starts the dino keychain. It&rsquo;s done 20 minutes later.
+              </p>
+            </li>
+          </ol>
+          <p class="mt-md">
+            Want something to print next?
+            <a href="challenge.html">This week&rsquo;s challenge</a> is free,
+            and so are the <a href="projects.html">past projects</a>.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section alt">
-      <div class="container">
-        <span class="eyebrow">What it costs to run</span>
-        <h2>About S$1 a print. Cheaper on the Refill Plan.</h2>
-        <p class="lead" style="margin-bottom:28px">Filo One runs on standard 1.75 mm filament. Here&rsquo;s what everyday prints cost with Filo PLA+ at S$22.90 per kg.</p>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Print</th><th>Time on Filo One</th><th>Filament</th><th>Cost</th></tr></thead>
-            <tbody>
-              <tr><td>Dino keychain</td><td>20 min</td><td>4 g</td><td>About 10&cent;</td></tr>
-              <tr><td>Desk cable tidy</td><td>25 min</td><td>18 g</td><td>About 40&cent;</td></tr>
-              <tr><td>Ribbed phone stand</td><td>50 min</td><td>35 g</td><td>About 80&cent;</td></tr>
-              <tr><td>Fluted pen cup</td><td>1 h 30 min</td><td>45 g</td><td>About S$1</td></tr>
-              <tr><td>Window planter</td><td>4 h</td><td>140 g</td><td>About S$3.20</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="small muted" style="margin-top:12px">A 1 kg roll makes roughly 25 phone stands or 250 keychains. <a href="bundles.html#refill">The Refill Plan</a> takes 10&ndash;15% off every reorder.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <span class="eyebrow">What owners say</span>
-        <h2>Printing in the first hour.</h2>
-        <div class="reviews">
-          <blockquote class="review"><p>&ldquo;Out of the box and printing in 20 minutes. My daughter&rsquo;s keychain was done before dinner.&rdquo;</p><cite>Hafiz, Family Kit</cite></blockquote>
-          <blockquote class="review"><p>&ldquo;My second printer. Quieter than my old one and the auto-levelling actually works.&rdquo;</p><cite>Marcus, Maker Kit</cite></blockquote>
-          <blockquote class="review"><p>&ldquo;The weekly challenges mean it&rsquo;s never just sitting there.&rdquo;</p><cite>Wei Ling, Starter Kit</cite></blockquote>
-          <p class="sample-note">Sample reviews written for this concept site.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container split">
-        <div>
-          <span class="eyebrow">In the box</span>
-          <h2>Everything you need for your first print.</h2>
-          <ul class="checklist">
-            <li>Filo One printer, about 90% assembled</li>
-            <li>Textured PEI build plate (magnetic and flexible)</li>
-            <li>Spare 0.4 mm nozzle, tool kit and scraper</li>
-            <li>Quick-start card with a QR code for the Filo app</li>
-            <li>Kits also include Filo PLA+ filament and a Refila Bag</li>
-          </ul>
-        </div>
-        <div>
-          <span class="eyebrow">Specifications</span>
-          <div class="table-wrap" style="margin-top:12px">
+      <!-- RUNNING COSTS: unique, quotable data -->
+      <section class="section">
+        <div class="container">
+          <span class="eyebrow">What it costs to run</span>
+          <h2>About S$1 a print. Cheaper on the Refill Plan.</h2>
+          <p class="lead mb-md">
+            Filo One runs on standard 1.75 mm filament. Here&rsquo;s what
+            everyday prints cost with Filo PLA+ at S$22.90 per kg.
+          </p>
+          <div class="table-wrap">
             <table>
+              <caption class="sr-only">
+                Print time, filament used and cost of everyday prints on Filo
+                One
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Print</th>
+                  <th scope="col">Time on Filo One</th>
+                  <th scope="col">Filament</th>
+                  <th scope="col">Cost</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>Build volume</td><td>220 &times; 220 &times; 250 mm</td></tr>
-                <tr><td>Print speed</td><td>Up to 300 mm/s (150 mm/s typical)</td></tr>
-                <tr><td>Levelling</td><td>Automatic bed levelling and Z-offset</td></tr>
-                <tr><td>Extruder</td><td>Direct drive, 0.4 mm nozzle, up to 300&deg;C</td></tr>
-                <tr><td>Bed</td><td>Heated to 100&deg;C, textured PEI plate</td></tr>
-                <tr><td>Filament</td><td>1.75 mm PLA, PLA+, PETG and TPU, any brand</td></tr>
-                <tr><td>Connectivity</td><td>Wi-Fi, Filo app, USB-C and microSD</td></tr>
-                <tr><td>Safety</td><td>Runout sensor, power-loss resume, thermal protection</td></tr>
-                <tr><td>Noise</td><td>About 48 dB in quiet mode</td></tr>
-                <tr><td>Warranty</td><td>12 months, repairs handled in Singapore</td></tr>
+                <tr>
+                  <th scope="row">Dino keychain</th>
+                  <td>20 min</td>
+                  <td>4 g</td>
+                  <td>About 10&cent;</td>
+                </tr>
+                <tr>
+                  <th scope="row">Desk cable tidy</th>
+                  <td>25 min</td>
+                  <td>18 g</td>
+                  <td>About 40&cent;</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ribbed phone stand</th>
+                  <td>50 min</td>
+                  <td>35 g</td>
+                  <td>About 80&cent;</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fluted pen cup</th>
+                  <td>1 h 30 min</td>
+                  <td>45 g</td>
+                  <td>About S$1</td>
+                </tr>
+                <tr>
+                  <th scope="row">Window planter</th>
+                  <td>4 h</td>
+                  <td>140 g</td>
+                  <td>About S$3.20</td>
+                </tr>
               </tbody>
             </table>
           </div>
+          <p class="small muted mt-sm">
+            A 1 kg roll makes roughly 25 phone stands or 250 keychains.
+            <a href="bundles.html#refill">The Refill Plan</a> takes 10&ndash;15%
+            off every reorder.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="container" style="max-width:860px">
-        <span class="eyebrow">Before you buy</span>
-        <h2>Common questions</h2>
-        <div class="faq">
-          <details><summary>Do I have to use Filo filament?</summary><div>No. Filo One takes any 1.75 mm filament. Filo PLA+ simply comes with tested settings for this printer, and Refill Plan members get a voucher on every reorder.</div></details>
-          <details><summary>Is it suitable for kids?</summary><div>Yes, with an adult nearby. The nozzle and bed get hot, so keep little hands away while it prints. The Family Kit includes a printable safety checklist for children.</div></details>
-          <details><summary>How loud is it in an HDB flat?</summary><div>About 48 dB in quiet mode, similar to a quiet fridge. Most people run it in the living room or a study.</div></details>
-          <details><summary>What if something breaks?</summary><div>Every Filo One has a 12-month warranty. Message our Shopee store and we'll arrange a repair or replacement in Singapore.</div></details>
-          <details><summary>Why do I check out on Shopee?</summary><div>So you get the vouchers, instalments, delivery tracking and Shopee Guarantee you already use. This site helps you choose and keeps you printing; Shopee handles the payment.</div></details>
+      <!-- REVIEWS -->
+      <section class="section alt">
+        <div class="container">
+          <span class="eyebrow">What owners say</span>
+          <h2>Printing in the first hour.</h2>
+          <div class="reviews">
+            <blockquote class="review">
+              <p>
+                &ldquo;Out of the box and printing in 20 minutes. My
+                daughter&rsquo;s keychain was done before dinner.&rdquo;
+              </p>
+              <cite>Hafiz, Family Kit</cite>
+            </blockquote>
+            <blockquote class="review">
+              <p>
+                &ldquo;My second printer. Quieter than my old one and the
+                auto-levelling actually works.&rdquo;
+              </p>
+              <cite>Marcus, Maker Kit</cite>
+            </blockquote>
+            <blockquote class="review">
+              <p>
+                &ldquo;The weekly challenges mean it&rsquo;s never just sitting
+                there.&rdquo;
+              </p>
+              <cite>Wei Ling, Starter Kit</cite>
+            </blockquote>
+            <!-- <p class="sample-note">
+              Sample reviews written for this concept site.
+            </p> -->
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section tight">
-      <div class="container">
-        <div class="cta-banner">
+      <!-- IN THE BOX + SPECS -->
+      <section class="section" id="specs">
+        <div class="container split">
           <div>
-            <h2 style="margin-bottom:.3em">Get Filo One. Print tonight.</h2>
-            <p>From S$349 with a 12-month local warranty. Every kit ships with filament, so your first print starts the day it arrives.</p>
+            <span class="eyebrow">In the box</span>
+            <h2>Everything you need for your first print.</h2>
+            <ul class="checklist">
+              <li>Filo One printer, about 90% assembled</li>
+              <li>Textured PEI build plate (magnetic and flexible)</li>
+              <li>Spare 0.4 mm nozzle, tool kit and scraper</li>
+              <li>Quick-start card with a QR code for the Filo app</li>
+              <li>Kits also include Filo PLA+ filament and a project pack</li>
+            </ul>
+            <img
+              class="photo mt-md"
+              src="assets/img/in-the-box.webp"
+              alt="Filo One box contents: textured PEI build plate, hex keys, scraper, spare nozzle, quick-start card and power cable"
+              width="1000"
+              height="671"
+              loading="lazy"
+            />
           </div>
-          <div class="btn-row" style="margin-top:0">
-            <a class="btn btn-light" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
-            <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+          <div>
+            <span class="eyebrow">Specifications</span>
+            <div class="table-wrap mt-sm">
+              <table>
+                <caption class="sr-only">
+                  Filo One technical specifications
+                </caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">Build volume</th>
+                    <td>220 &times; 220 &times; 250 mm</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Print speed</th>
+                    <td>Up to 300 mm/s (150 mm/s typical)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Levelling</th>
+                    <td>Automatic bed levelling and Z-offset</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Extruder</th>
+                    <td>Direct drive, 0.4 mm nozzle, up to 300&deg;C</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Bed</th>
+                    <td>Heated to 100&deg;C, textured PEI plate</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Filament</th>
+                    <td>1.75 mm PLA, PLA+, PETG and TPU, any brand</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Connectivity</th>
+                    <td>Wi-Fi, Filo app, USB-C and microSD</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Safety</th>
+                    <td>
+                      Runout sensor, power-loss resume, thermal protection
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Noise</th>
+                    <td>About 48 dB in quiet mode</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Warranty</th>
+                    <td>12 months, repairs handled in Singapore</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <!-- TECHNICAL FAQ (buying questions live on the home page) -->
+      <section class="section alt">
+        <div class="container faq-wrap">
+          <span class="eyebrow">Before you buy</span>
+          <h2>Filo One questions, answered.</h2>
+          <div class="faq mt-md">
+            <details>
+              <summary>Do I have to use Filo filament?</summary>
+              <div>
+                <p>
+                  No. Filo One takes any 1.75 mm PLA, PLA+, PETG or TPU. Filo
+                  PLA+ simply comes with a tested profile in the Filo app, so
+                  there is nothing to tune.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What is the biggest thing I can print?</summary>
+              <div>
+                <p>
+                  Anything up to 220 &times; 220 &times; 250 mm in one piece,
+                  about the size of a shoebox standing on its end. Larger models
+                  can be split into parts and glued.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How loud is it in an HDB flat?</summary>
+              <div>
+                <p>
+                  About 48 dB in quiet mode, similar to a quiet fridge. Most
+                  owners print in the living room or a study, and quiet mode is
+                  fine to leave running overnight.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What happens if the power trips mid-print?</summary>
+              <div>
+                <p>
+                  Filo One saves its position. When power returns, it asks
+                  whether to resume, so a long print isn&rsquo;t lost.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Is it safe to use around kids?</summary>
+              <div>
+                <p>
+                  Yes, with an adult nearby. The nozzle reaches 300&deg;C and
+                  the bed 100&deg;C, so keep hands away while it prints. The
+                  Family Kit includes a printable safety checklist for children.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What maintenance does it need?</summary>
+              <div>
+                <p>
+                  Wipe the build plate with isopropyl alcohol every few prints
+                  and keep filament dry. A spare 0.4 mm nozzle and tool kit are
+                  in the box for the occasional clog.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What if something breaks?</summary>
+              <div>
+                <p>
+                  Every Filo One has a 12-month warranty. Message our Shopee
+                  store and we&rsquo;ll arrange a repair or replacement in
+                  Singapore, not overseas.
+                </p>
+              </div>
+            </details>
+          </div>
+          <p class="small muted mt-sm">
+            Questions about kits, Filo Club or Refila? See the
+            <a href="index.html#faq">buying FAQ</a> on our home page.
+          </p>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="logo" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark"><rect x="5" y="5" width="38" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M11 15h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="19" y="11" width="10" height="8.5" rx="2" fill="currentColor"/><path d="M22 19.5h4l-2 3z" fill="currentColor"/><rect x="19.5" y="24" width="9" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="16.5" y="28" width="15" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="15" y="32" width="18" height="2.8" rx="1" fill="var(--brand-text)"/><path d="M10.5 37.5h27" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Filo<span class="logo-sub">Print</span></a>
-          <p>Filo One: the beginner 3D printer that arrives with filament in the box. Then PLA+ refills, a new project every week and a take-back scheme for your scraps. Print more. Waste less.</p>
-          <a class="btn btn-shopee btn-sm" style="margin-top:18px" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
+      <!-- CTA written for this page: printer only vs kit -->
+      <section class="section tight">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Printer only, S$349. Or add 2 kg of filament for S$30.</h2>
+              <p>
+                Both come with a 12-month local warranty. The Starter Kit adds
+                two rolls of Filo PLA+, 10 beginner models and a Refila Bag.
+              </p>
+            </div>
+            <div class="btn-row">
+              <a
+                class="btn btn-light"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=printer_banner"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo One on Shopee</a
+              >
+              <a class="btn btn-ghost" href="bundles.html"
+                >See the Starter Kit</a
+              >
+            </div>
+          </div>
         </div>
-        <div>
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="printer.html">Filo One printer</a></li>
-            <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
-            <li><a href="product.html">PLA+ refills</a></li>
-            <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
-          </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Filo Print home"
+              ><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark">
+                <rect
+                  x="5"
+                  y="5"
+                  width="38"
+                  height="38"
+                  rx="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.6"
+                />
+                <path
+                  d="M11 15h26"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />
+                <rect
+                  x="19"
+                  y="11"
+                  width="10"
+                  height="8.5"
+                  rx="2"
+                  fill="currentColor"
+                />
+                <path d="M22 19.5h4l-2 3z" fill="currentColor" />
+                <rect
+                  x="19.5"
+                  y="24"
+                  width="9"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <rect
+                  x="16.5"
+                  y="28"
+                  width="15"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <rect
+                  x="15"
+                  y="32"
+                  width="18"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <path
+                  d="M10.5 37.5h27"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                /></svg
+              >Filo<span class="logo-sub">Print</span></a
+            >
+            <p>
+              Filo One: the beginner 3D printer that arrives with filament in
+              the box. Then PLA+ refills, a new project every week and a
+              take-back scheme for your scraps. Print more. Waste less.
+            </p>
+            <a
+              class="btn btn-shopee btn-sm mt-md"
+              href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
+              target="_blank"
+              rel="noopener"
+              >Buy Filo One on Shopee</a
+            >
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="printer.html">Filo One printer</a></li>
+              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="product.html">PLA+ refills</a></li>
+              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Make &amp; Refila</h4>
+            <ul>
+              <li><a href="challenge.html">Weekly Print Challenge</a></li>
+              <li><a href="projects.html">Projects &amp; free models</a></li>
+              <li><a href="refila.html">Refila take-back</a></li>
+              <li><a href="rewards.html">Filo Rewards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">Our story</a></li>
+              <li><a href="join.html">Join / Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
+              <li><a href="team.html">Project team</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h4>Make &amp; Refila</h4>
-          <ul>
-            <li><a href="challenge.html">Weekly Print Challenge</a></li>
-            <li><a href="projects.html">Projects &amp; free models</a></li>
-            <li><a href="refila.html">Refila take-back</a></li>
-            <li><a href="rewards.html">Filo Rewards</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Filo Print. All rights reserved.</span>
+          <span
+            ><a href="privacy.html">Privacy</a> &middot;
+            <a href="team.html">Team</a></span
+          >
         </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">Our story</a></li>
-            <li><a href="join.html">Join / Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
-            <li><a href="team.html">Project team</a></li>
-          </ul>
-        </div>
+        <p class="notice">
+          Filo Print, Filo One and Refila are student concept brands created for
+          an NTU web design project. Shopee is a trademark of its respective
+          owner; checkout links open a Shopee Singapore search, not a real
+          product listing.
+        </p>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Filo Print. All rights reserved.</span>
-        <span><a href="privacy.html">Privacy</a> &middot; <a href="team.html">Team</a></span>
-      </div>
-      <p class="notice">Filo Print, Filo One and Refila are student concept brands created for an NTU web design project. Shopee is a trademark of its respective owner; checkout links open Shopee Singapore.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

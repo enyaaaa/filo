@@ -1,283 +1,781 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-SG">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>Filo Print | Filo One Beginner 3D Printer with Filament Included, Singapore</title>
-  <meta name="description" content="Filo One is a beginner-friendly 3D printer that arrives with filament, a new free project every week and a take-back scheme for your scraps. Shopee checkout and local warranty.">
-  <meta name="keywords" content="3D printer Singapore, beginner 3D printer, 3D printer with filament, PLA filament Singapore, 3D printing for kids, Shopee 3D printer">
-  <meta property="og:title" content="Filo Print | Beginner 3D Printer with Filament Included">
-  <meta property="og:description" content="A 3D printer that arrives with filament, a new project every week and a take-back scheme for your scraps.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='10' fill='%231d1b18'/%3E%3Cpath d='M11 15h26M10.5 37.5h27' stroke='%23f5f1ea' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='19' y='10.5' width='10' height='9' rx='2' fill='%23f5f1ea'/%3E%3Cpath d='M22 19.5h4l-2 3z' fill='%23f5f1ea'/%3E%3Crect x='19.5' y='24' width='9' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='16.5' y='28' width='15' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='15' y='32' width='18' height='3' rx='1' fill='%23cfa57a'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="announce">Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379 with 2 kg of filament in the box.</div>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="logo" href="index.html" aria-label="Filo Print home"><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark"><rect x="5" y="5" width="38" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M11 15h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="19" y="11" width="10" height="8.5" rx="2" fill="currentColor"/><path d="M22 19.5h4l-2 3z" fill="currentColor"/><rect x="19.5" y="24" width="9" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="16.5" y="28" width="15" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="15" y="32" width="18" height="2.8" rx="1" fill="var(--brand-text)"/><path d="M10.5 37.5h27" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Filo<span class="logo-sub">Print</span></a>
-      <input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Switch between light and dark theme">
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
-      <ul class="nav-links">
-        <li><a href="printer.html">Printer</a></li>
-        <li><a href="bundles.html">Kits</a></li>
-        <li><a href="product.html">Refills</a></li>
-        <li><a href="challenge.html">Challenge</a></li>
-        <li><a href="refila.html">Refila</a></li>
-        <li><a href="rewards.html">Rewards</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="btn btn-primary btn-sm" href="join.html">Join Filo Club</a></li>
-      </ul>
-      <div class="nav-tools">
-        <label for="theme-toggle" class="theme-btn" title="Switch light / dark theme"><span class="i-moon" aria-hidden="true">&#9790;</span><span class="i-sun" aria-hidden="true">&#9728;</span><span class="sr-only">Switch theme</span></label>
-        <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
-      </div>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>
+      Filo Print | Beginner 3D Printer Kits with Filament, Singapore
+    </title>
+    <meta
+      name="description"
+      content="Filo Print sells Filo One, a self-levelling beginner 3D printer, in kits with filament, a free project every week and a take-back scheme for scraps. Shopee checkout."
+    />
+    <!-- TODO: replace the domain below with your real hosted URL -->
+    <link rel="canonical" href="https://www.filoprint.example/" />
+    <meta
+      property="og:title"
+      content="Filo One | Beginner 3D Printer with Filament Included"
+    />
+    <meta
+      property="og:description"
+      content="A self-levelling 3D printer that arrives with filament, 10 starter models and a new project every week."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.filoprint.example/" />
+    <meta
+      property="og:image"
+      content="https://www.filoprint.example/assets/filoONE.png"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='10' fill='%231d1b18'/%3E%3Cpath d='M11 15h26M10.5 37.5h27' stroke='%23f5f1ea' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='19' y='10.5' width='10' height='9' rx='2' fill='%23f5f1ea'/%3E%3Cpath d='M22 19.5h4l-2 3z' fill='%23f5f1ea'/%3E%3Crect x='19.5' y='24' width='9' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='16.5' y='28' width='15' height='3' rx='1' fill='%23cfa57a'/%3E%3Crect x='15' y='32' width='18' height='3' rx='1' fill='%23cfa57a'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <main id="main">
+    <!-- Structured data for the brand and buying FAQ.
+         Product details and price live on printer.html. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Filo Print",
+            "url": "https://www.filoprint.example/",
+            "description": "Singapore concept brand selling the Filo One beginner 3D printer, Filo PLA+ filament, a Weekly Print Challenge and the Refila take-back scheme."
+          },
+          {
+            "@type": "WebSite",
+            "name": "Filo Print",
+            "url": "https://www.filoprint.example/"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Should I buy the printer on its own or a kit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Filo One on its own is S$349. Kits cost S$379 to S$429 and add filament and project files, which works out cheaper than buying them separately. Not sure which kit? The 2-question Kit Finder will pick one for you."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What comes in a Filo One kit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Every kit has the Filo One printer, Filo PLA+ filament with tuned settings and a pack of tested project files. The Starter and Maker Kits also include a Refila Bag for your scraps. Compare the kits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to join Filo Club?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Not to buy a printer. Filo Club is free and gets you the Weekly Challenge files, a stamp card, a S$3 Shopee voucher and the optional Refill Plan. Join in a minute."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is Refila?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our take-back partner. Fill a Refila Bag with PLA scraps and empty spools, send it back, and earn Filo Points: about S$1.25 back per kg of scraps. See how Refila works."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do you sell on Shopee?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shopee gives you a familiar checkout, SPayLater, buyer protection and Shopee vouchers that stack with our own codes. And if you find a similar self-levelling printer cheaper from a Singapore seller, message us before buying and we&rsquo;ll match it."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Filo One 3D printer &middot; launch price S$349</span>
-          <h1>Your first 3D printer. <span>Printing tonight.</span></h1>
-          <p class="lead">Filo One levels itself, prints at up to 300 mm/s and arrives with filament in the box. Unbox it after dinner and print your first model before bed.</p>
-          <div class="btn-row">
-            <a class="btn btn-shopee" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_hero" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
-            <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
-          </div>
-          <div class="badges">
-            <span class="badge">&#10003; Filament in the box</span>
-            <span class="badge">&#10003; Self-levelling</span>
-            <span class="badge">&#10003; 12-month local warranty</span>
-            <span class="badge">&#10003; Price match on Shopee</span>
-          </div>
-        </div>
-        <div class="hero-art"><div class="blob"></div><svg class="printer-art" viewBox="0 0 240 230" role="img" aria-label="Filo One 3D printer printing a vase" style="--fil:#cfa57a">
-  <path d="M196 52 C 170 26, 118 34, 110 78" fill="none" stroke="var(--fil)" stroke-width="3" stroke-linecap="round"/>
-  <rect x="174" y="34" width="16" height="150" rx="5" class="sp-flange" stroke-width="3"/>
-  <rect x="28" y="180" width="176" height="36" rx="9" class="sp-flange" stroke-width="3"/>
-  <rect x="42" y="191" width="36" height="14" rx="3" class="sp-line"/>
-  <circle cx="186" cy="198" r="5" class="sp-line"/>
-  <rect x="46" y="168" width="128" height="12" rx="3" class="sp-hub" stroke-width="3"/>
-  <rect x="98" y="134" width="26" height="34" rx="4" class="fil"/>
-  <path d="M104 136v30M111 136v30M118 136v30" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
-  <rect x="52" y="90" width="138" height="12" rx="4" class="sp-flange" stroke-width="3"/>
-  <rect x="94" y="78" width="34" height="38" rx="7" class="sp-line"/>
-  <path d="M106 116h10l-5 9z" class="sp-line"/>
-  <circle cx="111" cy="92" r="5" class="fil"/>
-  <g class="spin" style="transform-box:fill-box">
-    <circle cx="210" cy="72" r="22" class="sp-flange" stroke-width="3"/>
-    <circle cx="210" cy="72" r="16" class="fil"/>
-    <circle cx="210" cy="72" r="6" class="sp-hub" stroke-width="3"/>
-  </g>
-</svg></div>
-      </div>
-    </section>
+    <!-- The time-limited deal lives here, where every visitor sees it first -->
+    <div class="announce">
+      11.11 only: extra S$11 off any Filo One kit with code
+      <strong>FILO1111</strong> in our
+      <a
+        href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_1111"
+        target="_blank"
+        rel="noopener"
+        >Shopee store</a
+      >.
+    </div>
 
-    <section class="section tight alt">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">Why Filo One?</span>
-          <h2>Less setting up. More printing.</h2>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a class="logo" href="index.html" aria-label="Filo Print home"
+          ><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark">
+            <rect
+              x="5"
+              y="5"
+              width="38"
+              height="38"
+              rx="8"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.6"
+            />
+            <path
+              d="M11 15h26"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            />
+            <rect
+              x="19"
+              y="11"
+              width="10"
+              height="8.5"
+              rx="2"
+              fill="currentColor"
+            />
+            <path d="M22 19.5h4l-2 3z" fill="currentColor" />
+            <rect
+              x="19.5"
+              y="24"
+              width="9"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <rect
+              x="16.5"
+              y="28"
+              width="15"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <rect
+              x="15"
+              y="32"
+              width="18"
+              height="2.8"
+              rx="1"
+              fill="var(--brand-text)"
+            />
+            <path
+              d="M10.5 37.5h27"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+            /></svg
+          >Filo<span class="logo-sub">Print</span></a
+        >
+        <input
+          type="checkbox"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Switch between light and dark theme"
+        />
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Open menu"
+        />
+        <ul class="nav-links">
+          <li><a href="printer.html">Printer</a></li>
+          <li><a href="bundles.html">Kits</a></li>
+          <li><a href="product.html">Refills</a></li>
+          <li><a href="challenge.html">Challenge</a></li>
+          <li><a href="refila.html">Refila</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- Plain link now: Shopee is the one filled button on this page -->
+          <li><a href="join.html">Join Filo Club</a></li>
+        </ul>
+        <div class="nav-tools">
+          <label
+            for="theme-toggle"
+            class="theme-btn"
+            title="Switch light / dark theme"
+            ><span class="i-moon" aria-hidden="true">&#9790;</span
+            ><span class="i-sun" aria-hidden="true">&#9728;</span
+            ><span class="sr-only">Switch theme</span></label
+          >
+          <label for="nav-toggle" class="nav-burger"
+            ><span aria-hidden="true"></span
+            ><span class="sr-only">Menu</span></label
+          >
         </div>
-        <div class="grid grid-4" style="margin-top:34px">
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Printing in 15 minutes</h3><p>It arrives mostly assembled and levels its own bed.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg></div><h3>Fast</h3><p>Up to 300 mm/s. A keychain takes about 20 minutes.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Filament included</h3><p>Every kit ships with Filo PLA+ already tuned for the printer.</p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.2-7 10-3.5-1.8-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Local warranty</h3><p>12 months, with repairs handled in Singapore.</p></div>
-        </div>
-        <div class="center btn-row"><a class="btn btn-ghost" href="printer.html">See full specs</a></div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <section class="section">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">Printer kits</span>
-          <h2>Pick your Filo One kit.</h2>
-          <p class="lead" style="margin:0 auto">Same printer, different starting filament. Choose the one that matches what you&rsquo;ll make.</p>
-        </div>
-        <div class="grid grid-3" style="margin-top:34px">
-          <article class="card bundle">
-            <div class="spools"><i style="background:#ece2d0"></i><i style="background:#2b2f2e"></i></div>
-            <span class="tag">New to printing</span>
-            <h3>Starter Kit</h3>
-            <div class="price">S$379</div>
-            <ul><li>Filo One + 2 kg PLA+</li><li>10 beginner models</li><li>Free Refila Bag</li></ul>
-            <a class="btn btn-shopee" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_starter" target="_blank" rel="noopener">Buy on Shopee</a>
-          </article>
-          <article class="card bundle popular">
-            <div class="spools"><i style="background:#c4734f"></i><i style="background:#cfa57a"></i><i style="background:#2a6fb0"></i><i style="background:#a48ad8"></i><i style="background:#9cb39a"></i><i style="background:#ece2d0"></i></div>
-            <span class="tag">Families</span>
-            <h3>Family Kit</h3>
-            <div class="price">S$385</div>
-            <ul><li>Filo One + 6 mini spools</li><li>Family project pack</li><li>Kids&rsquo; safety checklist</li></ul>
-            <a class="btn btn-shopee" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_family" target="_blank" rel="noopener">Buy on Shopee</a>
-          </article>
-          <article class="card bundle">
-            <div class="spools"><i style="background:#2b2f2e"></i><i style="background:#2b2f2e"></i><i style="background:#ece2d0"></i><i style="background:#ece2d0"></i><i style="background:#2a6fb0"></i></div>
-            <span class="tag">Frequent makers</span>
-            <h3>Maker Kit</h3>
-            <div class="price">S$429</div>
-            <ul><li>Filo One + 5 kg PLA+</li><li>Spare nozzles + calibration set</li><li>Prepaid Refila return label</li></ul>
-            <a class="btn btn-shopee" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_maker" target="_blank" rel="noopener">Buy on Shopee</a>
-          </article>
-        </div>
-        <p class="center" style="margin-top:24px">Not sure? <a href="guide.html">Take the 2-question Kit Finder &rarr;</a></p>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <span class="eyebrow">Your first month with Filo One</span>
-        <h2>Unbox on Friday. Printing every week after.</h2>
-        <p class="lead" style="margin-bottom:28px">Most printers end up in a cupboard. We plan your first month so Filo One never does.</p>
-        <div class="steps">
-          <div class="step"><h3>Day 1</h3><p>Unbox, load the spool in the box and print a dino keychain in 20 minutes.</p></div>
-          <div class="step"><h3>Week 1</h3><p>Work through the 10 beginner models: pen cup, phone stand, name tags.</p></div>
-          <div class="step"><h3>Weeks 2&ndash;4</h3><p>A new <a href="challenge.html">Weekly Challenge</a> every Monday. Share it, collect a stamp.</p></div>
-          <div class="step"><h3>Running low</h3><p>The Filo app spots it and the <a href="bundles.html#refill">Refill Plan</a> sends up to 15% off your next roll.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <span class="eyebrow">Filo One vs a typical Shopee printer listing</span>
-        <h2>Same price range. A lot more in the box.</h2>
-        <div class="table-wrap" style="margin-top:24px">
-          <table>
-            <thead><tr><th>&nbsp;</th><th>Filo One kit</th><th>Typical beginner printer</th></tr></thead>
-            <tbody>
-              <tr><td>Filament included</td><td>&#10003; 1.5&ndash;5 kg, tuned settings</td><td>Small test sample, if any</td></tr>
-              <tr><td>Setup</td><td>&#10003; Self-levelling, about 15 minutes</td><td>Manual levelling, often an hour or more</td></tr>
-              <tr><td>Something to print</td><td>&#10003; 10 starter models + a new one every week</td><td>Find your own files</td></tr>
-              <tr><td>Running out</td><td>&#10003; App reminder + Refill Plan voucher</td><td>Notice when the print fails</td></tr>
-              <tr><td>Warranty</td><td>&#10003; 12 months, repaired in Singapore</td><td>Often sent overseas</td></tr>
-              <tr><td>Scraps and spools</td><td>&#10003; Refila take-back for points</td><td>The bin</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="small muted" style="margin-top:12px">Seen a similar self-levelling printer cheaper in a Singapore Shopee store? Message us before you buy and we&rsquo;ll match the printer price.</p>
-      </div>
-    </section>
-
-    <section class="section tight alt">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow">This season</span>
-          <h2>Deals worth printing for.</h2>
-        </div>
-        <div class="grid grid-3" style="margin-top:34px">
-          <article class="card">
-            <span class="tag">11.11 &middot; 11 Nov only</span>
-            <h3>Extra S$11 off any printer kit</h3>
-            <p>Code <strong>FILO1111</strong> in our Shopee store. Stacks with Shopee vouchers.</p>
-            <p><a href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=promo_1111" target="_blank" rel="noopener">Shop the 11.11 deal &rarr;</a></p>
-          </article>
-          <article class="card">
-            <span class="tag green">School holidays</span>
-            <h3>Free holiday print-along pack</h3>
-            <p>10 extra kids&rsquo; projects with every Family Kit, until 31 Dec.</p>
-            <p><a href="bundles.html">See the Family Kit &rarr;</a></p>
-          </article>
-          <article class="card">
-            <span class="tag">Christmas gifts</span>
-            <h3>Give a printer that prints presents</h3>
-            <p>Filo One kits ship in gift-ready boxes, and December&rsquo;s challenges are all gifts.</p>
-            <p><a href="challenge.html">See the gift challenges &rarr;</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark">
-      <div class="container">
-        <div class="split">
+    <main id="main">
+      <!-- ATTENTION: hero -->
+      <section class="hero">
+        <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Weekly Print Challenge</span>
-            <h2>A new print every Monday.</h2>
-            <p class="lead">Print the week&rsquo;s free model, share a photo and collect a stamp. Stamps add up to free filament, so your printer never sits idle.</p>
+            <span class="eyebrow">Filo One beginner 3D printer</span>
+            <h1>Your first 3D printer. <span>Printing tonight.</span></h1>
+            <p class="lead">
+              Filo One levels itself, prints at up to 300 mm/s and arrives with
+              filament in the box. Unbox it after dinner and print your first
+              model before bed.
+            </p>
+            <p class="hero-price">
+              Filo One <strong>S$349</strong>, or S$379 with 2 kg of filament
+            </p>
             <div class="btn-row">
-              <a class="btn btn-primary" href="challenge.html">See this week&rsquo;s challenge</a>
-              <a class="btn btn-ghost" href="refila.html">How Refila works</a>
+              <a
+                class="btn btn-shopee"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_hero"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo One on Shopee</a
+              >
+              <a class="btn btn-ghost" href="#kits">Compare kits</a>
+            </div>
+            <ul class="badges">
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Filament in the box
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Self-levelling
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> 12-month local warranty
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Price match promise
+              </li>
+            </ul>
+          </div>
+          <div class="hero-art">
+            <div class="blob"></div>
+            <!-- TODO: set width/height to the image's real pixel size.
+                 Export a .webp copy if you can; it loads much faster. -->
+            <img
+              src="assets/filoONE.png"
+              alt="Filo One 3D printer with a spool of caramel PLA+ filament"
+              width="800"
+              height="800"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERCOME DOUBT: what you get vs a typical listing -->
+      <section class="section alt">
+        <div class="container">
+          <span class="eyebrow">Filo One vs a typical beginner printer</span>
+          <h2>Same price range. A lot more in the box.</h2>
+          <div class="table-wrap mt-md">
+            <table>
+              <caption class="sr-only">
+                What comes with a Filo One kit compared with a typical beginner
+                3D printer listing
+              </caption>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th scope="col">Filo One kit</th>
+                  <th scope="col">Typical beginner printer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Filament included</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> 2&ndash;5 kg or 6
+                    mini spools, tuned settings
+                  </td>
+                  <td>Small test sample, if any</td>
+                </tr>
+                <tr>
+                  <th scope="row">Setup</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> Self-levelling,
+                    about 15 minutes
+                  </td>
+                  <td>Manual levelling, often an hour or more</td>
+                </tr>
+                <tr>
+                  <th scope="row">Something to print</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> 10 starter models +
+                    a new one every week
+                  </td>
+                  <td>Find your own files</td>
+                </tr>
+                <tr>
+                  <th scope="row">Running out</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> App reminder +
+                    Refill Plan voucher
+                  </td>
+                  <td>You notice when a print fails</td>
+                </tr>
+                <tr>
+                  <th scope="row">Warranty</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> 12 months, repaired
+                    in Singapore
+                  </td>
+                  <td>Often sent overseas</td>
+                </tr>
+                <tr>
+                  <th scope="row">Scraps and spools</th>
+                  <td>
+                    <span aria-hidden="true">&#10003;</span> Refila take-back
+                    for points
+                  </td>
+                  <td>Thrown away</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small muted mt-sm">
+            Seen a similar self-levelling printer cheaper from a Singapore
+            seller? We&rsquo;ll match it.
+          </p>
+        </div>
+      </section>
+
+      <!-- DESIRE: first month, as four tear-off calendar pages -->
+      <section class="section">
+        <div class="container">
+          <div class="split mb-md">
+            <div>
+              <span class="eyebrow">Your first month with Filo One</span>
+              <h2>Unbox on Friday. Printing every week after.</h2>
+              <p class="lead">
+                Most printers end up in a cupboard. We plan your first month so
+                Filo One never does.
+              </p>
+            </div>
+            <img
+              class="photo"
+              src="assets/img/day1-keychain.webp"
+              alt="A child peeling a freshly printed dinosaur keychain off a flexible build plate"
+              width="1000"
+              height="671"
+              loading="lazy"
+            />
+          </div>
+          <ol class="cal-cards">
+            <li class="cal-card">
+              <p class="cal-card-head">Day</p>
+              <p class="cal-card-num">1</p>
+              <div class="cal-card-body">
+                <h3>Unbox and print</h3>
+                <p>
+                  Load the spool from the box and print a dino keychain in 20
+                  minutes.
+                </p>
+              </div>
+            </li>
+            <li class="cal-card">
+              <p class="cal-card-head">Week</p>
+              <p class="cal-card-num">1</p>
+              <div class="cal-card-body">
+                <h3>Your starter models</h3>
+                <p>
+                  Work through your kit&rsquo;s project pack: pen cup, phone
+                  stand, name tags.
+                </p>
+              </div>
+            </li>
+            <li class="cal-card">
+              <p class="cal-card-head">Weeks</p>
+              <p class="cal-card-num">2&ndash;4</p>
+              <div class="cal-card-body">
+                <h3>A challenge every Monday</h3>
+                <p>
+                  A new <a href="challenge.html">Weekly Challenge</a> drops.
+                  Share your print, collect a stamp.
+                </p>
+              </div>
+            </li>
+            <li class="cal-card">
+              <p class="cal-card-head">Week</p>
+              <p class="cal-card-num">4+</p>
+              <div class="cal-card-body">
+                <h3>Running low</h3>
+                <p>
+                  The Filo app spots it and the
+                  <a href="bundles.html#refill">Refill Plan</a> sends up to 15%
+                  off your next roll.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ACTION: kits -->
+      <section class="section alt" id="kits">
+        <div class="container">
+          <div class="center">
+            <span class="eyebrow">Printer kits</span>
+            <h2>Pick your Filo One kit.</h2>
+            <p class="lead mx-auto">
+              Same printer, different starting filament. Choose the one that
+              matches what you&rsquo;ll make.
+            </p>
+          </div>
+          <div class="grid grid-3 mt-lg">
+            <article class="card bundle">
+              <div class="spools" aria-hidden="true">
+                <i style="background: #ece2d0"></i
+                ><i style="background: #2b2f2e"></i>
+              </div>
+              <span class="tag">New to printing</span>
+              <h3>Starter Kit</h3>
+              <div class="price">S$379</div>
+              <ul>
+                <li>Filo One + 2 kg PLA+</li>
+                <li>10 beginner models</li>
+                <li>Free Refila Bag</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%20starter%20kit&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_starter"
+                target="_blank"
+                rel="noopener"
+                >Get the Starter Kit</a
+              >
+            </article>
+            <!-- Honest label instead of an unbacked "Most popular" claim -->
+            <article class="card bundle popular" data-badge="Best for families">
+              <div class="spools" aria-hidden="true">
+                <i style="background: #c4734f"></i
+                ><i style="background: #cfa57a"></i
+                ><i style="background: #2a6fb0"></i
+                ><i style="background: #a48ad8"></i
+                ><i style="background: #9cb39a"></i
+                ><i style="background: #ece2d0"></i>
+              </div>
+              <span class="tag">Families</span>
+              <h3>Family Kit</h3>
+              <div class="price">S$385</div>
+              <ul>
+                <li>Filo One + 6 mini spools</li>
+                <li>Family project pack</li>
+                <li>Kids&rsquo; safety checklist</li>
+                <li>Free holiday print-along pack until 31 Dec</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%20family%20kit&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_family"
+                target="_blank"
+                rel="noopener"
+                >Get the Family Kit</a
+              >
+            </article>
+            <article class="card bundle">
+              <div class="spools" aria-hidden="true">
+                <i style="background: #2b2f2e"></i
+                ><i style="background: #2b2f2e"></i
+                ><i style="background: #ece2d0"></i
+                ><i style="background: #ece2d0"></i
+                ><i style="background: #2a6fb0"></i>
+              </div>
+              <span class="tag">Frequent makers</span>
+              <h3>Maker Kit</h3>
+              <div class="price">S$429</div>
+              <ul>
+                <li>Filo One + 5 kg PLA+</li>
+                <li>Spare nozzles + calibration set</li>
+                <li>Prepaid Refila return label</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%20maker%20kit&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_maker"
+                target="_blank"
+                rel="noopener"
+                >Get the Maker Kit</a
+              >
+            </article>
+          </div>
+          <p class="center mt-md">
+            Not sure? <a href="guide.html">Take the 2-question Kit Finder</a>
+          </p>
+          <p class="center small muted mt-sm">
+            Every kit ships in a gift-ready box, and December&rsquo;s weekly
+            challenges are all gifts you can print.
+          </p>
+        </div>
+      </section>
+
+      <!-- KEEP GOING: Weekly Challenge -->
+      <section class="section dark">
+        <div class="container">
+          <div class="split">
+            <div>
+              <span class="eyebrow">Weekly Print Challenge</span>
+              <h2>A new print every Monday.</h2>
+              <p class="lead">
+                Print the week&rsquo;s free model, share a photo and collect a
+                stamp. Stamps add up to free filament, so your printer never
+                sits idle.
+              </p>
+              <div class="btn-row">
+                <a class="btn btn-ghost" href="challenge.html"
+                  >See this week&rsquo;s challenge</a
+                >
+              </div>
+              <p class="mt-sm">
+                <a href="refila.html">How the Refila take-back works</a>
+              </p>
+            </div>
+            <div class="stats stats-2">
+              <div class="stat">
+                <strong>Free</strong> <span>250 g mini spool at 4 stamps</span>
+              </div>
+              <div class="stat">
+                <strong>S$12</strong> <span>Shopee voucher at 8 stamps</span>
+              </div>
+              <div class="stat">
+                <strong>1 kg</strong> <span>free roll at 12 stamps</span>
+              </div>
+              <div class="stat">
+                <strong>S$1.25</strong>
+                <span>back per kg of scraps with Refila</span>
+              </div>
             </div>
           </div>
-          <div class="stats" style="grid-template-columns:1fr 1fr">
-            <div class="stat"><strong>Free</strong>250 g mini spool at 4 stamps</div>
-            <div class="stat"><strong>S$12</strong>Shopee voucher at 8 stamps</div>
-            <div class="stat"><strong>1 kg</strong>free roll at 12 stamps</div>
-            <div class="stat"><strong>S$1.25</strong>back per kg of scraps with Refila</div>
+        </div>
+      </section>
+
+      <!-- OBJECTIONS: buying FAQ (technical questions live on printer.html) -->
+      <section class="section" id="faq">
+        <div class="container faq-wrap">
+          <div class="center">
+            <span class="eyebrow">Questions before you buy</span>
+            <h2>Buying a Filo One: your questions.</h2>
+          </div>
+          <div class="faq mt-lg">
+            <details>
+              <summary>Should I buy the printer on its own or a kit?</summary>
+              <div>
+                <p>
+                  Filo One on its own is S$349. Kits cost S$379 to S$429 and add
+                  filament and project files, which works out cheaper than
+                  buying them separately. Not sure which kit? The
+                  <a href="guide.html">2-question Kit Finder</a> will pick one
+                  for you.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What comes in a Filo One kit?</summary>
+              <div>
+                <p>
+                  Every kit has the Filo One printer, Filo PLA+ filament with
+                  tuned settings and a pack of tested project files. The Starter
+                  and Maker Kits also include a Refila Bag for your scraps.
+                  <a href="bundles.html">Compare the kits</a>.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Do I need to join Filo Club?</summary>
+              <div>
+                <p>
+                  Not to buy a printer. Filo Club is free and gets you the
+                  Weekly Challenge files, a stamp card, a S$3 Shopee voucher and
+                  the optional Refill Plan.
+                  <a href="join.html">Join in a minute</a>.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What is Refila?</summary>
+              <div>
+                <p>
+                  Our take-back partner. Fill a Refila Bag with PLA scraps and
+                  empty spools, send it back, and earn Filo Points: about S$1.25
+                  back per kg of scraps.
+                  <a href="refila.html">See how Refila works</a>.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Why do you sell on Shopee?</summary>
+              <div>
+                <p>
+                  Shopee gives you a familiar checkout, SPayLater, buyer
+                  protection and Shopee vouchers that stack with our own codes.
+                  If you see a similar self-levelling printer cheaper in a
+                  Singapore Shopee store, message us before buying and
+                  we&rsquo;ll match the printer price.
+                </p>
+              </div>
+            </details>
+          </div>
+          <p class="small muted mt-sm">
+            Questions about noise, print size or filament? See the
+            <a href="printer.html#specs">Filo One printer page</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="section tight">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2>Get Filo One. Print tonight.</h2>
+              <p>
+                From S$349 with a 12-month local warranty. Kits ship with
+                filament, so your first print starts the day it arrives.
+              </p>
+            </div>
+            <div class="btn-row">
+              <a
+                class="btn btn-light"
+                href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo One on Shopee</a
+              >
+              <a class="btn btn-ghost" href="#kits">Compare kits</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="section tight">
+    <footer class="site-footer">
       <div class="container">
-        <div class="cta-banner">
+        <div class="footer-grid">
           <div>
-            <h2 style="margin-bottom:.3em">Get Filo One. Print tonight.</h2>
-            <p>From S$349 with a 12-month local warranty. Every kit ships with filament, so your first print starts the day it arrives.</p>
+            <a class="logo" href="index.html" aria-label="Filo Print home"
+              ><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark">
+                <rect
+                  x="5"
+                  y="5"
+                  width="38"
+                  height="38"
+                  rx="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.6"
+                />
+                <path
+                  d="M11 15h26"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />
+                <rect
+                  x="19"
+                  y="11"
+                  width="10"
+                  height="8.5"
+                  rx="2"
+                  fill="currentColor"
+                />
+                <path d="M22 19.5h4l-2 3z" fill="currentColor" />
+                <rect
+                  x="19.5"
+                  y="24"
+                  width="9"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <rect
+                  x="16.5"
+                  y="28"
+                  width="15"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <rect
+                  x="15"
+                  y="32"
+                  width="18"
+                  height="2.8"
+                  rx="1"
+                  fill="var(--brand-text)"
+                />
+                <path
+                  d="M10.5 37.5h27"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                /></svg
+              >Filo<span class="logo-sub">Print</span></a
+            >
+            <p>
+              Filo One: the beginner 3D printer that arrives with filament in
+              the box. Then PLA+ refills, a new project every week and a
+              take-back scheme for your scraps. Print more. Waste less.
+            </p>
+            <a
+              class="btn btn-shopee btn-sm mt-md"
+              href="https://https://shopee.sg/product/881733363/52055703982??keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
+              target="_blank"
+              rel="noopener"
+              >Buy Filo One on Shopee</a
+            >
           </div>
-          <div class="btn-row" style="margin-top:0">
-            <a class="btn btn-light" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
-            <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+          <div>
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="printer.html">Filo One printer</a></li>
+              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="product.html">PLA+ refills</a></li>
+              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Make &amp; Refila</h4>
+            <ul>
+              <li><a href="challenge.html">Weekly Print Challenge</a></li>
+              <li><a href="projects.html">Projects &amp; free models</a></li>
+              <li><a href="refila.html">Refila take-back</a></li>
+              <li><a href="rewards.html">Filo Rewards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">Our story</a></li>
+              <li><a href="join.html">Join / Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
+              <li><a href="team.html">Project team</a></li>
+            </ul>
           </div>
         </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Filo Print. All rights reserved.</span>
+          <span
+            ><a href="privacy.html">Privacy</a> &middot;
+            <a href="team.html">Team</a></span
+          >
+        </div>
+        <p class="notice">
+          Filo Print, Filo One and Refila are student concept brands created for
+          an NTU web design project. Shopee is a trademark of its respective
+          owner; checkout links open a Shopee Singapore search, not a real
+          product listing.
+        </p>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="logo" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true" class="logo-mark"><rect x="5" y="5" width="38" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M11 15h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="19" y="11" width="10" height="8.5" rx="2" fill="currentColor"/><path d="M22 19.5h4l-2 3z" fill="currentColor"/><rect x="19.5" y="24" width="9" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="16.5" y="28" width="15" height="2.8" rx="1" fill="var(--brand-text)"/><rect x="15" y="32" width="18" height="2.8" rx="1" fill="var(--brand-text)"/><path d="M10.5 37.5h27" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Filo<span class="logo-sub">Print</span></a>
-          <p>Filo One: the beginner 3D printer that arrives with filament in the box. Then PLA+ refills, a new project every week and a take-back scheme for your scraps. Print more. Waste less.</p>
-          <a class="btn btn-shopee btn-sm" style="margin-top:18px" href="https://shopee.sg/-SG-Stock-Bambu-Lab-PLA-Matte-Filament-i.1197709433.26586945916?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noopener">Buy Filo One on Shopee</a>
-        </div>
-        <div>
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="printer.html">Filo One printer</a></li>
-            <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
-            <li><a href="product.html">PLA+ refills</a></li>
-            <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Make &amp; Refila</h4>
-          <ul>
-            <li><a href="challenge.html">Weekly Print Challenge</a></li>
-            <li><a href="projects.html">Projects &amp; free models</a></li>
-            <li><a href="refila.html">Refila take-back</a></li>
-            <li><a href="rewards.html">Filo Rewards</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">Our story</a></li>
-            <li><a href="join.html">Join / Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy (PDPA)</a></li>
-            <li><a href="team.html">Project team</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Filo Print. All rights reserved.</span>
-        <span><a href="privacy.html">Privacy</a> &middot; <a href="team.html">Team</a></span>
-      </div>
-      <p class="notice">Filo Print, Filo One and Refila are student concept brands created for an NTU web design project. Shopee is a trademark of its respective owner; checkout links open Shopee Singapore.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
