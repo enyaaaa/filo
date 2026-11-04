@@ -146,7 +146,6 @@
     <main id="main">
       <section class="page-hero">
         <div class="container center">
-          <p class="breadcrumb"><a href="index.html">Home</a> / Kits</p>
           <span class="eyebrow">Printer kits &amp; Refill Plan</span>
           <h1>Pick a kit, not a puzzle.</h1>
           <p class="lead">
@@ -293,55 +292,74 @@
         </p>
       </section>
 
-      <section class="section alt" id="refill">
+      <section class="section alt refill-plan" id="refill">
         <div class="container">
-          <div class="split">
-            <div>
-              <span class="eyebrow">The Refill Plan &middot; free to join</span>
-              <h2>Never run out. Pay less every time you don&rsquo;t.</h2>
-              <p class="lead">
-                Choose how much you print each month. When your spool runs low,
-                we send a private voucher so your next roll costs less.
-              </p>
-              <ol class="checklist" style="list-style: none">
-                <li>
-                  Pick a plan when you join Filo Club (you can change it any
-                  time).
-                </li>
-                <li>
-                  The Filo app tracks what&rsquo;s left on your spool and tells
-                  us when you&rsquo;re low.
-                </li>
-                <li>
-                  We email your Refill voucher. Reorder in our Shopee store in a
-                  few taps.
-                </li>
-                <li>
-                  Skip a month or stop whenever you like. No card stored, no
-                  lock-in.
-                </li>
-              </ol>
-            </div>
-            <div class="grid" style="gap: 16px">
-              <div class="card tier">
-                <div class="num">10%</div>
-                <h3>Weekend plan</h3>
-                <p>1 kg a month, for a few prints a week</p>
-              </div>
-              <div class="card tier feature">
-                <div class="num" style="color: var(--amber)">12%</div>
-                <h3>Weekly plan</h3>
-                <p>2 kg a month, for the Weekly Challenge and more</p>
-              </div>
-              <div class="card tier">
-                <div class="num">15%</div>
-                <h3>Maker plan</h3>
-                <p>A 5 kg Maker Pack a month, with double Filo Points</p>
-              </div>
-            </div>
+          <div class="center">
+            <span class="eyebrow">The Refill Plan &middot; free to join</span>
+            <h2>Never run out. Pay less every time you don&rsquo;t.</h2>
+            <p class="lead mx-auto">
+              Choose how much you print each month. When your spool runs low, we
+              send a private voucher so your next roll costs less.
+            </p>
           </div>
-          <p class="center" style="margin-top: 28px">
-            <a class="btn btn-primary" href="join.html">Join the Refill Plan</a>
+
+          <ol class="refill-steps">
+            <li>
+              <strong>Pick a plan</strong>
+              <span>When you join Filo Club. Change it any time.</span>
+            </li>
+            <li>
+              <strong>We watch your spool</strong>
+              <span>The Filo app tells us when you&rsquo;re running low.</span>
+            </li>
+            <li>
+              <strong>Get your voucher</strong>
+              <span>We email it. Reorder on Shopee in a few taps.</span>
+            </li>
+            <li>
+              <strong>Skip or stop</strong>
+              <span>Whenever you like. No card stored, no lock-in.</span>
+            </li>
+          </ol>
+
+          <div class="plan-grid">
+            <article class="plan-card">
+              <h3>Weekend plan</h3>
+              <p class="plan-pct"><strong>10%</strong> off every refill</p>
+              <ul class="plan-facts">
+                <li><span>Refills</span> 1 kg a month</li>
+                <li><span>Best for</span> A few prints a week</li>
+                <li><span>You save</span> about S$2.30 a month</li>
+              </ul>
+              <a class="btn btn-ghost" href="join.html">Choose Weekend</a>
+            </article>
+            <article class="plan-card featured">
+              <span class="plan-badge">Most popular</span>
+              <h3>Weekly plan</h3>
+              <p class="plan-pct"><strong>12%</strong> off every refill</p>
+              <ul class="plan-facts">
+                <li><span>Refills</span> 2 kg a month</li>
+                <li><span>Best for</span> The Weekly Challenge and more</li>
+                <li><span>You save</span> about S$5.50 a month</li>
+              </ul>
+              <a class="btn btn-primary" href="join.html">Choose Weekly</a>
+            </article>
+            <article class="plan-card">
+              <h3>Maker plan</h3>
+              <p class="plan-pct"><strong>15%</strong> off every refill</p>
+              <ul class="plan-facts">
+                <li><span>Refills</span> A 5 kg Maker Pack a month</li>
+                <li><span>Best for</span> Printers that rarely sit idle</li>
+                <li>
+                  <span>You save</span> about S$14 a month, plus double Filo
+                  Points
+                </li>
+              </ul>
+              <a class="btn btn-ghost" href="join.html">Choose Maker</a>
+            </article>
+          </div>
+          <p class="center small muted mt-md">
+            Savings based on S$22.90 per 1 kg roll and S$94.90 per Maker Pack.
           </p>
         </div>
       </section>

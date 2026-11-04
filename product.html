@@ -147,9 +147,6 @@
 
     <main id="main">
       <section class="page-hero">
-        <div class="container">
-          <p class="breadcrumb"><a href="index.html">Home</a> / Refills</p>
-        </div>
         <div class="container picker product-grid">
           <div class="product-stage">
             <div class="stage-bar">
@@ -234,40 +231,53 @@
                 aria-label="Filo PLA+ 1 kg spool in the selected colour"
               >
                 <defs>
-                  <linearGradient id="sp-kraft" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#dcc39c" />
-                    <stop offset="1" stop-color="#b8915f" />
+                  <linearGradient id="sp-plastic" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#4f4841" />
+                    <stop offset="0.55" stop-color="#2a2622" />
+                    <stop offset="1" stop-color="#171513" />
                   </linearGradient>
-                  <linearGradient id="sp-kraftDark" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#b8915f" />
-                    <stop offset="1" stop-color="#8f6c42" />
+                  <linearGradient id="sp-band" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#000" stop-opacity="0.45" />
+                    <stop offset="0.6" stop-color="#000" stop-opacity="0.12" />
+                    <stop offset="1" stop-color="#000" stop-opacity="0.25" />
                   </linearGradient>
-                  <linearGradient id="sp-sheen" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#fff" stop-opacity=".38" />
-                    <stop offset=".45" stop-color="#fff" stop-opacity="0" />
-                    <stop offset="1" stop-color="#000" stop-opacity=".28" />
+                  <radialGradient id="sp-depth" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0.36" stop-color="#000" stop-opacity="0.28" />
+                    <stop offset="0.62" stop-color="#000" stop-opacity="0.02" />
+                    <stop offset="0.97" stop-color="#000" stop-opacity="0.12" />
+                    <stop offset="1" stop-color="#000" stop-opacity="0.3" />
+                  </radialGradient>
+                  <radialGradient id="sp-light" cx="0.3" cy="0.25" r="0.6">
+                    <stop offset="0" stop-color="#fff" stop-opacity="0.22" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="sp-shine" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0.1" stop-color="#fff" stop-opacity="0.45" />
+                    <stop offset="0.45" stop-color="#fff" stop-opacity="0" />
+                    <stop offset="0.75" stop-color="#fff" stop-opacity="0.25" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
                   </linearGradient>
-                  <filter id="sp-paper" x="0" y="0" width="100%" height="100%">
+                  <linearGradient id="sp-glass" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff" stop-opacity="0.16" />
+                    <stop offset="0.5" stop-color="#fff" stop-opacity="0.02" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0.08" />
+                  </linearGradient>
+                  <radialGradient id="sp-hole" cx="0.35" cy="0.5" r="0.6">
+                    <stop offset="0" stop-color="#0b0a09" />
+                    <stop offset="1" stop-color="#2b2723" />
+                  </radialGradient>
+                  <filter id="sp-grain" x="0" y="0" width="100%" height="100%">
                     <feTurbulence
                       type="fractalNoise"
-                      baseFrequency=".9"
+                      baseFrequency="1.1"
                       numOctaves="2"
-                      seed="4"
+                      seed="7"
                     />
                     <feColorMatrix
-                      values="0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .22 0"
+                      values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.09 0"
                     />
                     <feComposite in2="SourceGraphic" operator="in" />
                     <feBlend in="SourceGraphic" mode="multiply" />
-                  </filter>
-                  <filter
-                    id="sp-edge"
-                    x="-20%"
-                    y="-20%"
-                    width="140%"
-                    height="140%"
-                  >
-                    <feGaussianBlur stdDeviation="2.5" />
                   </filter>
                   <filter
                     id="sp-soft"
@@ -276,286 +286,180 @@
                     width="200%"
                     height="500%"
                   >
-                    <feGaussianBlur stdDeviation="10" />
+                    <feGaussianBlur stdDeviation="9" />
                   </filter>
-                  <mask id="sp-winMask">
-                    <g
-                      fill="#fff"
-                      stroke="#fff"
-                      stroke-width="10"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M217.8 50.8A146 146 0 0 1 308.5 103.1L244.7 154.7A64 64 0 0 0 205.0 131.8Z"
-                      />
-                      <path
-                        d="M331.3 142.7A146 146 0 0 1 331.3 247.3L254.7 217.9A64 64 0 0 0 254.7 172.1Z"
-                      />
-                      <path
-                        d="M308.5 286.9A146 146 0 0 1 217.8 339.2L205.0 258.2A64 64 0 0 0 244.7 235.3Z"
-                      />
-                      <path
-                        d="M172.2 339.2A146 146 0 0 1 81.5 286.9L145.3 235.3A64 64 0 0 0 185.0 258.2Z"
-                      />
-                      <path
-                        d="M58.7 247.3A146 146 0 0 1 58.7 142.7L135.3 172.1A64 64 0 0 0 135.3 217.9Z"
-                      />
-                      <path
-                        d="M81.5 103.1A146 146 0 0 1 172.2 50.8L185.0 131.8A64 64 0 0 0 145.3 154.7Z"
-                      />
-                    </g>
-                  </mask>
-                  <mask id="sp-flangeCut">
-                    <circle cx="195" cy="195" r="170" fill="#fff" />
-                    <g
-                      fill="#000"
-                      stroke="#000"
-                      stroke-width="10"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M217.8 50.8A146 146 0 0 1 308.5 103.1L244.7 154.7A64 64 0 0 0 205.0 131.8Z"
-                      />
-                      <path
-                        d="M331.3 142.7A146 146 0 0 1 331.3 247.3L254.7 217.9A64 64 0 0 0 254.7 172.1Z"
-                      />
-                      <path
-                        d="M308.5 286.9A146 146 0 0 1 217.8 339.2L205.0 258.2A64 64 0 0 0 244.7 235.3Z"
-                      />
-                      <path
-                        d="M172.2 339.2A146 146 0 0 1 81.5 286.9L145.3 235.3A64 64 0 0 0 185.0 258.2Z"
-                      />
-                      <path
-                        d="M58.7 247.3A146 146 0 0 1 58.7 142.7L135.3 172.1A64 64 0 0 0 135.3 217.9Z"
-                      />
-                      <path
-                        d="M81.5 103.1A146 146 0 0 1 172.2 50.8L185.0 131.8A64 64 0 0 0 145.3 154.7Z"
-                      />
-                    </g>
-                    <circle cx="195" cy="195" r="30" fill="#000" />
-                  </mask>
                 </defs>
 
                 <!-- shadow on the table -->
                 <ellipse
-                  cx="217"
-                  cy="379"
+                  cx="223"
+                  cy="372"
                   rx="150"
-                  ry="16"
+                  ry="13"
                   fill="#000"
-                  opacity=".22"
+                  opacity="0.24"
                   filter="url(#sp-soft)"
                 />
 
-                <!-- back flange -->
-                <circle cx="221" cy="221" r="170" fill="url(#sp-kraftDark)" />
-
-                <!-- filament wound between the flanges (side view) -->
-                <g class="fil-fill">
-                  <circle cx="199" cy="199" r="158" />
-                  <circle cx="201" cy="201" r="158" />
-                  <circle cx="203" cy="203" r="158" />
-                  <circle cx="205" cy="205" r="158" />
-                  <circle cx="207" cy="207" r="158" />
-                  <circle cx="209" cy="209" r="158" />
-                  <circle cx="211" cy="211" r="158" />
-                  <circle cx="213" cy="213" r="158" />
-                  <circle cx="215" cy="215" r="158" />
-                  <circle cx="217" cy="217" r="158" />
-                  <circle cx="219" cy="219" r="158" />
-                </g>
-                <g opacity=".28" fill="#000">
-                  <circle cx="199" cy="199" r="158" />
-                  <circle cx="201" cy="201" r="158" />
-                  <circle cx="203" cy="203" r="158" />
-                  <circle cx="205" cy="205" r="158" />
-                  <circle cx="207" cy="207" r="158" />
-                  <circle cx="209" cy="209" r="158" />
-                  <circle cx="211" cy="211" r="158" />
-                  <circle cx="213" cy="213" r="158" />
-                  <circle cx="215" cy="215" r="158" />
-                  <circle cx="217" cy="217" r="158" />
-                  <circle cx="219" cy="219" r="158" />
+                <!-- back flange (clear plastic with a dark rim) -->
+                <g transform="translate(202 195) scale(0.82 1)">
+                  <circle r="165" fill="#3a352f" opacity="0.4" />
+                  <circle
+                    r="160"
+                    fill="none"
+                    stroke="url(#sp-plastic)"
+                    stroke-width="10"
+                  />
                 </g>
 
-                <!-- front flange thickness -->
-                <circle cx="199" cy="199" r="170" fill="url(#sp-kraftDark)" />
+                <!-- side of the wound filament -->
+                <g class="fil-fill" filter="url(#sp-grain)">
+                  <ellipse cx="206" cy="195" rx="123.0" ry="150" />
+                  <path
+                    d="M206 45 L244 45 A123.0 150 0 0 0 244 345 L206 345 Z"
+                  />
+                </g>
+                <path
+                  d="M206 45 L244 45 A123.0 150 0 0 0 244 345 L206 345 A123.0 150 0 0 1 206 45 Z"
+                  fill="url(#sp-band)"
+                />
+                <g
+                  fill="none"
+                  stroke="#000"
+                  stroke-opacity="0.13"
+                  stroke-width="1"
+                >
+                  <path d="M204.3 45 A123.0 150 0 0 0 204.3 345" />
+                  <path d="M206.7 45 A123.0 150 0 0 0 206.7 345" />
+                  <path d="M209.0 45 A123.0 150 0 0 0 209.0 345" />
+                  <path d="M211.3 45 A123.0 150 0 0 0 211.3 345" />
+                  <path d="M213.7 45 A123.0 150 0 0 0 213.7 345" />
+                  <path d="M216.0 45 A123.0 150 0 0 0 216.0 345" />
+                  <path d="M218.3 45 A123.0 150 0 0 0 218.3 345" />
+                  <path d="M220.7 45 A123.0 150 0 0 0 220.7 345" />
+                  <path d="M223.0 45 A123.0 150 0 0 0 223.0 345" />
+                  <path d="M225.3 45 A123.0 150 0 0 0 225.3 345" />
+                  <path d="M227.7 45 A123.0 150 0 0 0 227.7 345" />
+                  <path d="M230.0 45 A123.0 150 0 0 0 230.0 345" />
+                  <path d="M232.3 45 A123.0 150 0 0 0 232.3 345" />
+                  <path d="M234.7 45 A123.0 150 0 0 0 234.7 345" />
+                  <path d="M237.0 45 A123.0 150 0 0 0 237.0 345" />
+                  <path d="M239.3 45 A123.0 150 0 0 0 239.3 345" />
+                  <path d="M241.7 45 A123.0 150 0 0 0 241.7 345" />
+                </g>
 
-                <g class="spin face">
-                  <!-- filament face seen through the windows -->
-                  <circle class="fil-fill" cx="195" cy="195" r="158" />
+                <!-- front face -->
+                <g class="face" transform="translate(244 195) scale(0.82 1)">
+                  <!-- flange edge thickness -->
+                  <circle cx="-7" r="165" fill="#1a1714" />
+                  <!-- filament face -->
+                  <circle class="fil-fill" r="150" filter="url(#sp-grain)" />
+                  <circle r="150" fill="url(#sp-depth)" />
                   <g
                     fill="none"
                     stroke="#000"
-                    stroke-opacity=".14"
-                    stroke-width="1.2"
+                    stroke-opacity="0.09"
+                    stroke-width="1"
                   >
-                    <circle cx="195" cy="195" r="56" />
-                    <circle cx="195" cy="195" r="59" />
-                    <circle cx="195" cy="195" r="62" />
-                    <circle cx="195" cy="195" r="65" />
-                    <circle cx="195" cy="195" r="68" />
-                    <circle cx="195" cy="195" r="71" />
-                    <circle cx="195" cy="195" r="74" />
-                    <circle cx="195" cy="195" r="77" />
-                    <circle cx="195" cy="195" r="80" />
-                    <circle cx="195" cy="195" r="83" />
-                    <circle cx="195" cy="195" r="86" />
-                    <circle cx="195" cy="195" r="89" />
-                    <circle cx="195" cy="195" r="92" />
-                    <circle cx="195" cy="195" r="95" />
-                    <circle cx="195" cy="195" r="98" />
-                    <circle cx="195" cy="195" r="101" />
-                    <circle cx="195" cy="195" r="104" />
-                    <circle cx="195" cy="195" r="107" />
-                    <circle cx="195" cy="195" r="110" />
-                    <circle cx="195" cy="195" r="113" />
-                    <circle cx="195" cy="195" r="116" />
-                    <circle cx="195" cy="195" r="119" />
-                    <circle cx="195" cy="195" r="122" />
-                    <circle cx="195" cy="195" r="125" />
-                    <circle cx="195" cy="195" r="128" />
-                    <circle cx="195" cy="195" r="131" />
-                    <circle cx="195" cy="195" r="134" />
-                    <circle cx="195" cy="195" r="137" />
-                    <circle cx="195" cy="195" r="140" />
-                    <circle cx="195" cy="195" r="143" />
-                    <circle cx="195" cy="195" r="146" />
-                    <circle cx="195" cy="195" r="149" />
-                    <circle cx="195" cy="195" r="152" />
-                    <circle cx="195" cy="195" r="155" />
+                    <circle r="56.0" />
+                    <circle r="58.6" />
+                    <circle r="61.2" />
+                    <circle r="63.8" />
+                    <circle r="66.4" />
+                    <circle r="69.0" />
+                    <circle r="71.6" />
+                    <circle r="74.2" />
+                    <circle r="76.8" />
+                    <circle r="79.4" />
+                    <circle r="82.0" />
+                    <circle r="84.6" />
+                    <circle r="87.2" />
+                    <circle r="89.8" />
+                    <circle r="92.4" />
+                    <circle r="95.0" />
+                    <circle r="97.6" />
+                    <circle r="100.2" />
+                    <circle r="102.8" />
+                    <circle r="105.4" />
+                    <circle r="108.0" />
+                    <circle r="110.6" />
+                    <circle r="113.2" />
+                    <circle r="115.8" />
+                    <circle r="118.4" />
+                    <circle r="121.0" />
+                    <circle r="123.6" />
+                    <circle r="126.2" />
+                    <circle r="128.8" />
+                    <circle r="131.4" />
+                    <circle r="134.0" />
+                    <circle r="136.6" />
+                    <circle r="139.2" />
+                    <circle r="141.8" />
+                    <circle r="144.4" />
+                    <circle r="147.0" />
                   </g>
-                  <g
-                    fill="none"
-                    stroke="#fff"
-                    stroke-opacity=".12"
-                    stroke-width=".8"
-                    transform="translate(.9 .9)"
-                  >
-                    <circle cx="195" cy="195" r="56" />
-                    <circle cx="195" cy="195" r="59" />
-                    <circle cx="195" cy="195" r="62" />
-                    <circle cx="195" cy="195" r="65" />
-                    <circle cx="195" cy="195" r="68" />
-                    <circle cx="195" cy="195" r="71" />
-                    <circle cx="195" cy="195" r="74" />
-                    <circle cx="195" cy="195" r="77" />
-                    <circle cx="195" cy="195" r="80" />
-                    <circle cx="195" cy="195" r="83" />
-                    <circle cx="195" cy="195" r="86" />
-                    <circle cx="195" cy="195" r="89" />
-                    <circle cx="195" cy="195" r="92" />
-                    <circle cx="195" cy="195" r="95" />
-                    <circle cx="195" cy="195" r="98" />
-                    <circle cx="195" cy="195" r="101" />
-                    <circle cx="195" cy="195" r="104" />
-                    <circle cx="195" cy="195" r="107" />
-                    <circle cx="195" cy="195" r="110" />
-                    <circle cx="195" cy="195" r="113" />
-                    <circle cx="195" cy="195" r="116" />
-                    <circle cx="195" cy="195" r="119" />
-                    <circle cx="195" cy="195" r="122" />
-                    <circle cx="195" cy="195" r="125" />
-                    <circle cx="195" cy="195" r="128" />
-                    <circle cx="195" cy="195" r="131" />
-                    <circle cx="195" cy="195" r="134" />
-                    <circle cx="195" cy="195" r="137" />
-                    <circle cx="195" cy="195" r="140" />
-                    <circle cx="195" cy="195" r="143" />
-                    <circle cx="195" cy="195" r="146" />
-                    <circle cx="195" cy="195" r="149" />
-                    <circle cx="195" cy="195" r="152" />
-                    <circle cx="195" cy="195" r="155" />
-                  </g>
+                  <circle r="150" fill="url(#sp-light)" />
                   <circle
                     class="sheen"
-                    opacity=".75"
-                    cx="195"
-                    cy="195"
-                    r="158"
-                    fill="url(#sp-sheen)"
+                    r="150"
+                    fill="url(#sp-shine)"
+                    opacity="0"
                   />
 
-                  <!-- shadow the flange casts into each window -->
-                  <g mask="url(#sp-winMask)">
-                    <g
-                      fill="none"
-                      stroke="#000"
-                      stroke-opacity=".35"
-                      stroke-width="14"
-                      stroke-linejoin="round"
-                      transform="translate(6 7)"
-                      filter="url(#sp-edge)"
-                    >
-                      <path
-                        d="M217.8 50.8A146 146 0 0 1 308.5 103.1L244.7 154.7A64 64 0 0 0 205.0 131.8Z"
-                      />
-                      <path
-                        d="M331.3 142.7A146 146 0 0 1 331.3 247.3L254.7 217.9A64 64 0 0 0 254.7 172.1Z"
-                      />
-                      <path
-                        d="M308.5 286.9A146 146 0 0 1 217.8 339.2L205.0 258.2A64 64 0 0 0 244.7 235.3Z"
-                      />
-                      <path
-                        d="M172.2 339.2A146 146 0 0 1 81.5 286.9L145.3 235.3A64 64 0 0 0 185.0 258.2Z"
-                      />
-                      <path
-                        d="M58.7 247.3A146 146 0 0 1 58.7 142.7L135.3 172.1A64 64 0 0 0 135.3 217.9Z"
-                      />
-                      <path
-                        d="M81.5 103.1A146 146 0 0 1 172.2 50.8L185.0 131.8A64 64 0 0 0 145.3 154.7Z"
-                      />
-                    </g>
-                  </g>
-                  <!-- kraft cardboard flange with six windows -->
-                  <g mask="url(#sp-flangeCut)">
-                    <circle
-                      cx="195"
-                      cy="195"
-                      r="170"
-                      fill="url(#sp-kraft)"
-                      filter="url(#sp-paper)"
-                    />
-                    <circle
-                      cx="195"
-                      cy="195"
-                      r="164"
-                      fill="none"
-                      stroke="#8f6c42"
-                      stroke-opacity=".35"
-                      stroke-width="1.5"
-                    />
-                    <circle
-                      cx="195"
-                      cy="195"
-                      r="52"
-                      fill="none"
-                      stroke="#8f6c42"
-                      stroke-opacity=".35"
-                      stroke-width="1.5"
-                    />
-                  </g>
-                  <!-- hub hole -->
+                  <!-- hub tube -->
+                  <circle r="56" fill="url(#sp-plastic)" />
                   <circle
-                    cx="195"
-                    cy="195"
-                    r="30"
-                    fill="#3a2c1c"
-                    opacity=".55"
+                    r="48"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-opacity="0.1"
+                    stroke-width="2"
                   />
-                  <circle cx="200" cy="200" r="26" fill="#000" opacity=".35" />
-                  <!-- small hole that holds the filament end -->
-                  <circle cx="195" cy="39" r="4" fill="#3a2c1c" opacity=".7" />
-                </g>
+                  <circle r="23" fill="url(#sp-hole)" />
+                  <path
+                    d="M-23 0 A23 23 0 0 1 23 0 A17 23 0 0 0 -11 0 Z"
+                    fill="#fff"
+                    opacity="0.06"
+                  />
 
-                <!-- loose filament end -->
-                <path
-                  class="fil-stroke"
-                  d="M315 300 C 370 345, 385 395, 345 410"
-                  fill="none"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
+                  <!-- clear front flange: tint, rim and a highlight -->
+                  <circle r="165" fill="url(#sp-glass)" />
+                  <circle
+                    r="160"
+                    fill="none"
+                    stroke="url(#sp-plastic)"
+                    stroke-width="10"
+                  />
+                  <circle
+                    r="165"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-opacity="0.22"
+                    stroke-width="1.2"
+                  />
+                  <circle
+                    r="154"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-opacity="0.22"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    pathLength="100"
+                    stroke-dasharray="11 89"
+                    stroke-dashoffset="-56"
+                  />
+                  <circle
+                    r="154"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-opacity="0.18"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    pathLength="100"
+                    stroke-dasharray="4 96"
+                    stroke-dashoffset="-70"
+                  />
+                </g>
               </svg>
             </div>
             <p class="stage-caption mono">

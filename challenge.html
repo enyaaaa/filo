@@ -143,25 +143,31 @@
     </header>
 
     <main id="main">
-      <section class="page-hero">
-        <div class="container center">
-          <p class="breadcrumb"><a href="index.html">Home</a> / Challenge</p>
-          <span class="eyebrow">Weekly Print Challenge</span>
-          <h1>A new print every Monday. A stamp every Sunday.</h1>
-          <p class="lead">
-            Every week we release one free, tested model. Print it, share a
-            photo by Sunday and collect a stamp. Stamps add up to free filament.
-          </p>
+      <section class="page-hero chal-hero">
+        <div class="container chal-hero-grid">
+          <div>
+            <span class="eyebrow">Weekly Print Challenge</span>
+            <h1>A new print every Monday. A stamp every Sunday.</h1>
+            <p class="lead">
+              Every week we release one free, tested model. Print it, share a
+              photo by Sunday and collect a stamp. Stamps add up to free
+              filament.
+            </p>
+          </div>
+          <div class="chal-hero-art" aria-hidden="true">
+            <div class="mini-card back"></div>
+            <div class="mini-card">
+              <i class="on"></i><i class="on"></i><i class="on"></i
+              ><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i
+              ><i></i><i></i><i></i>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section alt" style="padding-top: 20px">
-        <div class="container split">
-          <a
-            class="card project"
-            href="join.html"
-            style="text-decoration: none; color: inherit"
-          >
+      <section class="section alt chal-week">
+        <div class="container week-feature">
+          <a class="week-photo" href="join.html">
             <div class="thumb">
               <img
                 src="assets/img/challenge-cable-tidy.webp"
@@ -171,7 +177,7 @@
                 loading="lazy"
               />
             </div>
-            <div class="body">
+            <div class="week-photo-caption">
               <span class="tag green">This week &middot; Week 46</span>
               <h3>Desk cable tidy</h3>
               <p class="muted">
@@ -183,7 +189,7 @@
               </p>
             </div>
           </a>
-          <div>
+          <div class="week-copy">
             <span class="eyebrow">9&ndash;15 November</span>
             <h2>This week: tidy one desk.</h2>
             <p class="lead">
@@ -199,7 +205,7 @@
                 >Browse past challenges</a
               >
             </div>
-            <p class="small muted" style="margin-top: 14px">
+            <p class="small muted mt-sm">
               Files are free for Filo Club members. Joining takes a minute.
             </p>
           </div>
@@ -210,7 +216,7 @@
         <div class="container">
           <span class="eyebrow">How it works</span>
           <h2>Four steps, every week.</h2>
-          <div class="steps" style="margin-top: 28px">
+          <div class="steps chal-steps">
             <div class="step">
               <h3>Download</h3>
               <p>
@@ -240,7 +246,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section chal-card-section">
         <div class="container">
           <span class="eyebrow">Your stamp card</span>
           <h2>12 stamps. Three rewards on the way.</h2>
@@ -254,27 +260,27 @@
             ><i class="prize"><b>8</b></i> <i></i><i></i><i></i
             ><i class="prize"><b>12</b></i>
           </div>
-          <div class="grid grid-3" style="margin-top: 28px">
+          <div class="chal-rewards">
             <div class="card tier">
               <div class="num">4</div>
               <p>stamps</p>
-              <h3 style="margin-top: 12px">Free 250 g mini spool</h3>
+              <h3>Free 250 g mini spool</h3>
               <p>Any colour, so you can keep the streak going</p>
             </div>
             <div class="card tier feature">
-              <div class="num" style="color: var(--amber)">8</div>
+              <div class="num">8</div>
               <p>stamps</p>
-              <h3 style="margin-top: 12px">S$12 Shopee voucher</h3>
+              <h3>S$12 Shopee voucher</h3>
               <p>For any refill in the Filo Shopee store</p>
             </div>
             <div class="card tier">
               <div class="num">12</div>
               <p>stamps</p>
-              <h3 style="margin-top: 12px">Free 1 kg roll</h3>
+              <h3>Free 1 kg roll</h3>
               <p>Then your card starts again</p>
             </div>
           </div>
-          <p class="center small muted" style="margin-top: 18px">
+          <p class="center small muted mt-md">
             Stamps don&rsquo;t expire. The best print each month is featured on
             our site and earns an extra 30 Filo Points.
           </p>
@@ -285,35 +291,37 @@
         <div class="container">
           <span class="eyebrow">Coming up</span>
           <h2>The next four weeks</h2>
-          <div class="grid grid-4" style="margin-top: 28px">
-            <div class="card">
+          <ol class="coming-up">
+            <li class="card">
               <span class="tag">Week 47</span>
               <h3>Snowflake ornaments</h3>
               <p class="muted">Set of 3 &middot; 30 g</p>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <span class="tag green">Week 48</span>
               <h3>Stackable desk tray</h3>
               <p class="muted">Ribbed finish &middot; 65 g</p>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <span class="tag">Week 49</span>
               <h3>Name-tag keychains</h3>
               <p class="muted">Print one for everyone &middot; 8 g each</p>
-            </div>
-            <div class="card">
+            </li>
+            <li class="card">
               <span class="tag green">Week 50</span>
               <h3>Gift box with lid</h3>
               <p class="muted">Fits a mug &middot; 80 g</p>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section class="section">
-        <div class="container" style="max-width: 860px">
-          <span class="eyebrow">Rules</span>
-          <h2>Common questions</h2>
+        <div class="container chal-faq">
+          <div>
+            <span class="eyebrow">Rules</span>
+            <h2>Common questions</h2>
+          </div>
           <div class="faq">
             <details>
               <summary>Do I need a Filo One to take part?</summary>

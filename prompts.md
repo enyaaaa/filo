@@ -25,20 +25,20 @@ Extracted from `css/styles.css` and the site copy:
 
 ### Colour palette (exact)
 
-| Role | Colour | Hex |
-|---|---|---|
-| Backdrop / paper | Warm sand | `#E7DDCC` |
-| Card surface | Oat cream | `#FFFDF9` |
-| Text / graphite | Warm ink | `#1D1B18` |
-| Accent | Warm amber | `#F0A33A` |
-| Filament 1 | Desert Sand | `#CFA57A` |
-| Filament 2 | Oat Milk | `#ECE2D0` |
-| Filament 3 | Sage | `#9CB39A` |
-| Filament 4 | Terracotta Clay | `#C4734F` |
-| Filament 5 | Ocean Blue | `#2A6FB0` |
-| Filament 6 | Lilac | `#A48AD8` |
-| Filament 7 | Charcoal Black | `#2B2F2E` |
-| Filament 8 | Silk Gold | `#E8C27A` |
+| Role             | Colour          | Hex       |
+| ---------------- | --------------- | --------- |
+| Backdrop / paper | Warm sand       | `#E7DDCC` |
+| Card surface     | Oat cream       | `#FFFDF9` |
+| Text / graphite  | Warm ink        | `#1D1B18` |
+| Accent           | Warm amber      | `#F0A33A` |
+| Filament 1       | Desert Sand     | `#CFA57A` |
+| Filament 2       | Oat Milk        | `#ECE2D0` |
+| Filament 3       | Sage            | `#9CB39A` |
+| Filament 4       | Terracotta Clay | `#C4734F` |
+| Filament 5       | Ocean Blue      | `#2A6FB0` |
+| Filament 6       | Lilac           | `#A48AD8` |
+| Filament 7       | Charcoal Black  | `#2B2F2E` |
+| Filament 8       | Silk Gold       | `#E8C27A` |
 
 Dark theme (only if ever generating dark-backdrop assets): paper `#11100E`, card
 `#221E1A`, ink `#EFE8DD`.
