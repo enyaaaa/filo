@@ -255,11 +255,12 @@
     </header>
 
     <main id="main">
-      <section class="page-hero">
+      <section class="page-hero tradein-hero">
         <div class="container split">
           <div>
+            <p class="breadcrumb"><a href="index.html">Home</a> / Trade-in</p>
             <span class="eyebrow">Printer trade-in</span>
-            <h1>Trade in your old printer. Get up to $100 off.</h1>
+            <h1>Trade in your old printer. <span>Get up to $100 off.</span></h1>
             <p class="lead">
               Any brand, working or not. We collect it when your new Filo
               printer arrives, and nothing ends up in the bin.
@@ -270,45 +271,36 @@
                 >See the Filo range</a
               >
             </div>
+            <ul class="badges">
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Any brand
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Working or broken
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Free collection
+              </li>
+            </ul>
           </div>
-          <div class="credit-card">
-            <span class="eyebrow">Trade-in credit</span>
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">New printer</th>
-                  <th scope="col">Working</th>
-                  <th scope="col">Broken</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Filo Mini <span class="muted small">$249</span></td>
-                  <td><strong>$40</strong></td>
-                  <td><strong>$20</strong></td>
-                </tr>
-                <tr>
-                  <td>Filo One <span class="muted small">$349</span></td>
-                  <td><strong>$60</strong></td>
-                  <td><strong>$30</strong></td>
-                </tr>
-                <tr>
-                  <td>Filo Pro <span class="muted small">$549</span></td>
-                  <td><strong>$100</strong></td>
-                  <td><strong>$50</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <img
+            class="photo"
+            src="assets/img/trade-in-box.webp"
+            alt="Hands lowering a well-used old 3D printer into a cardboard box lined with kraft paper, ready for collection"
+            width="1600"
+            height="893"
+            fetchpriority="high"
+          />
         </div>
       </section>
 
-      <section class="section tight-top" id="check">
+      <section class="section alt" id="check">
         <div class="container">
           <span class="eyebrow">Credit checker</span>
           <h2>What&rsquo;s your old printer worth?</h2>
+          <div class="checker-grid mt-md">
           <div
-            class="finder mt-md"
+            class="finder"
             role="group"
             aria-label="Trade-in credit checker"
           >
@@ -452,11 +444,46 @@
               </div>
             </div>
           </div>
+          <aside class="credit-card">
+            <span class="eyebrow">All credits at a glance</span>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">New printer</th>
+                  <th scope="col">Working</th>
+                  <th scope="col">Broken</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Filo Mini <span class="muted small">$249</span></td>
+                  <td><strong>$40</strong></td>
+                  <td><strong>$20</strong></td>
+                </tr>
+                <tr>
+                  <td>Filo One <span class="muted small">$349</span></td>
+                  <td><strong>$60</strong></td>
+                  <td><strong>$30</strong></td>
+                </tr>
+                <tr>
+                  <td>Filo Pro <span class="muted small">$549</span></td>
+                  <td><strong>$100</strong></td>
+                  <td><strong>$50</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="small muted mt-sm">
+              Credit comes as a private Shopee voucher. One trade-in per new
+              printer.
+            </p>
+          </aside>
+          </div>
         </div>
       </section>
 
       <section class="section dark" id="how">
         <div class="container">
+          <span class="eyebrow">Four steps</span>
           <h2>How trade-in works</h2>
           <div class="steps mt-lg">
             <div class="step">
@@ -491,30 +518,37 @@
       </section>
 
       <section class="section">
-        <div class="container">
-          <h2>What we accept</h2>
-          <div class="grid grid-3 mt-md">
-            <div class="card">
-              <h3>&#10003; Any FDM printer</h3>
-              <p>
-                Any brand or age, working or not. Missing parts are fine, as
-                long as the frame is there.
-              </p>
-            </div>
-            <div class="card">
-              <h3>&#10007; Resin printers</h3>
-              <p>
-                Not yet. Leftover resin needs special handling, so we
-                can&rsquo;t collect them safely.
-              </p>
-            </div>
-            <div class="card">
-              <h3>+ Your scraps too</h3>
-              <p>
-                Put a full Refila Bag in the box with your old printer and earn
-                Filo Points for the scraps as well.
-              </p>
-            </div>
+        <div class="container split">
+          <img
+            class="photo"
+            src="assets/img/trade-in-parts.webp"
+            alt="A dismantled 3D printer sorted into kraft trays: aluminium rails, stepper motors, belts and pulleys, and screws"
+            width="1600"
+            height="1073"
+            loading="lazy"
+          />
+          <div>
+            <span class="eyebrow">What we accept</span>
+            <h2>Every printer gets a second life.</h2>
+            <p class="lead">
+              Working printers go to school makerspaces. Broken ones are
+              stripped for motors, rails and belts, and the plastic goes to
+              Refila.
+            </p>
+            <ul class="accept-list">
+              <li class="yes">
+                <strong>Any FDM printer</strong>
+                <span>Any brand or age, working or not, as long as the frame is there.</span>
+              </li>
+              <li class="no">
+                <strong>Not resin printers</strong>
+                <span>Leftover resin needs special handling, so we can&rsquo;t collect them yet.</span>
+              </li>
+              <li class="plus">
+                <strong>Your scraps too</strong>
+                <span>Add a full Refila Bag to the box and earn Filo Points for it.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

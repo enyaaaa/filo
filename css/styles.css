@@ -5444,8 +5444,13 @@ tr:last-child th {
   padding: 56px 0 48px;
 }
 
-.printer-mini-hero h1 {
-  max-width: 18ch;
+.printer-mini-hero .split {
+  align-items: center;
+}
+
+/* Range photo beside the hero text, uncropped so all three printers show */
+.printer-mini-hero .range-hero-img {
+  box-shadow: var(--shadow);
 }
 
 .printer-mini-hero h1 span {
@@ -5988,4 +5993,138 @@ tr:last-child th {
 
 .story-body strong {
   color: var(--ink);
+}
+
+/* Challenge "next four weeks": photo under the week label */
+.coming-up .coming-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin: -18px 0 16px;
+}
+
+.coming-up .coming-img-top {
+  object-position: 50% 30%;
+}
+
+/* Printer photos in the homepage carousel: shown like every other photo on
+   the site (rounded, soft shadow), without the cut-out card and brackets */
+.hero-art.has-photo {
+  aspect-ratio: auto;
+}
+
+.hero-art.has-photo .blob,
+.hero-art.has-photo::before,
+.hero-art.has-photo::after {
+  display: none;
+}
+
+.hero-art.has-photo img {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  filter: none;
+}
+
+/* Printer photo at the top of each range card on printer.html */
+.range-card .range-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   Trade-in page layout
+   ========================================================= */
+.tradein-hero .split {
+  align-items: center;
+}
+
+.tradein-hero h1 span {
+  color: var(--brand-text);
+}
+
+/* Checker: questions on the left, credit table on the right */
+.checker-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.checker-grid .finder {
+  background: var(--paper);
+}
+
+@media (max-width: 900px) {
+  .checker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* What we accept: icon list */
+.accept-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.accept-list li {
+  position: relative;
+  padding: 14px 16px 14px 54px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.accept-list li::before {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.accept-list .yes::before {
+  content: "\2713";
+  background: var(--mint);
+  color: var(--green-dark);
+}
+
+.accept-list .no::before {
+  content: "\2715";
+  background: rgba(214, 63, 33, 0.15);
+  color: #d63f21;
+}
+
+.accept-list .plus::before {
+  content: "+";
+  background: var(--amber-soft);
+  color: var(--brand-text);
+}
+
+.accept-list strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.accept-list span {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }

@@ -25,7 +25,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.filoprint.example/assets/filoONE.png"
+      content="https://www.filoprint.example/assets/img/filo-range.webp"
     />
     <link
       rel="icon"
@@ -71,7 +71,7 @@
               "name": "Filo Print"
             },
             "description": "Compact self-levelling FDM 3D printer for kids and small desks: 180 × 180 × 180 mm build volume, up to 250 mm/s, about 45 dB, 12-month Singapore warranty.",
-            "image": "https://www.filoprint.example/assets/filoONE.png",
+            "image": "https://www.filoprint.example/assets/img/filo-mini.webp",
             "additionalProperty": [
               {
                 "@type": "PropertyValue",
@@ -110,7 +110,7 @@
               "name": "Filo Print"
             },
             "description": "Beginner FDM 3D printer with automatic bed levelling, 220 × 220 × 250 mm build volume, direct-drive extruder, up to 300 mm/s printing and a 12-month Singapore warranty.",
-            "image": "https://www.filoprint.example/assets/filoONE.png",
+            "image": "https://www.filoprint.example/assets/img/filo-one.webp",
             "additionalProperty": [
               {
                 "@type": "PropertyValue",
@@ -149,7 +149,7 @@
               "name": "Filo Print"
             },
             "description": "Enclosed self-levelling FDM 3D printer for makers: 300 × 300 × 300 mm build volume, up to 500 mm/s, prints ABS and ASA, built-in camera, 12-month Singapore warranty.",
-            "image": "https://www.filoprint.example/assets/filoONE.png",
+            "image": "https://www.filoprint.example/assets/img/filo-pro.webp",
             "additionalProperty": [
               {
                 "@type": "PropertyValue",
@@ -341,33 +341,45 @@
     <main id="main">
       <!-- 1. MINI HERO: send people to the questionnaire or the trade-in page -->
       <section class="page-hero printer-mini-hero">
-        <div class="container">
-          <span class="eyebrow">Filo 3D printers</span>
-          <h1>Three printers. <span>Find the one for you.</span></h1>
-          <p class="lead">
-            Every Filo printer levels itself, sets up in about 15 minutes and
-            comes with a 12-month warranty, repaired in Singapore.
-          </p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="#finder">Help me choose</a>
-            <a class="btn btn-ghost" href="trade-in.html"
-              >Trade in, save up to $100</a
-            >
+        <div class="container split">
+          <div>
+            <p class="breadcrumb"><a href="index.html">Home</a> / 3D printers</p>
+            <span class="eyebrow">Filo 3D printers</span>
+            <h1>Three printers. <span>Find the one for you.</span></h1>
+            <p class="lead">
+              Every Filo printer levels itself, sets up in about 15 minutes and
+              comes with a 12-month warranty, repaired in Singapore.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#finder">Help me choose</a>
+              <a class="btn btn-ghost" href="trade-in.html"
+                >Trade in, save up to $100</a
+              >
+            </div>
+            <ul class="badges">
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> From $249
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> 15-minute setup
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#9733;</span> 4.8 from 84 Shopee
+                ratings
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> 12-month local warranty
+              </li>
+            </ul>
           </div>
-          <ul class="badges">
-            <li class="badge">
-              <span aria-hidden="true">&#10003;</span> From $249
-            </li>
-            <li class="badge">
-              <span aria-hidden="true">&#10003;</span> 15-minute setup
-            </li>
-            <li class="badge">
-              <span aria-hidden="true">&#9733;</span> 4.8 from 84 Shopee ratings
-            </li>
-            <li class="badge">
-              <span aria-hidden="true">&#10003;</span> 12-month local warranty
-            </li>
-          </ul>
+          <img
+            class="photo range-hero-img"
+            src="assets/img/filo-range.webp"
+            alt="Filo Mini, Filo One and Filo Pro 3D printers lined up from smallest to largest on a wooden sideboard"
+            width="1800"
+            height="1005"
+            fetchpriority="high"
+          />
         </div>
       </section>
 
@@ -396,6 +408,14 @@
           </ul>
           <div class="grid grid-3 mt-lg range-grid">
             <article class="card range-card">
+              <img
+                class="range-img"
+                src="assets/img/filo-mini.webp"
+                alt="Filo Mini compact 3D printer"
+                width="1600"
+                height="1073"
+                loading="lazy"
+              />
               <div class="vol" aria-hidden="true">
                 <span style="--s: 0.6"></span>
               </div>
@@ -418,6 +438,14 @@
             </article>
             <article class="card range-card featured">
               <span class="range-badge">Most popular</span>
+              <img
+                class="range-img"
+                src="assets/img/filo-one.webp"
+                alt="Filo One open-frame 3D printer"
+                width="1200"
+                height="1200"
+                loading="lazy"
+              />
               <div class="vol" aria-hidden="true">
                 <span style="--s: 0.75"></span>
               </div>
@@ -439,6 +467,14 @@
               >
             </article>
             <article class="card range-card">
+              <img
+                class="range-img"
+                src="assets/img/filo-pro.webp"
+                alt="Filo Pro enclosed 3D printer"
+                width="1200"
+                height="1200"
+                loading="lazy"
+              />
               <div class="vol" aria-hidden="true">
                 <span style="--s: 1"></span>
               </div>
