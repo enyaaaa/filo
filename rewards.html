@@ -38,9 +38,33 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="announce">
-      Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379
-      with 2 kg of filament in the box.
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
+      <a
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
+        target="_blank"
+        rel="noopener"
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
     <header class="site-header">
       <nav class="nav container" aria-label="Main">
@@ -171,7 +195,7 @@
             <h1>Every print counts towards your next roll.</h1>
             <p class="lead">
               Join Filo Club free and get a
-              <strong>S$3 Shopee voucher</strong> and your
+              <strong>$3 Shopee voucher</strong> and your
               <strong>first challenge stamp</strong> straight away. Then every
               print, return and reorder earns you more.
             </p>
@@ -192,7 +216,7 @@
           <img
             class="photo"
             src="assets/img/join-welcome-pack.webp"
-            alt="Filo Club welcome pack: Refila Bag, stamp card, S$3 voucher and three small printed models"
+            alt="Filo Club welcome pack: Refila Bag, stamp card, $3 voucher and three small printed models"
             width="1000"
             height="671"
             fetchpriority="high"
@@ -270,19 +294,19 @@
                 Tick a couple more to unlock your first voucher.
               </p>
               <p class="calc-reward r-200">
-                That&rsquo;s a <strong>S$5 voucher</strong> for the Filo Shopee
+                That&rsquo;s a <strong>$5 voucher</strong> for the Filo Shopee
                 store.
               </p>
               <p class="calc-reward r-400">
-                That&rsquo;s a <strong>S$12 voucher</strong>, with points to
+                That&rsquo;s a <strong>$12 voucher</strong>, with points to
                 spare.
               </p>
               <p class="calc-stamps">
-                Plus <strong>12 stamps</strong>: a free mini spool, a S$12
+                Plus <strong>12 stamps</strong>: a free mini spool, a $12
                 voucher and a free 1&nbsp;kg roll.
               </p>
               <p class="small muted">
-                Every member also starts with a S$3 welcome voucher and their
+                Every member also starts with a $3 welcome voucher and their
                 first stamp.
               </p>
               <a class="btn btn-primary mt-sm" href="join.html"
@@ -302,8 +326,8 @@
             <li class="step">
               <h3>Month 1: the box arrives</h3>
               <p>
-                Hafiz&rsquo;s family unboxes the Family Kit and joins Filo Club.
-                A S$3 voucher and their first stamp land straight away. The kids
+                Hafiz&rsquo;s family unboxes Filo One + Refills and joins Filo Club.
+                A $3 voucher and their first stamp land straight away. The kids
                 print dino keychains that night.
               </p>
             </li>
@@ -311,7 +335,7 @@
               <h3>Month 2: Sundays become print day</h3>
               <p>
                 A new challenge every week. Stamp 4 earns a free mini spool,
-                stamp 8 a S$12 voucher. Their first Refila Bag of scraps and
+                stamp 8 a $12 voucher. Their first Refila Bag of scraps and
                 spools goes back.
               </p>
             </li>
@@ -320,13 +344,13 @@
               <p>
                 Stamp 12 completes the card: a free 1&nbsp;kg roll. A second
                 Refila Bag and four registered rolls take them to 220 points, a
-                S$5 voucher.
+                $5 voucher.
               </p>
             </li>
           </ol>
           <p class="small mt-md">
-            Total: S$3 + mini spool (S$7.90) + S$12 + 1&nbsp;kg roll (S$22.90) +
-            S$5 = <strong>S$50.80 in rewards</strong>.
+            Total: $3 + mini spool ($7.90) + $12 + 1&nbsp;kg roll ($22.90) +
+            $5 = <strong>$50.80 in rewards</strong>.
             <!-- <span class="sample-tag">Example</span> -->
           </p>
         </div>
@@ -344,8 +368,8 @@
                 <p>points</p>
               </div>
               <div class="voucher-body">
-                <h3>S$5 voucher</h3>
-                <p>Minimum spend S$20 in our Shopee store</p>
+                <h3>$5 voucher</h3>
+                <p>Minimum spend $20 in our Shopee store</p>
               </div>
             </li>
             <li class="voucher feature">
@@ -354,8 +378,8 @@
                 <p>points</p>
               </div>
               <div class="voucher-body">
-                <h3>S$12 voucher</h3>
-                <p>Minimum spend S$40, which works well with bundles</p>
+                <h3>$12 voucher</h3>
+                <p>Minimum spend $40, which works well with bundles</p>
               </div>
             </li>
             <li class="voucher">
@@ -436,7 +460,7 @@
             <div>
               <h2>Start earning on your next print.</h2>
               <p>
-                Join Filo Club free for a S$3 voucher and your first stamp, then
+                Join Filo Club free for a $3 voucher and your first stamp, then
                 earn on every return, roll and challenge.
               </p>
             </div>
@@ -513,28 +537,27 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
-              class="btn btn-shopee btn-sm"
-              style="margin-top: 18px"
+              class="btn btn-shopee btn-sm footer-btn"
               href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -570,5 +593,7 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar -->
+    <script src="js/countdown.js" defer></script>
   </body>
 </html>

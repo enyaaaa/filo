@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
-    <title>3D Printer Kits with Filament + Refill Plan | Filo Print</title>
+    <title>3D Printer Bundles with Filament + Refill Plan | Filo Print</title>
     <meta
       name="description"
-      content="Filo One printer kits with filament included: Starter, Family and Maker Kits from S$379. Join the free Refill Plan for up to 15% off every reorder."
+      content="Filo 3D printer bundles with filament included: Filo Duo ($749), Filo One + Refills ($379) and PLA+ Refill Packs from $44.90. Join the free Refill Plan for up to 15% off every reorder."
     />
     <meta
       name="keywords"
-      content="3D printer kit Singapore, 3D printer with filament, filament refill, PLA filament subscription, 3D printing for kids"
+      content="3D printer bundle Singapore, 3D printer kit Singapore, 3D printer with filament, filament refill, PLA filament subscription, 3D printing for kids"
     />
     <meta
       property="og:title"
-      content="3D Printer Kits with Filament + Refill Plan | Filo Print"
+      content="3D Printer Bundles with Filament + Refill Plan | Filo Print"
     />
     <meta
       property="og:description"
-      content="Filo One kits with filament in the box, plus a free Refill Plan for up to 15% off every reorder."
+      content="Filo Duo, Filo One + Refills and PLA+ Refill Packs, plus a free Refill Plan for up to 15% off every reorder."
     />
     <meta property="og:type" content="website" />
     <link
@@ -33,12 +33,114 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bundle details for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.filoprint.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Bundles",
+                "item": "https://www.filoprint.example/bundles.html"
+              }
+            ]
+          },
+          {
+            "@type": "Product",
+            "name": "Filo Duo",
+            "category": "3D printer bundle",
+            "brand": {
+              "@type": "Brand",
+              "name": "Filo Print"
+            },
+            "description": "Filo Pro and Filo Mini 3D printers with 2 kg of Filo PLA+, 20 tested project files and a free Refila Bag.",
+            "image": "https://www.filoprint.example/assets/filoONE.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "749.00",
+              "priceCurrency": "SGD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Filo One + Refills",
+            "category": "3D printer bundle",
+            "brand": {
+              "@type": "Brand",
+              "name": "Filo Print"
+            },
+            "description": "Filo One 3D printer with 2 kg of Filo PLA+, 10 beginner models and a free Refila Bag.",
+            "image": "https://www.filoprint.example/assets/img/filo-one-hero.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "379.00",
+              "priceCurrency": "SGD",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Filo PLA+ Refill Packs",
+            "category": "3D printer filament",
+            "brand": {
+              "@type": "Brand",
+              "name": "Filo Print"
+            },
+            "description": "Filo PLA+ filament packs: Family Colour Box (6 × 250 g), Starter Trio (3 × 1 kg) and Maker Pack (5 × 1 kg).",
+            "image": "https://www.filoprint.example/assets/img/pla-colour-lineup.webp",
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "SGD",
+              "lowPrice": "44.90",
+              "highPrice": "94.90",
+              "offerCount": "3",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="announce">
-      Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379
-      with 2 kg of filament in the box.
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
+      <a
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
+        target="_blank"
+        rel="noopener"
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
     <header class="site-header">
       <nav class="nav container" aria-label="Main">
@@ -161,155 +263,238 @@
     </header>
 
     <main id="main">
+      <!-- HERO -->
       <section class="page-hero">
         <div class="container center">
-          <span class="eyebrow">Printer kits &amp; Refill Plan</span>
-          <h1>Pick a kit, not a puzzle.</h1>
+          <p class="breadcrumb"><a href="index.html">Home</a> / Bundles</p>
+          <span class="eyebrow">Bundles &amp; Refill Plan</span>
+          <h1>Pick a bundle, <span>not a puzzle.</span></h1>
           <p class="lead">
-            Every kit is a Filo One printer plus the filament and projects to
-            match what you&rsquo;ll make. Then the free Refill Plan keeps you
-            stocked for less.
+            Two printers for big projects, one printer to start, or just the
+            filament. Every bundle costs less than buying the parts separately.
           </p>
         </div>
       </section>
-      <section class="section" style="padding-top: 20px">
-        <div class="container grid grid-3">
-          <article class="card bundle">
-            <div class="spools">
-              <i style="background: #ece2d0"></i
-              ><i style="background: #2b2f2e"></i>
-            </div>
-            View Full Kit
-            <div class="bundle-target">
-              <h3>Starter Kit</h3>
+
+      <!-- THE THREE BUNDLES (same three as the homepage) -->
+      <section class="section bundles-main">
+        <div class="container">
+          <div class="grid grid-3">
+            <article class="card bundle popular" id="duo" data-badge="New">
+              <!-- TODO: swap for a photo of Filo Pro + Filo Mini together -->
+              <img
+                class="bundle-img is-printer"
+                src="assets/filoONE.png"
+                alt="Filo Pro enclosed 3D printer with a multi-colour filament unit, the big printer in Filo Duo"
+                width="2048"
+                height="2048"
+                loading="lazy"
+              />
+              <span class="tag">Bundle: Filo Pro + Filo Mini</span>
+              <h2 class="bundle-title">Filo Duo</h2>
+              <p>
+                Filo Pro takes the big projects while Filo Mini handles the
+                small parts. Finish in half the time.
+              </p>
+              <div class="price">
+                <s><span class="sr-only">Bought separately: </span>$843.80</s>
+                $749
+              </div>
+              <p class="save">You save $94.80 vs buying separately</p>
+              <ul>
+                <li>Filo Pro + Filo Mini</li>
+                <li>2 &times; 1 kg PLA+ (Oat Milk, Charcoal Black)</li>
+                <li>20 tested project files (big + small parts)</li>
+                <li>Free Refila Bag</li>
+                <li>20% off your first refill</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20duo&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=bundle_duo"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo Duo on Shopee</a
+              >
+            </article>
+
+            <article class="card bundle" id="one-refills">
+              <img
+                class="bundle-img is-printer"
+                src="assets/img/filo-one-hero.png"
+                alt="Filo One 3D printer with silver frame and black build plate"
+                width="699"
+                height="698"
+                loading="lazy"
+              />
               <span class="tag">New to printing</span>
-            </div>
-            <img
-              class="bundle-img"
-              src="assets/img/kit-starter.webp"
-              alt="Filo One Starter Kit: printer box, cream and black PLA+ spools and a drawstring bag"
-              width="800"
-              height="537"
-              loading="lazy"
-            />
-            <p>
-              Filo One and two everyday colours for your first month of
-              printing.
-            </p>
-            <div class="price">
-              <s><span class="sr-only">Bought separately: </span>S$394.80</s>
-              S$379
-            </div>
-            <p class="save">You save S$15.80 vs buying separately</p>
-            <ul>
-              <li>Filo One 3D printer</li>
-              <li>2 &times; 1 kg PLA+ (Oat Milk, Charcoal Black)</li>
-              <li>Beginner project pack (10 models)</li>
-              <li>Free Refila Bag</li>
-              <li>20% off your first refill</li>
-            </ul>
-            <a
-              class="btn btn-shopee"
-              href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=kit_starter"
-              target="_blank"
-              rel="noopener"
-              >Buy on Shopee</a
-            >
-          </article>
-          <article class="card bundle popular">
-            <div class="spools">
-              <i style="background: #c4734f"></i
-              ><i style="background: #cfa57a"></i
-              ><i style="background: #2a6fb0"></i
-              ><i style="background: #a48ad8"></i
-              ><i style="background: #9cb39a"></i
-              ><i style="background: #ece2d0"></i>
-            </div>
-            <div class="bundle-target">
-              <h3>Family Kit</h3>
-              <span class="tag">Families</span>
-            </div>
-            <img
-              class="bundle-img"
-              src="assets/img/kit-family.webp"
-              alt="Filo One Family Kit: printer box with six colourful mini spools, a dino keychain and a star"
-              width="800"
-              height="537"
-              loading="lazy"
-            />
-            <p>
-              Filo One and six bright mini spools, so everyone at home gets a
-              colour.
-            </p>
-            <div class="price">
-              <s><span class="sr-only">Bought separately: </span>S$393.90</s>
-              S$385
-            </div>
-            <p class="save">You save S$8.90 vs buying separately</p>
-            <ul>
-              <li>Filo One 3D printer</li>
-              <li>6 &times; 250 g PLA+ mini spools</li>
-              <li>Family project pack + kids&rsquo; safety checklist</li>
-              <li>Free holiday print-along pack (until 31 Dec)</li>
-              <li>20% off your first refill</li>
-            </ul>
-            <a
-              class="btn btn-shopee"
-              href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=kit_family"
-              target="_blank"
-              rel="noopener"
-              >Buy on Shopee</a
-            >
-          </article>
-          <article class="card bundle">
-            <div class="spools">
-              <i style="background: #2b2f2e"></i
-              ><i style="background: #2b2f2e"></i
-              ><i style="background: #ece2d0"></i
-              ><i style="background: #ece2d0"></i
-              ><i style="background: #2a6fb0"></i>
-            </div>
-            <div class="bundle-target">
-              <h3>Maker Kit</h3>
-              <span class="tag">Frequent makers</span>
-            </div>
-            <img
-              class="bundle-img"
-              src="assets/img/kit-maker.webp"
-              alt="Filo One Maker Kit: printer box, PLA+ rolls, spare nozzles and test prints"
-              width="800"
-              height="537"
-              loading="lazy"
-            />
-            <p>Filo One and 5 kg of PLA+ at our lowest price per kilogram.</p>
-            <div class="price">
-              <s><span class="sr-only">Bought separately: </span>S$443.90</s>
-              S$429
-            </div>
-            <p class="save">You save S$14.90 vs buying separately</p>
-            <ul>
-              <li>Filo One 3D printer</li>
-              <li>5 &times; 1 kg PLA+ (choose any colours on Shopee)</li>
-              <li>Spare nozzle set + calibration models</li>
-              <li>Refila Bag + prepaid return label</li>
-              <li>+60 Filo Points</li>
-            </ul>
-            <a
-              class="btn btn-shopee"
-              href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=kit_maker"
-              target="_blank"
-              rel="noopener"
-              >Buy on Shopee</a
-            >
-          </article>
+              <h2 class="bundle-title">Filo One + Refills</h2>
+              <p>
+                Our most popular printer with enough filament for your first
+                month of printing.
+              </p>
+              <div class="price">
+                <s><span class="sr-only">Bought separately: </span>$394.80</s>
+                $379
+              </div>
+              <p class="save">You save $15.80 vs buying separately</p>
+              <ul>
+                <li>Filo One 3D printer</li>
+                <li>2 &times; 1 kg PLA+ (Oat Milk, Charcoal Black)</li>
+                <li>Beginner project pack (10 models)</li>
+                <li>Free Refila Bag</li>
+                <li>20% off your first refill</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=bundle_one_refills"
+                target="_blank"
+                rel="noopener"
+                >Buy on Shopee</a
+              >
+            </article>
+
+            <article class="card bundle" id="refill-packs">
+              <img
+                class="bundle-img"
+                src="assets/img/pla-colour-lineup.webp"
+                alt="A row of Filo PLA+ spools in eight colours"
+                width="1600"
+                height="893"
+                loading="lazy"
+              />
+              <span class="tag">Already printing</span>
+              <h2 class="bundle-title">Refill Packs</h2>
+              <p>
+                Filo PLA+ for any 1.75 mm printer. The bigger the pack, the less
+                you pay per kilogram.
+              </p>
+              <div class="price"><small>from</small> $44.90</div>
+              <p class="save">Down to $18.98 a kg</p>
+              <ul class="pack-list">
+                <li><span>Family Colour Box &middot; 6 &times; 250 g</span> $44.90</li>
+                <li><span>Starter Trio &middot; 3 &times; 1 kg</span> $59.90</li>
+                <li><span>Maker Pack &middot; 5 &times; 1 kg</span> $94.90</li>
+              </ul>
+              <a class="btn btn-primary" href="#packs">See the refill packs</a>
+            </article>
+          </div>
+          <p class="center small muted mt-md">
+            Prices shown are proposed launch prices. Printers on their own: Filo
+            Mini $249, Filo One $349, Filo Pro $549. Final price and Shopee
+            vouchers are shown at checkout.
+          </p>
+          <p class="center mt-sm">
+            Not sure which one?
+            <a href="guide.html#finder">Take the 2-question Kit Finder</a>
+            &middot;
+            <a href="printer.html#finder">Find your printer</a>
+          </p>
         </div>
-        <p class="container center small muted" style="margin-top: 22px">
-          Prices shown are proposed launch prices. Filo One on its own is S$349.
-          The final price and any Shopee vouchers are shown at checkout.
-        </p>
       </section>
 
-      <section class="section alt refill-plan" id="refill">
+      <!-- REFILL PACKS: filament only, for any 1.75 mm printer -->
+      <section class="section alt" id="packs">
+        <div class="container">
+          <div class="center">
+            <span class="eyebrow">Refill packs</span>
+            <h2>Already printing? Stock up and save.</h2>
+            <p class="lead mx-auto">
+              Filo PLA+ works in any 1.75 mm printer, and every pack counts
+              towards the Refill Plan. The bigger the pack, the less you pay per
+              kilogram.
+            </p>
+          </div>
+          <div class="grid grid-3 mt-lg">
+            <article class="card bundle" id="family-box">
+              <img
+                class="bundle-img"
+                src="assets/img/kit-family.webp"
+                alt="Family Colour Box: six colourful PLA+ mini spools with a printed dino keychain and star"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="tag">Families</span>
+              <h3 class="bundle-title">Family Colour Box</h3>
+              <p>Six bright mini spools, so everyone at home gets their own colour.</p>
+              <div class="price">$44.90</div>
+              <p class="save">$29.93 a kg</p>
+              <ul>
+                <li>6 &times; 250 g PLA+ mini spools</li>
+                <li>Family project pack</li>
+                <li>Kids&rsquo; safety checklist</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_family"
+                target="_blank"
+                rel="noopener"
+                >Buy on Shopee</a
+              >
+            </article>
+            <article class="card bundle" id="starter-trio">
+              <img
+                class="bundle-img"
+                src="assets/img/kit-starter.webp"
+                alt="Starter Trio: cream and black PLA+ rolls with a Filo drawstring bag"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="tag">Everyday printing</span>
+              <h3 class="bundle-title">Starter Trio</h3>
+              <p>Three everyday colours that cover almost every practical print.</p>
+              <div class="price">$59.90</div>
+              <p class="save">$19.97 a kg</p>
+              <ul>
+                <li>3 &times; 1 kg PLA+</li>
+                <li>Oat Milk, Charcoal Black, Desert Sand</li>
+                <li>Free Refila Bag</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_starter"
+                target="_blank"
+                rel="noopener"
+                >Buy on Shopee</a
+              >
+            </article>
+            <article class="card bundle" id="maker-pack">
+              <img
+                class="bundle-img"
+                src="assets/img/kit-maker.webp"
+                alt="Maker Pack: five PLA+ rolls with spare nozzles and test prints"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="tag">Lowest price per kg</span>
+              <h3 class="bundle-title">Maker Pack</h3>
+              <p>Five rolls in any colours, at our lowest price per kilogram.</p>
+              <div class="price">$94.90</div>
+              <p class="save">$18.98 a kg</p>
+              <ul>
+                <li>5 &times; 1 kg PLA+, any colours</li>
+                <li>Spare nozzle set + calibration models</li>
+                <li>Double Filo Points on the Maker plan</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_maker"
+                target="_blank"
+                rel="noopener"
+                >Buy on Shopee</a
+              >
+            </article>
+          </div>
+          <p class="center mt-md">
+            Just need one roll? <a href="product.html">Pick a colour, $22.90</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- REFILL PLAN -->
+      <section class="section refill-plan" id="refill">
         <div class="container">
           <div class="center">
             <span class="eyebrow">The Refill Plan &middot; free to join</span>
@@ -346,7 +531,7 @@
               <ul class="plan-facts">
                 <li><span>Refills</span> 1 kg a month</li>
                 <li><span>Best for</span> A few prints a week</li>
-                <li><span>You save</span> about S$2.30 a month</li>
+                <li><span>You save</span> about $2.30 a month</li>
               </ul>
               <a class="btn btn-ghost" href="join.html">Choose Weekend</a>
             </article>
@@ -357,7 +542,7 @@
               <ul class="plan-facts">
                 <li><span>Refills</span> 2 kg a month</li>
                 <li><span>Best for</span> The Weekly Challenge and more</li>
-                <li><span>You save</span> about S$5.50 a month</li>
+                <li><span>You save</span> about $5.50 a month</li>
               </ul>
               <a class="btn btn-primary" href="join.html">Choose Weekly</a>
             </article>
@@ -368,7 +553,7 @@
                 <li><span>Refills</span> A 5 kg Maker Pack a month</li>
                 <li><span>Best for</span> Printers that rarely sit idle</li>
                 <li>
-                  <span>You save</span> about S$14 a month, plus double Filo
+                  <span>You save</span> about $14 a month, plus double Filo
                   Points
                 </li>
               </ul>
@@ -376,171 +561,113 @@
             </article>
           </div>
           <p class="center small muted mt-md">
-            Savings based on S$22.90 per 1 kg roll and S$94.90 per Maker Pack.
+            Savings based on $22.90 per 1 kg roll and $94.90 per Maker Pack.
           </p>
         </div>
       </section>
 
-      <section class="section">
+      <!-- FOLDED DETAILS: comparison tables, closed until needed -->
+      <section class="section folds">
         <div class="container">
-          <h2>Compare kits</h2>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>&nbsp;</th>
-                  <th>Starter Kit</th>
-                  <th>Family Kit</th>
-                  <th>Maker Kit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Printer</td>
-                  <td>Filo One</td>
-                  <td>Filo One</td>
-                  <td>Filo One</td>
-                </tr>
-                <tr>
-                  <td>Filament included</td>
-                  <td>2 kg</td>
-                  <td>1.5 kg (6 colours)</td>
-                  <td>5 kg</td>
-                </tr>
-                <tr>
-                  <td>Kit price</td>
-                  <td>S$379</td>
-                  <td>S$385</td>
-                  <td>S$429</td>
-                </tr>
-                <tr>
-                  <td>Project files</td>
-                  <td>10 beginner</td>
-                  <td>12 family</td>
-                  <td>Calibration set</td>
-                </tr>
-                <tr>
-                  <td>Refila Bag</td>
-                  <td>&#10003;</td>
-                  <td>&mdash;</td>
-                  <td>&#10003; + return label</td>
-                </tr>
-                <tr>
-                  <td>Best Refill Plan</td>
-                  <td>Weekend (1 kg)</td>
-                  <td>Weekend (1 kg)</td>
-                  <td>Maker (5 kg)</td>
-                </tr>
-                <tr>
-                  <td>Best for</td>
-                  <td>First printer</td>
-                  <td>Parents &amp; kids</td>
-                  <td>Weekly printing</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="center" style="margin-top: 28px">
-            Still not sure?
-            <a href="guide.html">Take the 2-question Kit Finder &rarr;</a>
-          </p>
+          <details class="fold" id="compare">
+            <summary>
+              <span class="fold-head">
+                <span class="eyebrow">Side by side</span>
+                <h2>Compare bundles.</h2>
+                <span class="fold-sub"
+                  >What&rsquo;s in each bundle and who it suits.</span
+                >
+              </span>
+              <span class="fold-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="fold-body">
+              <div class="table-wrap">
+                <table>
+                  <caption class="sr-only">
+                    Comparison of Filo Duo, Filo One + Refills and Refill Packs
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th scope="col">Filo Duo</th>
+                      <th scope="col">Filo One + Refills</th>
+                      <th scope="col">Refill Packs</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Printer</th>
+                      <td>Filo Pro + Filo Mini</td>
+                      <td>Filo One</td>
+                      <td>&mdash; (use your own)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Filament</th>
+                      <td>2 kg</td>
+                      <td>2 kg</td>
+                      <td>1.5&ndash;5 kg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Price</th>
+                      <td>$749</td>
+                      <td>$379</td>
+                      <td>$44.90&ndash;$94.90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Project files</th>
+                      <td>20 (big + small parts)</td>
+                      <td>10 beginner</td>
+                      <td>Free with Filo Club</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Refila Bag</th>
+                      <td>&#10003;</td>
+                      <td>&#10003;</td>
+                      <td>&mdash;</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Best Refill Plan</th>
+                      <td>Weekly (2 kg)</td>
+                      <td>Weekend (1 kg)</td>
+                      <td>Any</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Best for</th>
+                      <td>Big projects, frequent makers</td>
+                      <td>Your first printer</td>
+                      <td>Already printing</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+
         </div>
       </section>
 
-      <section class="section alt">
-        <div class="container">
-          <span class="eyebrow">Already have a printer?</span>
-          <h2>Filament packs</h2>
-          <p class="lead" style="margin-bottom: 28px">
-            Filo PLA+ works in any 1.75 mm printer. These packs also count
-            towards the Refill Plan.
-          </p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Pack</th>
-                  <th>What&rsquo;s inside</th>
-                  <th>Price</th>
-                  <th>Per kg</th>
-                  <th>&nbsp;</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Single roll</td>
-                  <td>1 kg PLA+, any of 8 colours</td>
-                  <td>S$22.90</td>
-                  <td>S$22.90</td>
-                  <td><a href="product.html">Pick a colour</a></td>
-                </tr>
-                <tr>
-                  <td>Family Colour Box</td>
-                  <td>6 &times; 250 g mini spools</td>
-                  <td>S$44.90</td>
-                  <td>S$29.93</td>
-                  <td>
-                    <a
-                      href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_family"
-                      target="_blank"
-                      rel="noopener"
-                      >Buy on Shopee</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>Starter Trio</td>
-                  <td>3 &times; 1 kg (Oat Milk, Charcoal, Desert Sand)</td>
-                  <td>S$59.90</td>
-                  <td>S$19.97</td>
-                  <td>
-                    <a
-                      href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_starter"
-                      target="_blank"
-                      rel="noopener"
-                      >Buy on Shopee</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>Maker Pack</td>
-                  <td>5 &times; 1 kg, any colours</td>
-                  <td>S$94.90</td>
-                  <td>S$18.98</td>
-                  <td>
-                    <a
-                      href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=pack_maker"
-                      target="_blank"
-                      rel="noopener"
-                      >Buy on Shopee</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
+      <!-- BUY NOW -->
       <section class="section tight">
         <div class="container">
           <div class="cta-banner">
             <div>
-              <h2 style="margin-bottom: 0.3em">Get Filo One. Print tonight.</h2>
+              <h2>Bundles save you up to $94.80.</h2>
               <p>
-                From S$349 with a 12-month local warranty. Every kit ships with
-                filament, so your first print starts the day it arrives.
+                Every printer bundle ships with filament and a free Refila Bag,
+                so your first print starts the day it arrives.
               </p>
             </div>
-            <div class="btn-row" style="margin-top: 0">
+            <div class="btn-row">
               <a
                 class="btn btn-light"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=bundles_banner"
                 target="_blank"
                 rel="noopener"
-                >Buy Filo One on Shopee</a
+                >Shop bundles on Shopee</a
               >
-              <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+              <a class="btn btn-ghost" href="printer.html#finder"
+                >Help me choose</a
+              >
             </div>
           </div>
         </div>
@@ -611,28 +738,27 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
-              class="btn btn-shopee btn-sm"
-              style="margin-top: 18px"
+              class="btn btn-shopee btn-sm footer-btn"
               href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -668,5 +794,9 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar -->
+    <script src="js/countdown.js" defer></script>
+    <!-- Opens a folded section when a link points inside it -->
+    <script src="js/fold.js" defer></script>
   </body>
 </html>

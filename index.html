@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>
-      Filo Print | Beginner 3D Printer Kits with Filament, Singapore
+      Filo Print | Beginner 3D Printers with Filament, Singapore
     </title>
     <meta
       name="description"
-      content="Filo Print sells Filo One, a self-levelling beginner 3D printer, in kits with filament, a free project every week and a take-back scheme for scraps. Shopee checkout."
+      content="Filo Print sells Filo Mini, Filo One and Filo Pro, self-levelling 3D printers, in bundles with filament, a free project every week and a take-back scheme for scraps. Shopee checkout."
     />
     <!-- TODO: replace the domain below with your real hosted URL -->
     <link rel="canonical" href="https://www.filoprint.example/" />
@@ -39,8 +39,9 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Structured data for the brand and buying FAQ.
-         Product details and price live on printer.html. -->
+    <!-- Structured data for the brand.
+         Product details and price live on printer.html.
+         The buying FAQ (and its FAQPage data) now lives on guide.html#faq. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -55,51 +56,6 @@
             "@type": "WebSite",
             "name": "Filo Print",
             "url": "https://www.filoprint.example/"
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Should I buy the printer on its own or a kit?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Filo One on its own is S$349. Kits cost S$379 to S$429 and add filament and project files, which works out cheaper than buying them separately. Not sure which kit? The 2-question Kit Finder will pick one for you."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What comes in a Filo One kit?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Every kit has the Filo One printer, Filo PLA+ filament with tuned settings and a pack of tested project files. The Starter and Maker Kits also include a Refila Bag for your scraps. Compare the kits."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do I need to join Filo Club?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Not to buy a printer. Filo Club is free and gets you the Weekly Challenge files, a stamp card, a S$3 Shopee voucher and the optional Refill Plan. Join in a minute."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What is Refila?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Our take-back partner. Fill a Refila Bag with PLA scraps and empty spools, send it back, and earn Filo Points: about S$1.25 back per kg of scraps. See how Refila works."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Why do you sell on Shopee?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Shopee gives you a familiar checkout, SPayLater, buyer protection and Shopee vouchers that stack with our own codes. And if you find a similar self-levelling printer cheaper from a Singapore seller, message us before buying and we&rsquo;ll match it."
-                }
-              }
-            ]
           }
         ]
       }
@@ -108,16 +64,33 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <!-- The time-limited deal lives here, where every visitor sees it first -->
-    <div class="announce">
-      11.11 only: extra S$11 off any Filo One kit with code
-      <strong>FILO1111</strong> in our
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
       <a
-        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_1111"
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
         target="_blank"
         rel="noopener"
-        >Shopee store</a
-      >.
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
 
     <header class="site-header">
@@ -242,145 +215,523 @@
     </header>
 
     <main id="main">
-      <!-- ATTENTION: hero -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
+      <!-- 1. VIDEO HERO: three reels playing side by side -->
+      <section class="reel-hero section dark" aria-labelledby="reel-hero-title">
+        <div class="container">
+          <div class="reel-hero-head">
             <span class="eyebrow">Print more. Waste less.</span>
-            <h1>Your first 3D printer. <span>Printing tonight.</span></h1>
+            <h1 id="reel-hero-title">Magic starts <span>with you.</span></h1>
             <p class="lead">
-              Filo One levels itself, prints at up to 300 mm/s and arrives with
-              filament in the box. Unbox it after dinner and print your first
-              model before bed.
+              Keychains, gears, gifts, glow-in-the-dark stars. Here&rsquo;s what
+              people are printing at home right now.
             </p>
-            <dl class="hero-price">
-              <div>
-                <dt>Printer only</dt>
-                <dd>S$349</dd>
-              </div>
-              <div>
-                <dt>With 2 kg of filament</dt>
-                <dd>S$379</dd>
-              </div>
-            </dl>
-            <div class="btn-row">
+          </div>
+
+          <!-- VIDEOS: save the three Instagram reels as
+               assets/video/reel-1.mp4, reel-2.mp4 and reel-3.mp4.
+               Until a file exists, its tile shows the poster photo.
+               When a video is in, delete that tile's <span class="reel-soon">. -->
+          <ul class="reels">
+            <li class="reel">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/img/project-dino-keychains.webp"
+                aria-label="Reel: a dino keychain being 3D printed"
+              >
+                <source src="assets/video/reel-1.mp4" type="video/mp4" />
+              </video>
+              <img
+                class="reel-still"
+                src="assets/img/project-dino-keychains.webp"
+                alt=""
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="reel-soon">Video coming soon</span>
               <a
-                class="btn btn-shopee"
-                href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_hero"
+                class="reel-credit"
+                href="https://www.instagram.com/reel/DdBcgZbTI9q/"
                 target="_blank"
                 rel="noopener"
-                >Buy Filo One on Shopee</a
+                >Watch on Instagram<span class="sr-only"> (reel 1)</span></a
               >
-              <a class="btn btn-ghost" href="#kits">Compare kits</a>
-            </div>
-            <ul class="badges">
-              <li class="badge">
-                <span aria-hidden="true">&#10003;</span> Filament in the box
-              </li>
-              <li class="badge">
-                <span aria-hidden="true">&#10003;</span> Self-levelling
-              </li>
-              <li class="badge">
-                <span aria-hidden="true">&#10003;</span> 12-month local warranty
-              </li>
-              <li class="badge">
-                <span aria-hidden="true">&#10003;</span> Price match promise
-              </li>
-            </ul>
-          </div>
-          <div class="hero-art">
-            <div class="blob"></div>
-            <!-- TODO: set width/height to the image's real pixel size.
-                 Export a .webp copy if you can; it loads much faster. -->
-            <img
-              src="assets/filoONE.png"
-              alt="Filo One 3D printer with a spool of caramel PLA+ filament"
-              width="800"
-              height="800"
-              fetchpriority="high"
-            />
-          </div>
+            </li>
+            <li class="reel">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/img/project-planetary-gear.webp"
+                aria-label="Reel: a 3D-printed planetary gear turning"
+              >
+                <source src="assets/video/reel-2.mp4" type="video/mp4" />
+              </video>
+              <img
+                class="reel-still"
+                src="assets/img/project-planetary-gear.webp"
+                alt=""
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="reel-soon">Video coming soon</span>
+              <a
+                class="reel-credit"
+                href="https://www.instagram.com/reel/DZ2uPxFJwF9/"
+                target="_blank"
+                rel="noopener"
+                >Watch on Instagram<span class="sr-only"> (reel 2)</span></a
+              >
+            </li>
+            <li class="reel">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/img/project-glow-star-mobile.webp"
+                aria-label="Reel: a glow-in-the-dark star mobile being printed"
+              >
+                <source src="assets/video/reel-3.mp4" type="video/mp4" />
+              </video>
+              <img
+                class="reel-still"
+                src="assets/img/project-glow-star-mobile.webp"
+                alt=""
+                width="600"
+                height="894"
+                loading="lazy"
+              />
+              <span class="reel-soon">Video coming soon</span>
+              <a
+                class="reel-credit"
+                href="https://www.instagram.com/reel/DfI9b3fxjvW/"
+                target="_blank"
+                rel="noopener"
+                >Watch on Instagram<span class="sr-only"> (reel 3)</span></a
+              >
+            </li>
+          </ul>
+
+          <a class="scroll-cue" href="#filo-one">
+            <span>Scroll to find out more</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 4v15M5 12l7 7 7-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
       </section>
 
-      <!-- OVERCOME DOUBT: what you get vs a typical listing -->
-      <section class="section alt">
+      <!-- 2. THE FILO RANGE: printer carousel (Filo One, Filo Mini, Filo Pro).
+           Swipes on its own with CSS scroll-snap; js/carousel.js adds the
+           arrows, the name tabs and keyboard support. -->
+      <section
+        class="hero printer-carousel"
+        id="filo-one"
+        aria-roledescription="carousel"
+        aria-label="Filo 3D printers"
+      >
         <div class="container">
-          <span class="eyebrow">Filo One vs a typical beginner printer</span>
-          <h2>Same price range. A lot more in the box.</h2>
-          <div class="table-wrap mt-md">
-            <table>
-              <caption class="sr-only">
-                What comes with a Filo One kit compared with a typical beginner
-                3D printer listing
-              </caption>
-              <thead>
-                <tr>
-                  <th></th>
-                  <th scope="col">Filo One kit</th>
-                  <th scope="col">Typical beginner printer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Filament included</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> 2&ndash;5 kg or 6
-                    mini spools, tuned settings
-                  </td>
-                  <td>Small test sample, if any</td>
-                </tr>
-                <tr>
-                  <th scope="row">Setup</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> Self-levelling,
-                    about 15 minutes
-                  </td>
-                  <td>Manual levelling, often an hour or more</td>
-                </tr>
-                <tr>
-                  <th scope="row">Something to print</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> 10 starter models +
-                    a new one every week
-                  </td>
-                  <td>Find your own files</td>
-                </tr>
-                <tr>
-                  <th scope="row">Running out</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> App reminder +
-                    Refill Plan voucher
-                  </td>
-                  <td>You notice when a print fails</td>
-                </tr>
-                <tr>
-                  <th scope="row">Warranty</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> 12 months, repaired
-                    in Singapore
-                  </td>
-                  <td>Often sent overseas</td>
-                </tr>
-                <tr>
-                  <th scope="row">Scraps and spools</th>
-                  <td>
-                    <span aria-hidden="true">&#10003;</span> Refila take-back
-                    for points
-                  </td>
-                  <td>Thrown away</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="pc-bar">
+            <span class="eyebrow">The Filo range</span>
+            <div class="pc-tabs" role="group" aria-label="Choose a printer">
+              <a class="pc-tab" href="#pc-one" aria-current="true">Filo One</a>
+              <a class="pc-tab" href="#pc-mini">Filo Mini</a>
+              <a class="pc-tab" href="#pc-pro">Filo Pro</a>
+            </div>
+            <div class="pc-arrows" hidden>
+              <button class="pc-arrow" type="button" data-dir="-1">
+                <span aria-hidden="true">&larr;</span
+                ><span class="sr-only">Previous printer</span>
+              </button>
+              <button class="pc-arrow" type="button" data-dir="1">
+                <span aria-hidden="true">&rarr;</span
+                ><span class="sr-only">Next printer</span>
+              </button>
+            </div>
           </div>
-          <p class="small muted mt-sm">
-            Seen a similar self-levelling printer cheaper from a Singapore
-            seller? We&rsquo;ll match it.
+
+          <div class="pc-track">
+            <!-- Slide 1: Filo One -->
+            <article
+              class="pc-slide hero-grid"
+              id="pc-one"
+              aria-roledescription="slide"
+              aria-label="1 of 3: Filo One"
+            >
+              <div>
+                <span class="tag">For most homes &middot; Most popular</span>
+                <h2 class="hero-title">
+                  Filo One. <span>Printing tonight.</span>
+                </h2>
+                <p class="lead">
+                  Levels itself, prints at up to 300 mm/s and arrives with
+                  filament in the box. Unbox it after dinner and print your
+                  first model before bed.
+                </p>
+                <dl class="hero-price">
+                  <div>
+                    <dt>Printer only</dt>
+                    <dd>$349</dd>
+                  </div>
+                  <div>
+                    <dt>With 2 kg of filament</dt>
+                    <dd>$379</dd>
+                  </div>
+                </dl>
+                <div class="btn-row">
+                  <a class="btn btn-primary" href="printer.html"
+                    >Meet Filo One</a
+                  >
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_carousel_one"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy on Shopee</a
+                  >
+                </div>
+                <ul class="badges">
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 22 &times; 22
+                    &times; 25 cm build
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> PLA, PETG and TPU
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> About 48 dB quiet
+                    mode
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 12-month local
+                    warranty
+                  </li>
+                </ul>
+              </div>
+              <div class="hero-art">
+                <div class="blob"></div>
+                <img
+                  src="assets/filoONE.png"
+                  alt="Filo One 3D printer with a spool of caramel PLA+ filament"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <!-- Slide 2: Filo Mini -->
+            <article
+              class="pc-slide hero-grid"
+              id="pc-mini"
+              aria-roledescription="slide"
+              aria-label="2 of 3: Filo Mini"
+            >
+              <div>
+                <span class="tag">For kids and small desks</span>
+                <h2 class="hero-title">
+                  Filo Mini. <span>Small printer, small parts.</span>
+                </h2>
+                <p class="lead">
+                  Fits on a study desk and runs at about 45 dB. Perfect for
+                  keychains, gears and game pieces, or as a second printer
+                  that handles the small parts while your main printer takes the
+                  big ones.
+                </p>
+                <dl class="hero-price">
+                  <div>
+                    <dt>Printer only</dt>
+                    <dd>$249</dd>
+                  </div>
+                  <div>
+                    <dt>In the Filo Duo bundle</dt>
+                    <dd>$749</dd>
+                  </div>
+                </dl>
+                <div class="btn-row">
+                  <a class="btn btn-primary" href="printer.html#range"
+                    >Meet Filo Mini</a
+                  >
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20mini%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_carousel_mini"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy on Shopee</a
+                  >
+                </div>
+                <ul class="badges">
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 18 &times; 18
+                    &times; 18 cm build
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> Up to 250 mm/s
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> About 45 dB
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 12-month local
+                    warranty
+                  </li>
+                </ul>
+              </div>
+              <div class="hero-art pc-art-mini">
+                <div class="blob"></div>
+                <!-- TODO: replace with a Filo Mini photo -->
+                <img
+                  src="assets/filoONE.png"
+                  alt="Filo Mini 3D printer, a smaller version of Filo One"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <!-- Slide 3: Filo Pro -->
+            <article
+              class="pc-slide hero-grid"
+              id="pc-pro"
+              aria-roledescription="slide"
+              aria-label="3 of 3: Filo Pro"
+            >
+              <div>
+                <span class="tag">For makers and big projects</span>
+                <h2 class="hero-title">
+                  Filo Pro. <span>Go bigger, go faster.</span>
+                </h2>
+                <p class="lead">
+                  A 30 cm build cube, up to 500 mm/s and an enclosed chamber
+                  for ABS and ASA outdoor parts. A built-in camera lets you
+                  check long prints from your phone.
+                </p>
+                <dl class="hero-price">
+                  <div>
+                    <dt>Printer only</dt>
+                    <dd>$549</dd>
+                  </div>
+                  <div>
+                    <dt>With a trade-in</dt>
+                    <dd>from $449</dd>
+                  </div>
+                </dl>
+                <div class="btn-row">
+                  <a class="btn btn-primary" href="printer.html#range"
+                    >Meet Filo Pro</a
+                  >
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20pro%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_carousel_pro"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy on Shopee</a
+                  >
+                </div>
+                <ul class="badges">
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 30 &times; 30
+                    &times; 30 cm build
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> Enclosed chamber
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> Built-in camera
+                  </li>
+                  <li class="badge">
+                    <span aria-hidden="true">&#10003;</span> 12-month local
+                    warranty
+                  </li>
+                </ul>
+              </div>
+              <div class="hero-art pc-art-pro">
+                <div class="blob"></div>
+                <!-- TODO: replace with a Filo Pro photo -->
+                <img
+                  src="assets/filoONE.png"
+                  alt="Filo Pro 3D printer, a larger enclosed version of Filo One"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+          </div>
+          <p class="small muted pc-note">
+            Filo Mini and Filo Pro are proposed additions to the range. Trade
+            in any old printer for up to $100 off:
+            <a href="trade-in.html">check your credit</a>.
           </p>
         </div>
       </section>
 
-      <!-- DESIRE: first month, as four tear-off calendar pages -->
+      <!-- 3. BUNDLES: CTA to bundles.html -->
+      <section class="section alt" id="bundles">
+        <div class="container">
+          <div class="center">
+            <span class="eyebrow">Bundles</span>
+            <h2>Pick your bundle.</h2>
+            <p class="lead mx-auto">
+              Two printers for big projects, one printer to start, or just the
+              filament. Every bundle costs less than buying the parts
+              separately.
+            </p>
+          </div>
+          <div class="grid grid-3 mt-lg">
+            <article class="card bundle popular" data-badge="New">
+              <!-- TODO: swap for a photo of Filo Pro + Filo Mini together -->
+              <img
+                class="bundle-img is-printer"
+                src="assets/filoONE.png"
+                alt="Filo Pro enclosed 3D printer with a multi-colour filament unit, the big printer in Filo Duo"
+                width="2048"
+                height="2048"
+                loading="lazy"
+              />
+              <span class="tag">Bundle: Filo Pro + Filo Mini</span>
+              <h3>Filo Duo</h3>
+              <p class="muted">
+                Filo Pro for the big projects. Filo Mini for the small parts.
+                Run both and finish in half the time.
+              </p>
+              <ul>
+                <li>Filo Pro + Filo Mini</li>
+                <li>2 kg Filo PLA+</li>
+                <li>20 tested project files</li>
+              </ul>
+              <div class="price">
+                <s><span class="sr-only">Bought separately: </span>$843.80</s>
+                $749
+              </div>
+              <a class="btn btn-primary" href="bundles.html#duo">See Filo Duo</a>
+            </article>
+
+            <article class="card bundle">
+              <img
+                class="bundle-img is-printer"
+                src="assets/img/filo-one-hero.png"
+                alt="Filo One 3D printer with silver frame and black build plate"
+                width="699"
+                height="698"
+                loading="lazy"
+              />
+              <span class="tag">New to printing</span>
+              <h3>Filo One + Refills</h3>
+              <p class="muted">
+                Everything you need to start, with enough filament for your
+                first month.
+              </p>
+              <ul>
+                <li>Filo One printer</li>
+                <li>2 kg Filo PLA+</li>
+                <li>10 starter models</li>
+              </ul>
+              <div class="price">
+                <s><span class="sr-only">Bought separately: </span>$394.80</s>
+                $379
+              </div>
+              <a class="btn btn-primary" href="bundles.html#one-refills"
+                >See Filo One + Refills</a
+              >
+            </article>
+
+            <article class="card bundle">
+              <img
+                class="bundle-img"
+                src="assets/img/kit-family.webp"
+                alt="Refill Packs: six colourful Filo PLA+ mini spools with a printed dino keychain and star"
+                width="800"
+                height="537"
+                loading="lazy"
+              />
+              <span class="tag">Already printing</span>
+              <h3>Refill Packs</h3>
+              <p class="muted">
+                Stock up on Filo PLA+. The bigger the pack, the less you pay per
+                kilogram.
+              </p>
+              <ul class="pack-list">
+                <li>
+                  <span>Family Colour Box &middot; 6 &times; 250 g</span> $44.90
+                </li>
+                <li><span>Starter Trio &middot; 3 &times; 1 kg</span> $59.90</li>
+                <li><span>Maker Pack &middot; 5 &times; 1 kg</span> $94.90</li>
+              </ul>
+              <div class="price"><small>from</small> $44.90</div>
+              <a class="btn btn-primary" href="bundles.html#packs"
+                >See Refill Packs</a
+              >
+            </article>
+          </div>
+          <p class="center mt-md">
+            Not sure? <a href="guide.html">Take the 2-question Kit Finder</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. REFILA: CTA to refila.html -->
+      <section class="section dark refila-promo">
+        <div class="container split">
+          <div>
+            <span class="eyebrow">Refila take-back</span>
+            <h2>Refill. Recycle. <span>Repeat.</span></h2>
+            <p class="lead">
+              Failed prints, supports and empty spools don&rsquo;t belong in the
+              bin. Send them back and they become new filament, and you get
+              points for it.
+            </p>
+            <ol class="loop-steps">
+              <li>
+                <strong>Fill</strong>
+                <span
+                  >Drop PLA scraps and empty spools in your Refila Bag.</span
+                >
+              </li>
+              <li>
+                <strong>Send</strong>
+                <span>Post it back for free when it&rsquo;s full.</span>
+              </li>
+              <li>
+                <strong>Earn</strong>
+                <span>Get 50 Filo Points per kg, about $1.25 back.</span>
+              </li>
+            </ol>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="refila.html"
+                >See how Refila works</a
+              >
+            </div>
+          </div>
+          <img
+            class="photo"
+            src="assets/img/refila-flakes.webp"
+            alt="Shredded PLA flakes from recycled scraps, ready to become new filament"
+            width="1000"
+            height="671"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- 5. PRINTING PLAN: CTAs to challenge.html and product.html -->
       <section class="section">
         <div class="container">
           <div class="split mb-md">
@@ -419,8 +770,8 @@
               <div class="cal-card-body">
                 <h3>Your starter models</h3>
                 <p>
-                  Work through your kit&rsquo;s project pack: pen cup, phone
-                  stand, name tags.
+                  Work through your project pack: pen cup, phone stand, name
+                  tags.
                 </p>
               </div>
             </li>
@@ -430,8 +781,8 @@
               <div class="cal-card-body">
                 <h3>A challenge every Monday</h3>
                 <p>
-                  A new <a href="challenge.html">Weekly Challenge</a> drops.
-                  Share your print, collect a stamp.
+                  A new Weekly Challenge drops. Share your print, collect a
+                  stamp.
                 </p>
               </div>
             </li>
@@ -441,291 +792,61 @@
               <div class="cal-card-body">
                 <h3>Running low</h3>
                 <p>
-                  The Filo app spots it and the
-                  <a href="bundles.html#refill">Refill Plan</a> sends up to 15%
-                  off your next roll.
+                  The Filo app spots it and the Refill Plan sends up to 15% off
+                  your next roll.
                 </p>
               </div>
             </li>
           </ol>
-        </div>
-      </section>
-
-      <!-- ACTION: kits -->
-      <section class="section alt" id="kits">
-        <div class="container">
-          <div class="center">
-            <span class="eyebrow">Printer kits</span>
-            <h2>Pick your Filo One kit.</h2>
-            <p class="lead mx-auto">
-              Same printer, different starting filament. Choose the one that
-              matches what you&rsquo;ll make.
+          <div class="plan-cta">
+            <p>
+              <strong>Ready for week 2?</strong>
+              This week&rsquo;s challenge is a desk cable tidy: 25 minutes, no
+              supports.
             </p>
-          </div>
-          <div class="grid grid-3 mt-lg">
-            <article class="card bundle">
-              <img
-                class="bundle-img"
-                src="assets/img/kit-starter.webp"
-                alt="Filo One Starter Kit: printer box, cream and black PLA+ spools and a drawstring bag"
-                width="800"
-                height="537"
-                loading="lazy"
-              />
-              <span class="tag">New to printing</span>
-              <h3>Starter Kit</h3>
-              <p class="muted">
-                Filo One, 2 kg of PLA+ and 10 beginner models.
-              </p>
-              <div class="price">S$379</div>
-              <a
-                class="btn btn-shopee"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_starter"
-                target="_blank"
-                rel="noopener"
-                >Get the Starter Kit</a
-              >
-            </article>
-
-            <article class="card bundle popular" data-badge="Best for families">
-              <img
-                class="bundle-img"
-                src="assets/img/kit-family.webp"
-                alt="Filo One Family Kit: printer box with six colourful mini spools, a dino keychain and a star"
-                width="800"
-                height="537"
-                loading="lazy"
-              />
-              <span class="tag">Families</span>
-              <h3>Family Kit</h3>
-              <p class="muted">
-                Filo One and six mini spools, so everyone gets a colour.
-              </p>
-              <div class="price">S$385</div>
-              <a
-                class="btn btn-shopee"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_family"
-                target="_blank"
-                rel="noopener"
-                >Get the Family Kit</a
-              >
-            </article>
-
-            <article class="card bundle">
-              <img
-                class="bundle-img"
-                src="assets/img/kit-maker.webp"
-                alt="Filo One Maker Kit: printer box, PLA+ rolls, spare nozzles and test prints"
-                width="800"
-                height="537"
-                loading="lazy"
-              />
-              <span class="tag">Frequent makers</span>
-              <h3>Maker Kit</h3>
-              <p class="muted">
-                Filo One and 5 kg of PLA+ at our lowest price per kilogram.
-              </p>
-              <div class="price">S$429</div>
-              <a
-                class="btn btn-shopee"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=home_kit_maker"
-                target="_blank"
-                rel="noopener"
-                >Get the Maker Kit</a
-              >
-            </article>
-          </div>
-          <p class="center mt-md">
-            Not sure? <a href="guide.html">Take the 2-question Kit Finder</a>
-          </p>
-          <p class="center small muted mt-sm">
-            Every kit ships in a gift-ready box, and December&rsquo;s weekly
-            challenges are all gifts you can print.
-          </p>
-        </div>
-      </section>
-
-      <!-- KEEP GOING: Weekly Challenge -->
-      <section class="section dark challenge-teaser">
-        <div class="container split">
-          <div>
-            <span class="eyebrow">Weekly Print Challenge</span>
-            <h2>A new print every Monday.</h2>
-            <p class="lead">
-              Print the week&rsquo;s free model, share a photo and collect a
-              stamp. Stamps add up to free filament, so your printer never sits
-              idle.
-            </p>
-            <a class="week-card" href="challenge.html">
-              <img
-                src="assets/img/challenge-cable-tidy.webp"
-                alt="A 3D-printed cable tidy clipped to the edge of a desk"
-                width="900"
-                height="604"
-                loading="lazy"
-              />
-              <span class="week-card-text">
-                <span class="tag">This week &middot; Week 46</span>
-                <strong>Desk cable tidy</strong>
-                <span class="mono"
-                  >25 min &middot; 18 g &middot; no supports</span
-                >
-              </span>
-            </a>
             <div class="btn-row">
               <a class="btn btn-primary" href="challenge.html"
                 >See this week&rsquo;s challenge</a
               >
+              <a class="btn btn-ghost" href="product.html">Shop PLA+ refills</a>
             </div>
-          </div>
-          <div class="stamp-panel">
-            <p class="stamp-panel-head">
-              <span>Your stamp card</span>
-              <span class="mono">5 / 12 stamps</span>
-            </p>
-            <ol
-              class="stamp-track"
-              aria-label="Example stamp card: 5 of 12 stamps collected, with rewards at 4, 8 and 12 stamps"
-            >
-              <li class="on"></li>
-              <li class="on"></li>
-              <li class="on"></li>
-              <li class="on prize"><b>4</b></li>
-              <li class="on"></li>
-              <li></li>
-              <li></li>
-              <li class="prize"><b>8</b></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li class="prize"><b>12</b></li>
-            </ol>
-            <ul class="stamp-rewards">
-              <li>
-                <span class="num">4</span>
-                <span
-                  ><strong>Free 250 g mini spool</strong> Any colour, to keep
-                  the streak going</span
-                >
-              </li>
-              <li>
-                <span class="num">8</span>
-                <span
-                  ><strong>S$12 Shopee voucher</strong> For any refill in our
-                  store</span
-                >
-              </li>
-              <li>
-                <span class="num">12</span>
-                <span
-                  ><strong>Free 1 kg roll</strong> Then your card starts
-                  again</span
-                >
-              </li>
-            </ul>
-            <p class="small mt-sm">
-              Scraps from failed prints?
-              <a href="refila.html">Refila takes them back for points.</a>
-            </p>
           </div>
         </div>
       </section>
 
-      <!-- OBJECTIONS: buying FAQ (technical questions live on printer.html) -->
-      <section class="section" id="faq">
-        <div class="container faq-wrap">
-          <div class="center">
-            <span class="eyebrow">Questions before you buy</span>
-            <h2>Buying a Filo One: your questions.</h2>
-          </div>
-          <div class="faq mt-lg">
-            <details>
-              <summary>Should I buy the printer on its own or a kit?</summary>
-              <div>
-                <p>
-                  Filo One on its own is S$349. Kits cost S$379 to S$429 and add
-                  filament and project files, which works out cheaper than
-                  buying them separately. Not sure which kit? The
-                  <a href="guide.html">2-question Kit Finder</a> will pick one
-                  for you.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>What comes in a Filo One kit?</summary>
-              <div>
-                <p>
-                  Every kit has the Filo One printer, Filo PLA+ filament with
-                  tuned settings and a pack of tested project files. The Starter
-                  and Maker Kits also include a Refila Bag for your scraps.
-                  <a href="bundles.html">Compare the kits</a>.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>Do I need to join Filo Club?</summary>
-              <div>
-                <p>
-                  Not to buy a printer. Filo Club is free and gets you the
-                  Weekly Challenge files, a stamp card, a S$3 Shopee voucher and
-                  the optional Refill Plan.
-                  <a href="join.html">Join in a minute</a>.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>What is Refila?</summary>
-              <div>
-                <p>
-                  Our take-back partner. Fill a Refila Bag with PLA scraps and
-                  empty spools, send it back, and earn Filo Points: about S$1.25
-                  back per kg of scraps.
-                  <a href="refila.html">See how Refila works</a>.
-                </p>
-              </div>
-            </details>
-            <details>
-              <summary>Why do you sell on Shopee?</summary>
-              <div>
-                <p>
-                  Shopee gives you a familiar checkout, SPayLater, buyer
-                  protection and Shopee vouchers that stack with our own codes.
-                  If you see a similar self-levelling printer cheaper in a
-                  Singapore Shopee store, message us before buying and
-                  we&rsquo;ll match the printer price.
-                </p>
-              </div>
-            </details>
-          </div>
-          <p class="small muted mt-sm">
-            Questions about noise, print size or filament? See the
-            <a href="printer.html#specs">Filo One printer page</a>.
+      <!-- 6. FINAL CTA: image background, headline "prints" in layers -->
+      <section class="final-cta" aria-labelledby="final-cta-title">
+        <img
+          class="final-cta-bg"
+          src="assets/img/about-drawer.webp"
+          alt=""
+          width="1600"
+          height="1073"
+          loading="lazy"
+        />
+        <div class="container final-cta-inner">
+          <span class="eyebrow">Your turn</span>
+          <h2 id="final-cta-title" class="print-in">
+            What will you print first?
+          </h2>
+          <p class="lead">
+            Filo One from $349, with filament in the box and a 12-month local
+            warranty. Join Filo Club for free and get $3 off your first order.
           </p>
-        </div>
-      </section>
-
-      <!-- FINAL CTA -->
-      <section class="section tight">
-        <div class="container">
-          <div class="cta-banner">
-            <div>
-              <h2>Get Filo One. Print tonight.</h2>
-              <p>
-                From S$349 with a 12-month local warranty. Kits ship with
-                filament, so your first print starts the day it arrives.
-              </p>
-            </div>
-            <div class="btn-row">
-              <a
-                class="btn btn-light"
-                href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner"
-                target="_blank"
-                rel="noopener"
-                >Buy Filo One on Shopee</a
-              >
-              <a class="btn btn-ghost" href="#kits">Compare kits</a>
-            </div>
+          <div class="btn-row">
+            <a
+              class="btn btn-shopee"
+              href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=final_cta"
+              target="_blank"
+              rel="noopener"
+              >Buy Filo One on Shopee</a
+            >
+            <a class="btn btn-light" href="join.html">Join Filo Club</a>
           </div>
+          <p class="small mt-md">
+            Questions before you buy?
+            <a href="guide.html#faq">Read the FAQ</a>.
+          </p>
         </div>
       </section>
     </main>
@@ -794,9 +915,9 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
@@ -804,17 +925,17 @@
               href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -851,5 +972,9 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar (plain JS, no build step needed) -->
+    <script src="js/countdown.js" defer></script>
+    <!-- Printer carousel arrows and tabs -->
+    <script src="js/carousel.js" defer></script>
   </body>
 </html>

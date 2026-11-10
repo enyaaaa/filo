@@ -7,7 +7,7 @@
     <title>Our Story | Filo Print, Singapore 3D Printer Brand</title>
     <meta
       name="description"
-      content="Filo started with a drawer full of failed prints. Meet the Singapore 3D printing brand that sells the printer, the filament and a reason to print every week."
+      content="Filo started with a drawer full of failed prints. Meet the Singapore brand behind Filo Mini, Filo One and Filo Pro, Filo PLA+ filament, the Weekly Challenge and Refila take-back."
     />
     <meta
       name="keywords"
@@ -19,7 +19,7 @@
     />
     <meta
       property="og:description"
-      content="Filo started with a drawer full of failed prints. Meet the Singapore 3D printing brand that sells the printer, the filament and a reason to print every week."
+      content="Filo started with a drawer full of failed prints. Meet the Singapore brand behind Filo Mini, Filo One and Filo Pro, Filo PLA+ filament, the Weekly Challenge and Refila take-back."
     />
     <meta property="og:type" content="website" />
     <link
@@ -33,12 +33,74 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- About page + organisation details for search and AI answers -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.filoprint.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Our story",
+                "item": "https://www.filoprint.example/about.html"
+              }
+            ]
+          },
+          {
+            "@type": "AboutPage",
+            "name": "Our Story | Filo Print",
+            "url": "https://www.filoprint.example/about.html",
+            "about": {
+              "@type": "Organization",
+              "name": "Filo Print",
+              "url": "https://www.filoprint.example/",
+              "slogan": "Print more. Waste less.",
+              "description": "Singapore concept brand selling the Filo Mini, Filo One and Filo Pro 3D printers, Filo PLA+ filament, a Weekly Print Challenge and the Refila take-back scheme. Every project and print cost on the site comes from the team's own test prints.",
+              "areaServed": "SG"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="announce">
-      Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379
-      with 2 kg of filament in the box.
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
+      <a
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
+        target="_blank"
+        rel="noopener"
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
     <header class="site-header">
       <nav class="nav container" aria-label="Main">
@@ -161,29 +223,68 @@
     </header>
 
     <main id="main">
-      <!-- STORY: situation, challenge, turning point, result -->
-      <section class="page-hero">
-        <div class="container split">
-          <div>
-            <span class="eyebrow">Our story</span>
-            <h1>It started with a drawer full of failed prints.</h1>
-          </div>
-          <div>
-            <p class="lead">
-              Anyone who owns a 3D printer knows the drawer: half-finished
-              prints, tangled supports and empty spools that are &ldquo;too
-              useful to throw away&rdquo;. We started Filo Print to take that
-              drawer back.
-            </p>
-            <p class="lead">
-              Then we noticed something. Most people asking us about filament
-              didn&rsquo;t own a printer yet. So now we sell the whole thing:
-              <strong
-                >Filo One, the filament to feed it, and a new reason to print
-                every week.</strong
-              >
-            </p>
-          </div>
+      <!-- STORY: a short headline, then the story as three short steps -->
+      <section class="page-hero about-hero">
+        <div class="container">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Our story</p>
+          <span class="eyebrow">Our story</span>
+          <h1>It started with a drawer full of <span>failed prints.</span></h1>
+          <p class="lead">
+            Now we make sure your printer never ends up there.
+          </p>
+          <ol class="story-steps">
+            <li>
+              <span class="story-num">01</span>
+              <strong>The drawer</strong>
+              <span>Failed prints, tangled supports and empty spools.</span>
+            </li>
+            <li>
+              <span class="story-num">02</span>
+              <strong>The gap</strong>
+              <span>Most people asking about filament had no printer yet.</span>
+            </li>
+            <li>
+              <span class="story-num">03</span>
+              <strong>Filo today</strong>
+              <span>Three printers, the filament and a reason to print weekly.</span>
+            </li>
+          </ol>
+
+          <!-- The full story, folded so the page stays short -->
+          <details class="fold fold-sm" id="full-story">
+            <summary>
+              <span class="fold-head">
+                <h2>Read the full story</h2>
+                <span class="fold-sub">How a drawer of failed prints became Filo.</span>
+              </span>
+              <span class="fold-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="fold-body story-body">
+              <p>
+                Anyone who owns a 3D printer knows the drawer: half-finished
+                prints, tangled supports and empty spools that are &ldquo;too
+                useful to throw away&rdquo;. We started Filo Print to take that
+                drawer back, with better filament and a way to send the scraps
+                back.
+              </p>
+              <p>
+                Then we noticed something. Most people asking us about filament
+                didn&rsquo;t own a printer yet, and the ones who did often
+                stopped using it after a few weeks. They didn&rsquo;t need more
+                plastic. They needed a printer that just works and a reason to
+                keep printing.
+              </p>
+              <p>
+                So now we sell the whole thing:
+                <strong
+                  >three self-levelling printers, the filament to feed them, and
+                  a new tested project every week.</strong
+                >
+                And when a print fails, or a printer retires, Refila and trade-in
+                bring it back instead of leaving it in a drawer.
+              </p>
+            </div>
+          </details>
         </div>
         <div class="container">
           <img
@@ -196,79 +297,68 @@
         </div>
       </section>
 
-      <!-- VALUES: each one is a promise to the customer, with proof -->
+      <!-- VALUES: same card style as "Safe at home" on printer.html -->
       <section class="section dark">
         <div class="container">
           <span class="eyebrow">What we stand for</span>
-          <h2>Print more. Waste less. Explain everything.</h2>
-          <div class="grid grid-3 mt-lg">
-            <article class="value">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+          <h2>Print more. Waste less. <span>Explain everything.</span></h2>
+          <ul class="value-grid">
+            <li class="value">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
                   <path d="M9 18h6" />
                   <path d="M10 21h4" />
                   <path
                     d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"
                   />
                 </svg>
-              </div>
+              </span>
               <h3>Print more</h3>
-              <p>
-                Most printers end up in a cupboard. Yours gets a new, tested
-                project every Monday, so there&rsquo;s always something worth
-                making.
-              </p>
+              <p>A new, tested project every Monday.</p>
               <a class="value-link" href="challenge.html"
-                >See this week&rsquo;s challenge &rarr;</a
+                >This week&rsquo;s challenge <span aria-hidden="true">&rarr;</span></a
               >
-            </article>
-            <article class="value">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+            </li>
+            <li class="value">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
                   <path d="M20 12a8 8 0 0 1-14.3 4.9" />
                   <path d="M4 12a8 8 0 0 1 14.3-4.9" />
                   <path d="M18.5 3v4.2h-4.2" />
                   <path d="M5.5 21v-4.2h4.2" />
                 </svg>
-              </div>
+              </span>
               <h3>Waste less</h3>
-              <p>
-                Spools come back to be refilled, and scraps become new filament.
-                We publish what we collect every quarter, including what
-                didn&rsquo;t work.
-              </p>
+              <p>Scraps, spools and old printers come back to be recycled.</p>
               <a class="value-link" href="refila.html"
-                >How Refila works &rarr;</a
+                >How Refila works <span aria-hidden="true">&rarr;</span></a
               >
-            </article>
-            <article class="value">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+            </li>
+            <li class="value">
+              <span class="value-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
                   <path d="M4 5h16v11H9l-5 4z" />
                   <path d="M8 9h8" />
                   <path d="M8 12h5" />
                 </svg>
-              </div>
+              </span>
               <h3>Explain everything</h3>
-              <p>
-                Plain English and real numbers: a 15-minute setup, about S$1 a
-                print, and a 12-month warranty with repairs in Singapore.
-              </p>
+              <p>Plain English, real numbers, no spec-sheet guesswork.</p>
               <a class="value-link" href="printer.html#specs"
-                >See the full specs &rarr;</a
+                >See the full specs <span aria-hidden="true">&rarr;</span></a
               >
-            </article>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <!-- WHY SHOPEE: benefits to the customer, not to us -->
+      <!-- WHY SHOPEE: three short reasons -->
       <section class="section">
         <div class="container split">
           <img
             class="photo"
             src="assets/img/kit-starter.webp"
-            alt="Filo One Starter Kit: printer box, cream and black PLA+ spools and a drawstring bag"
+            alt="A Filo order packed for delivery: printer box, cream and black PLA+ rolls and a drawstring bag"
             width="800"
             height="537"
             loading="lazy"
@@ -277,55 +367,45 @@
             <span class="eyebrow">Why Shopee</span>
             <h2>Checkout the way you already shop.</h2>
             <p class="lead">
-              You already have an account, saved addresses, ShopeePay and a pile
-              of vouchers. Building our own checkout wouldn&rsquo;t make your
-              life easier, so we built this site for what a listing can&rsquo;t
-              do:
+              Your vouchers, ShopeePay and saved address, all ready to go. This
+              site does what a listing can&rsquo;t:
             </p>
             <ul class="checklist">
-              <li>Help you choose with the Kit Finder and setup guide</li>
-              <li>
-                Give you a new tested project every week with the Weekly
-                Challenge
-              </li>
-              <li>
-                Run the Refill Plan, Refila take-back and rewards, paid out as
-                Shopee voucher codes
-              </li>
+              <li>Help you choose the right printer</li>
+              <li>A new tested project every week</li>
+              <li>Refills, take-back and rewards as Shopee vouchers</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- TRUST: who is behind it (E-E-A-T) -->
+      <!-- TRUST: proof tiles instead of a paragraph -->
       <section class="section alt">
-        <div class="container split">
-          <div>
-            <span class="eyebrow">Who&rsquo;s behind Filo</span>
-            <h2>We print everything before we sell it.</h2>
-            <p class="lead">
-              Filo is run by a small team of makers. Every model, print time and
-              cost you see on this site comes from our own test prints on Filo
-              One, not a manufacturer&rsquo;s spec sheet.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn-ghost" href="team.html">Meet the team</a>
+        <div class="container">
+          <div class="about-trust-head">
+            <div>
+              <span class="eyebrow">Who&rsquo;s behind Filo</span>
+              <h2>We print everything before we sell it.</h2>
+              <p class="lead">A small team of makers in Singapore.</p>
             </div>
+            <a class="btn btn-ghost" href="team.html">Meet the team</a>
           </div>
-          <ul class="checklist">
+          <ul class="proof-grid">
             <li>
-              Every Weekly Challenge and project file is test-printed on Filo
-              One before it goes live
+              <strong>100%</strong>
+              <span>of projects test-printed before they go live</span>
             </li>
             <li>
-              Print times and filament costs are measured, then rounded honestly
+              <strong>Measured</strong>
+              <span>print times and costs, not estimates</span>
             </li>
             <li>
-              Questions are answered by the same team, within one working day
+              <strong>1 day</strong>
+              <span>to answer your questions</span>
             </li>
             <li>
-              Refila results are published every quarter, including what
-              didn&rsquo;t work
+              <strong>Quarterly</strong>
+              <span>Refila results, including what didn&rsquo;t work</span>
             </li>
           </ul>
         </div>
@@ -336,10 +416,10 @@
         <div class="container">
           <div class="cta-banner">
             <div>
-              <h2>Get Filo One. Print tonight.</h2>
+              <h2>Come print with us.</h2>
               <p>
-                From S$349 with a 12-month local warranty. Every kit ships with
-                filament, so your first print starts the day it arrives.
+                Start with a Filo printer from $249, then join Filo Club for a
+                free project every week and a $3 welcome voucher.
               </p>
             </div>
             <div class="btn-row">
@@ -348,9 +428,9 @@
                 href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=about_banner"
                 target="_blank"
                 rel="noopener"
-                >Buy Filo One on Shopee</a
+                >Shop Filo on Shopee</a
               >
-              <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+              <a class="btn btn-ghost" href="join.html">Join Filo Club</a>
             </div>
           </div>
         </div>
@@ -421,28 +501,27 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
-              class="btn btn-shopee btn-sm"
-              style="margin-top: 18px"
+              class="btn btn-shopee btn-sm footer-btn"
               href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -478,5 +557,9 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar -->
+    <script src="js/countdown.js" defer></script>
+    <!-- Opens a folded section when a link points inside it -->
+    <script src="js/fold.js" defer></script>
   </body>
 </html>

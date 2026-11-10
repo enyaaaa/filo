@@ -36,9 +36,33 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="announce">
-      Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379
-      with 2 kg of filament in the box.
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
+      <a
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
+        target="_blank"
+        rel="noopener"
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
     <header class="site-header">
       <nav class="nav container" aria-label="Main">
@@ -193,11 +217,11 @@
       <section class="section dark">
         <div class="container">
           <h2>How Refila works</h2>
-          <div class="steps" style="margin-top: 34px">
+          <div class="steps mt-lg">
             <div class="step">
               <h3>Get a bag</h3>
               <p>
-                Refila Bags come free with the Starter and Maker Kits, or you
+                Refila Bags come free with Filo Duo and Filo One + Refills, or you
                 can request one through our sign-up form.
               </p>
             </div>
@@ -212,7 +236,7 @@
               <h3>Send it</h3>
               <p>
                 Drop it at a partner collection point or post it back. Maker
-                Kits include a prepaid label.
+                Printer bundles include a prepaid label.
               </p>
             </div>
             <div class="step">
@@ -304,21 +328,21 @@
                   <tbody>
                     <tr>
                       <td>Empty Filo spool</td>
-                      <td>20 pts each (S$0.50 back)</td>
+                      <td>20 pts each ($0.50 back)</td>
                     </tr>
                     <tr>
                       <td>Other brand plastic spool</td>
-                      <td>10 pts each (S$0.25 back)</td>
+                      <td>10 pts each ($0.25 back)</td>
                     </tr>
                     <tr>
                       <td>PLA / PLA+ scraps</td>
-                      <td>50 pts per kg, weighed on arrival (S$1.25 back)</td>
+                      <td>50 pts per kg, weighed on arrival ($1.25 back)</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="small muted" style="margin-top: 12px">
-                Cash values are based on redeeming 200 points for a S$5 voucher.
+              <p class="small muted mt-sm">
+                Cash values are based on redeeming 200 points for a $5 voucher.
               </p>
             </div>
           </div>
@@ -428,21 +452,20 @@
         <div class="container">
           <div class="cta-banner">
             <div>
-              <h2 style="margin-bottom: 0.3em">Get Filo One. Print tonight.</h2>
+              <h2>Start your first bag.</h2>
               <p>
-                From S$349 with a 12-month local warranty. Every kit ships with
-                filament, so your first print starts the day it arrives.
+                Your Refila Bag comes free with Filo Duo and Filo One + Refills, or order one with your next refill. Every kg earns about $1.25 back.
               </p>
             </div>
-            <div class="btn-row" style="margin-top: 0">
+            <div class="btn-row">
               <a
                 class="btn btn-light"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=banner"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=refila_banner"
                 target="_blank"
                 rel="noopener"
-                >Buy Filo One on Shopee</a
+                >Get a Refila Bag on Shopee</a
               >
-              <a class="btn btn-ghost" href="bundles.html">Compare kits</a>
+              <a class="btn btn-ghost" href="rewards.html">See what points buy</a>
             </div>
           </div>
         </div>
@@ -513,28 +536,27 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
-              class="btn btn-shopee btn-sm"
-              style="margin-top: 18px"
+              class="btn btn-shopee btn-sm footer-btn"
               href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -570,5 +592,7 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar -->
+    <script src="js/countdown.js" defer></script>
   </body>
 </html>

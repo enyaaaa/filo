@@ -3235,56 +3235,188 @@ tr:last-child th {
 /* =========================================================
    About page: value cards with icons (no step numbers)
    ========================================================= */
+/* About page values: same look as the "Safe at home" cards on printer.html */
+.value-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
 .value {
-  padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 34px 24px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 0.2s;
 }
 
-.value h3 {
-  margin: 0 0 8px;
-}
-
-.value p {
-  flex: 1;
+.value:hover {
+  border-color: #e2be93;
 }
 
 .value-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: rgba(240, 163, 58, 0.15);
   display: grid;
   place-items: center;
-  margin-bottom: 18px;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  background: rgba(226, 190, 147, 0.12);
 }
 
 .value-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 52px;
+  height: 52px;
   fill: none;
-  stroke: var(--amber);
-  stroke-width: 1.6;
+  stroke: #e2be93;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-/* .section.dark .value-link {
-  margin-top: 14px;
+.value h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.section.dark .value p {
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+/* Link styled like the certification chips */
+.section.dark a.value-link {
+  margin-top: auto;
+  font-family: var(--mono);
+  font-size: 0.74rem;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   text-decoration: none;
+  padding: 6px 12px;
+  border: 1.5px solid #e2be93;
+  border-radius: 6px;
+  color: #e2be93;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
-.section.dark .value-link:hover {
-  text-decoration: underline;
+.section.dark a.value-link:hover {
+  background: #e2be93;
+  color: #1a1410;
 }
 
-.page-hero .lead+.lead {
-  margin-top: 14px;
-} */
+.section.dark h2 span {
+  color: #e2be93;
+}
+
+@media (max-width: 860px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About hero: the story as three short steps */
+.story-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.story-steps li {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.story-num {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--brand-text);
+  margin-bottom: 4px;
+}
+
+.story-steps strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+}
+
+.story-steps li > span:last-child {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 760px) {
+  .story-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About trust: heading with the button on the right, then proof tiles */
+.about-trust-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px 32px;
+}
+
+.proof-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.proof-grid li {
+  padding: 22px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.proof-grid strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  color: var(--brand-text);
+}
+
+.proof-grid span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 860px) {
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =========================================================
    Homepage: Weekly Challenge teaser
@@ -4357,50 +4489,6 @@ tr:last-child th {
   color: var(--ink);
 }
 
-.cert-strip {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
-}
-
-.certs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin: 0 0 16px;
-  padding: 0;
-  list-style: none;
-}
-
-.certs li {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  font-size: 0.86rem;
-  color: var(--ink-soft);
-}
-
-.certs strong {
-  display: block;
-  color: var(--ink);
-  font-size: 0.95rem;
-}
-
-.cert-mark {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  border: 2px solid var(--ink);
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-}
-
 @media (max-width: 960px) {
   .owner-grid {
     grid-template-columns: 1fr;
@@ -4409,15 +4497,10 @@ tr:last-child th {
   .rating-card {
     position: static;
   }
-
-  .certs {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 600px) {
-  .owner-reviews,
-  .certs {
+  .owner-reviews {
     grid-template-columns: 1fr;
   }
 }
@@ -4694,4 +4777,1215 @@ tr:last-child th {
     border-color: var(--line);
     color: var(--brand-text);
   }
+}
+
+/* =========================================================
+   Homepage redesign (Nov 2026)
+   ========================================================= */
+
+/* ---------- 11.11 announcement bar: Shopee orange, coupon chip ---------- */
+.announce.announce-deal {
+  background: #d63f21; /* white text passes 4.5:1 on this shade */
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 14px;
+  padding: 10px 16px;
+  font-size: 0.92rem;
+}
+
+.announce-deal strong {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.code-chip {
+  font-family: var(--mono);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border: 1.5px dashed #ffffff;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  animation: chip-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes chip-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
+  }
+}
+
+.announce-ends {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  opacity: 0.92;
+}
+
+.announce .announce-btn {
+  background: #ffffff;
+  color: #b8331a;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: transform 0.15s;
+}
+
+.announce .announce-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------- 1. Video hero ---------- */
+.reel-hero {
+  padding: 56px 0 40px;
+  overflow: hidden;
+}
+
+.reel-hero-head {
+  max-width: 720px;
+}
+
+.reel-hero h1 {
+  color: #ffffff;
+}
+
+.reel-hero h1 span {
+  color: #e2be93;
+}
+
+.reel-hero .lead {
+  margin-top: 14px;
+}
+
+.reels {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  justify-content: center;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.reel {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #1f1b17;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Middle reel sits a little lower, like a staggered film strip */
+.reel:nth-child(2) {
+  transform: translateY(28px);
+}
+
+.reel video,
+.reel .reel-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The still is only a fallback for reduced motion (see the end of this block) */
+.reel .reel-still {
+  display: none;
+}
+
+.reel-soon,
+.reel-credit {
+  position: absolute;
+  left: 12px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  padding: 4px 9px;
+  border-radius: 6px;
+  background: rgba(17, 16, 14, 0.72);
+  z-index: 1;
+}
+
+.reel-soon {
+  top: 12px;
+  color: #ffffff;
+}
+
+.section.dark a.reel-credit {
+  bottom: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.section.dark a.reel-credit:hover {
+  color: #e2be93;
+}
+
+.section.dark a.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  margin: 64px auto 0;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #c4cec8;
+}
+
+.scroll-cue svg {
+  width: 28px;
+  height: 28px;
+  color: #e2be93;
+  animation: cue-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes cue-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* Phones: reels become a swipeable row inside the section */
+@media (max-width: 760px) {
+  .reels {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -20px;
+    padding: 0 20px 10px;
+    scrollbar-width: none;
+  }
+
+  .reels::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reel {
+    flex: 0 0 64%;
+    scroll-snap-align: center;
+  }
+
+  .reel:nth-child(2) {
+    transform: none;
+  }
+
+  .section.dark a.scroll-cue {
+    margin-top: 36px;
+  }
+}
+
+/* ---------- 2. Filo One intro (old hero, now an h2) ---------- */
+.hero .hero-title {
+  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+  margin-bottom: 0;
+}
+
+.hero .hero-title span {
+  color: var(--brand-text);
+}
+
+/* ---------- 2. Printer carousel (Filo One / Mini / Pro) ---------- */
+.pc-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin-bottom: 26px;
+}
+
+.pc-bar .eyebrow {
+  margin-bottom: 0;
+}
+
+.pc-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.pc-tab {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 7px 14px;
+  border-radius: 7px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.pc-tab:hover {
+  color: var(--ink);
+}
+
+.pc-tab[aria-current="true"] {
+  background: var(--green);
+  color: var(--on-brand);
+}
+
+.pc-arrows {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.pc-arrows[hidden] {
+  display: none;
+}
+
+.pc-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    border-color 0.15s;
+}
+
+.pc-arrow:hover:not(:disabled) {
+  border-color: var(--brand-text);
+  transform: translateY(-2px);
+}
+
+.pc-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pc-arrow:focus-visible,
+.pc-tab:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.pc-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* room for the hero-art corner brackets */
+  padding-block: 14px;
+}
+
+.pc-track::-webkit-scrollbar {
+  display: none;
+}
+
+.pc-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  /* keep the corner brackets inside the slide */
+  padding-inline: 12px;
+}
+
+.pc-slide .tag {
+  margin-bottom: 14px;
+}
+
+/* Same photo for now: shown smaller for Mini, bigger for Pro */
+.pc-art-mini img {
+  width: 66%;
+  margin-top: 17%;
+}
+
+.pc-art-pro img {
+  width: 94%;
+  margin-top: 3%;
+}
+
+.pc-note {
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .pc-arrows {
+    margin-left: 0;
+  }
+
+  .pc-tab {
+    padding: 7px 10px;
+  }
+}
+
+/* ---------- 3. Bundles ---------- */
+.bundle .btn {
+  margin-top: auto;
+}
+
+.bundle .price {
+  margin-bottom: 16px;
+}
+
+.bundle .price small {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.pack-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pack-list li span {
+  color: var(--ink-soft);
+}
+
+/* ---------- 4. Refila promo ---------- */
+.refila-promo h2 {
+  color: #ffffff;
+}
+
+.refila-promo h2 span {
+  color: #e2be93;
+}
+
+.loop-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+  counter-reset: loop;
+}
+
+.loop-steps li {
+  counter-increment: loop;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.loop-steps strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.loop-steps strong::before {
+  content: "0" counter(loop) "  ";
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--amber);
+}
+
+.loop-steps span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: #c4cec8;
+}
+
+@media (max-width: 520px) {
+  .loop-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 5. Printing plan CTA strip ---------- */
+.plan-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 32px;
+  margin-top: 36px;
+  padding: 26px 30px;
+  border: 1.5px solid var(--brand-text);
+  border-radius: var(--radius);
+  background: radial-gradient(circle at 10% 50%, var(--glow), transparent 60%),
+    var(--card);
+}
+
+.plan-cta p {
+  max-width: 46ch;
+}
+
+.plan-cta strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+}
+
+.plan-cta .btn-row {
+  margin-top: 0;
+}
+
+/* ---------- 6. Final CTA: photo background ---------- */
+.final-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 120px 0;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.final-cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay with faint layer lines keeps the text readable */
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.035) 0 2px,
+      transparent 2px 10px
+    ),
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(17, 16, 14, 0.6),
+      rgba(17, 16, 14, 0.9) 75%
+    );
+}
+
+.final-cta .eyebrow {
+  color: var(--amber);
+}
+
+.final-cta h2 {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  color: #ffffff;
+}
+
+.final-cta .lead {
+  color: #e6ded2;
+  margin-inline: auto;
+}
+
+.final-cta p.small {
+  color: #e6ded2;
+}
+
+.final-cta .btn-row {
+  justify-content: center;
+}
+
+.final-cta .btn-light {
+  background: #f7f2ea;
+  color: #1a1410;
+}
+
+.final-cta a:not(.btn) {
+  color: #e2be93;
+}
+
+/* Headline "prints" in layer by layer as it scrolls into view.
+   Only in browsers that support scroll-driven animations. */
+@supports (animation-timeline: view()) {
+  .print-in {
+    animation: print-layers steps(8, end) both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+  }
+}
+
+@keyframes print-layers {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .final-cta {
+    padding: 80px 0;
+  }
+
+  .plan-cta {
+    padding: 22px;
+  }
+}
+
+/* ---------- FAQ categories (guide.html) ---------- */
+.faq-cats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 8px;
+}
+
+.faq-cats a {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+}
+
+.faq-cats a:hover {
+  border-color: var(--brand-text);
+  color: var(--brand-text);
+}
+
+.faq-group {
+  margin-top: 40px;
+  scroll-margin-top: 90px;
+}
+
+.faq-group h3 {
+  margin-bottom: 14px;
+}
+
+/* ---------- Deal countdown (filled in by js/countdown.js) ---------- */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.countdown[hidden],
+.announce[hidden] {
+  display: none;
+}
+
+.countdown-label {
+  margin-right: 4px;
+  opacity: 0.92;
+}
+
+.cd-unit b {
+  display: inline-block;
+  min-width: 2.1em;
+  margin-right: 1px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: rgba(17, 16, 14, 0.28);
+  font-weight: 600;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Final 24 hours: darker red so the bar feels more urgent */
+.announce.announce-deal.is-last-day {
+  background: #b02a12;
+}
+
+/* ---------- Motion off for people who ask for it ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .code-chip,
+  .scroll-cue svg,
+  .print-in {
+    animation: none !important;
+  }
+
+  .reel video {
+    display: none;
+  }
+
+  .reel .reel-still {
+    display: block;
+  }
+}
+
+/* =========================================================
+   Printer page redesign (Nov 2026)
+   ========================================================= */
+
+/* ---------- Mini hero ---------- */
+.printer-mini-hero {
+  padding: 56px 0 48px;
+}
+
+.printer-mini-hero h1 {
+  max-width: 18ch;
+}
+
+.printer-mini-hero h1 span {
+  color: var(--brand-text);
+}
+
+.printer-mini-hero .badges {
+  margin-top: 24px;
+}
+
+/* ---------- What every printer gets ---------- */
+.range-common {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.range-common li {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.range-common strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .range-common {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Printer Finder (reuses .finder from the Kit Finder) ---------- */
+.pf .addon.pf-tradein {
+  display: none;
+  margin: 0 0 4px;
+}
+
+.pf:has(#pf-own-yes:checked) .addon.pf-tradein {
+  display: block;
+}
+
+.result .addon a {
+  color: #e2be93;
+}
+
+.pf:has(input[name="pf-who"]:checked):has(input[name="pf-size"]:checked)
+  .result-default {
+  display: none;
+}
+
+/* Small prints -> Mini. Big prints -> Pro. Everyday prints -> One,
+   unless they print a lot, then Pro. */
+.pf:has(input[name="pf-who"]:checked):has(#pf-size-s:checked) .r-pf-mini,
+.pf:has(input[name="pf-who"]:checked):has(#pf-size-l:checked) .r-pf-pro,
+.pf:has(#pf-who-maker:checked):has(#pf-size-m:checked) .r-pf-pro,
+.pf:has(#pf-who-kids:checked):has(#pf-size-m:checked) .r-pf-one,
+.pf:has(#pf-who-me:checked):has(#pf-size-m:checked) .r-pf-one {
+  display: block;
+}
+
+/* ---------- Folded sections (setup, everything you need) ---------- */
+.folds .fold + .fold {
+  margin-top: 16px;
+}
+
+.fold {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+  scroll-margin-top: 90px;
+}
+
+.fold:hover,
+.fold[open] {
+  border-color: var(--brand-text);
+}
+
+.fold summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 30px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.fold summary::-webkit-details-marker {
+  display: none;
+}
+
+.fold summary:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+.fold-head {
+  display: block;
+}
+
+.fold-head .eyebrow {
+  margin-bottom: 6px;
+}
+
+.fold-head h2 {
+  margin-bottom: 4px;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.fold-sub {
+  display: block;
+  color: var(--ink-soft);
+}
+
+/* Round +/- button */
+.fold-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--brand-text);
+  transition:
+    transform 0.25s,
+    background 0.2s;
+}
+
+.fold-icon::before,
+.fold-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  margin: -1px 0 0 -8px;
+  border-radius: 2px;
+  background: var(--brand-text);
+}
+
+.fold-icon::after {
+  transform: rotate(90deg);
+  transition: transform 0.25s;
+}
+
+.fold summary:hover .fold-icon {
+  background: var(--mint);
+}
+
+.fold[open] .fold-icon::after {
+  transform: rotate(0deg);
+}
+
+.fold-body {
+  padding: 4px 30px 30px;
+  border-top: 1px dashed var(--line);
+  padding-top: 26px;
+}
+
+.fold-body .setup-steps {
+  margin-top: 0;
+}
+
+.fold-body .inbox-cols {
+  margin-top: 0;
+}
+
+/* Spec table: first column is the row label */
+.spec-compare td[colspan] {
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 640px) {
+  .fold summary {
+    padding: 20px;
+  }
+
+  .fold-body {
+    padding: 20px;
+  }
+
+  .fold-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ---------- Safe at home: benefit first, certification as proof ---------- */
+.safe-home h2 {
+  color: #ffffff;
+}
+
+.safe-home h2 span {
+  color: #e2be93;
+}
+
+.safe-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.safe-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 34px 22px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: default;
+  transition: border-color 0.2s;
+}
+
+/* Small "+" in the corner hints there is more on hover */
+.safe-card::after {
+  content: "+";
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.2rem;
+  color: rgba(226, 190, 147, 0.6);
+  transition: opacity 0.2s;
+}
+
+.safe-card:hover,
+.safe-card:focus-visible {
+  border-color: #e2be93;
+  outline: none;
+}
+
+/* Big icon is the hero of each card */
+.safe-icon {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  background: rgba(226, 190, 147, 0.12);
+  transition: transform 0.25s;
+}
+
+.safe-icon svg {
+  width: 52px;
+  height: 52px;
+  fill: none;
+  stroke: #e2be93;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.safe-card h3 {
+  font-size: 1.08rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* Description: hidden until hover or keyboard focus, then it slides up
+   over the card. Still read out by screen readers. */
+.section.dark .safe-more {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 28px 24px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #eef3ef;
+  background: #1f1b17;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+  pointer-events: none;
+}
+
+.safe-card:hover .safe-more,
+.safe-card:focus-visible .safe-more {
+  opacity: 1;
+  transform: none;
+}
+
+.safe-card:hover::after,
+.safe-card:focus-visible::after {
+  opacity: 0;
+}
+
+/* The certification sits at the bottom of every card, lined up */
+.cert-chip {
+  margin-top: auto;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1.5px solid #e2be93;
+  border-radius: 6px;
+  color: #e2be93;
+}
+
+/* Touch screens can't hover: show the description under the title instead */
+@media (hover: none) {
+  .section.dark .safe-more {
+    position: static;
+    opacity: 1;
+    transform: none;
+    padding: 0;
+    margin-bottom: 16px;
+    background: none;
+    font-size: 0.9rem;
+    color: #c4cec8;
+  }
+
+  .safe-card::after {
+    display: none;
+  }
+
+  .safe-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .safe-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.safe-extra {
+  margin-top: 26px;
+}
+
+.section.dark .safe-extra strong {
+  color: #ffffff;
+}
+
+.section.dark .safe-note {
+  margin-top: 8px;
+  color: #9a948b;
+}
+
+@media (max-width: 1000px) {
+  .safe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .safe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* One-line trust strip next to buy buttons */
+.trust-strip {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-top: 22px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.trust-strip li::before {
+  content: "\2713";
+  margin-right: 6px;
+  color: var(--brand-text);
+}
+
+.trust-strip a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
+.trust-strip a:hover {
+  color: var(--brand-text);
+}
+
+/* Inside the CTA banner (brand-coloured background) */
+.trust-strip.trust-strip-light {
+  margin-top: 16px;
+  color: var(--on-brand);
+  opacity: 0.85;
+}
+
+.trust-strip.trust-strip-light li::before {
+  color: inherit;
+}
+
+/* =========================================================
+   Site-wide tidy-up (Nov 2026): utilities that replace inline styles
+   ========================================================= */
+.section.tight-top {
+  padding-top: 40px;
+}
+
+.container.narrow {
+  max-width: 860px;
+}
+
+.container.narrow-sm {
+  max-width: 720px;
+}
+
+.split.align-start {
+  align-items: start;
+}
+
+.btn.btn-block {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.site-footer .footer-btn {
+  margin-top: 18px;
+}
+
+/* Team avatars */
+.avatar-green {
+  background: #1e7a52;
+}
+
+.avatar-amber {
+  background: #f0a33a;
+}
+
+.avatar-blue {
+  background: #2a6fb0;
+}
+
+/* Thank-you page spool illustration */
+.ty-art {
+  width: 160px;
+  margin: 0 auto 24px;
+}
+
+.fil.fil-line {
+  fill: none;
+}
+
+/* Page heroes: second half of the headline in brand colour */
+.page-hero h1 span {
+  color: var(--brand-text);
+}
+
+.page-hero .page-jump {
+  margin-top: 22px;
+}
+
+/* Bundle cards on bundles.html use h2 for the outline but look like card titles */
+.bundle .bundle-title {
+  font-size: 1.4rem;
+  margin: 6px 0 8px;
+}
+
+.bundles-main {
+  padding-top: 24px;
+}
+
+/* Kit Finder and FAQ answers that sit in a bare paragraph */
+.faq details > div > p + p {
+  margin-top: 0.6em;
+}
+
+/* Printer photos in bundle cards: show the whole printer, not a crop */
+.bundle-img.is-printer {
+  object-fit: contain;
+  padding: 14px;
+  background: radial-gradient(circle at 50% 55%, var(--glow), transparent 65%),
+    var(--paper);
+}
+
+/* Compact fold (about page story) */
+.fold.fold-sm {
+  margin-top: 14px;
+}
+
+.fold.fold-sm summary {
+  padding: 16px 22px;
+}
+
+.fold.fold-sm .fold-head h2 {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.fold.fold-sm .fold-sub {
+  font-size: 0.9rem;
+}
+
+.fold.fold-sm .fold-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.fold.fold-sm .fold-body {
+  padding: 20px 22px 22px;
+}
+
+.story-body {
+  color: var(--ink-soft);
+}
+
+/* Keep lines readable without shortening the divider above */
+.story-body p {
+  max-width: 72ch;
+}
+
+.story-body strong {
+  color: var(--ink);
 }

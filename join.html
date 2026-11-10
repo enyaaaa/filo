@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>
-      Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo Print
+      Join Filo Club: Free Starter Pack & $3 Shopee Voucher | Filo Print
     </title>
     <meta
       name="description"
-      content="Join Filo Club: free project files, the Weekly Print Challenge, an optional Refill Plan and a S$3 Shopee welcome voucher. PDPA-compliant sign-up."
+      content="Join Filo Club: free project files, the Weekly Print Challenge, an optional Refill Plan and a $3 Shopee welcome voucher. PDPA-compliant sign-up."
     />
     <meta
       name="keywords"
@@ -17,11 +17,11 @@
     />
     <meta
       property="og:title"
-      content="Join Filo Club: Free Starter Pack & S$3 Shopee Voucher | Filo Print"
+      content="Join Filo Club: Free Starter Pack & $3 Shopee Voucher | Filo Print"
     />
     <meta
       property="og:description"
-      content="Join Filo Club: free project files, the Weekly Print Challenge, an optional Refill Plan and a S$3 Shopee welcome voucher."
+      content="Join Filo Club: free project files, the Weekly Print Challenge, an optional Refill Plan and a $3 Shopee welcome voucher."
     />
     <meta property="og:type" content="website" />
     <link
@@ -38,9 +38,33 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <div class="announce">
-      Launch offer: the <a href="bundles.html">Filo One Starter Kit</a> is S$379
-      with 2 kg of filament in the box.
+    <!-- Site-wide deal bar. To run a new deal, change it on every page
+         (same text, code and data-deadline in Singapore time).
+         js/countdown.js shows the timer and hides the bar after the deadline. -->
+    <div
+      class="announce announce-deal"
+      data-deadline="2026-11-30T23:59:59+08:00"
+    >
+      <span class="announce-text"
+        ><strong>Early Gift Sale:</strong> $20 off any Filo bundle with
+        code</span
+      >
+      <span class="code-chip">GIFT20</span>
+      <span class="announce-ends">Ends 30 Nov, 11:59 pm</span>
+      <span class="countdown" hidden aria-hidden="true">
+        <span class="countdown-label">Ends in</span>
+        <span class="cd-unit"><b data-cd="d">00</b>d</span>
+        <span class="cd-unit"><b data-cd="h">00</b>h</span>
+        <span class="cd-unit"><b data-cd="m">00</b>m</span>
+        <span class="cd-unit"><b data-cd="s">00</b>s</span>
+      </span>
+      <a
+        class="announce-btn"
+        href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=announce_gift20"
+        target="_blank"
+        rel="noopener"
+        >Shop the deal <span aria-hidden="true">&rarr;</span></a
+      >
     </div>
     <header class="site-header">
       <nav class="nav container" aria-label="Main">
@@ -166,9 +190,20 @@
     </header>
 
     <main id="main">
-      <section class="page-hero"></section>
-      <section class="section" style="padding-top: 40px">
-        <div class="container split" style="align-items: start">
+      <section class="page-hero">
+        <div class="container">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Join Filo Club</p>
+          <span class="eyebrow">Join Filo Club &middot; free</span>
+          <h1>Get your starter pack. <span>Free.</span></h1>
+          <p class="lead">
+            Sign up in under a minute for free project files, your Weekly
+            Challenge stamp card, a $3 welcome voucher for our Shopee store and,
+            if you like, a Refill Plan that saves up to 15% on every reorder.
+          </p>
+        </div>
+      </section>
+      <section class="section tight-top">
+        <div class="container split align-start">
           <form
             class="form"
             action="https://formsubmit.co/YOUR-TEAM-EMAIL@example.com"
@@ -189,7 +224,7 @@
             <input
               type="text"
               name="_honey"
-              style="display: none"
+              hidden
               tabindex="-1"
               autocomplete="off"
             />
@@ -244,7 +279,9 @@
                 <label for="printer">Your printer</label>
                 <select id="printer" name="printer">
                   <option value="">Select (optional)</option>
+                  <option>Filo Mini</option>
                   <option>Filo One</option>
+                  <option>Filo Pro</option>
                   <option>Bambu Lab</option>
                   <option>Creality</option>
                   <option>Prusa</option>
@@ -278,8 +315,8 @@
                   Weekly Challenge</label
                 >
                 <label
-                  ><input type="checkbox" name="interest" value="kits" />
-                  Printer kit deals</label
+                  ><input type="checkbox" name="interest" value="bundles" />
+                  Printer &amp; bundle deals</label
                 >
               </div>
             </div>
@@ -326,20 +363,19 @@
             <label class="consent"
               ><input type="checkbox" name="marketing_consent" value="yes" />
               <span
-                ><strong>Optional:</strong> Send me the Weekly Challenge, kit
+                ><strong>Optional:</strong> Send me the Weekly Challenge, bundle
                 offers and Filo Club updates by email. I can unsubscribe at any
                 time.</span
               ></label
             >
 
             <button
-              class="btn btn-primary"
+              class="btn btn-primary btn-block"
               type="submit"
-              style="width: 100%; margin-top: 10px"
             >
               Join Filo Club
             </button>
-            <p class="hint center" style="margin-top: 12px">
+            <p class="hint center mt-sm">
               Fields marked * are required. You can withdraw consent at any time
               by emailing dpo@filo.sg.
             </p>
@@ -357,7 +393,7 @@
             />
             <ul class="checklist">
               <li>
-                <strong>S$3 welcome voucher</strong> for the Filo Shopee store
+                <strong>$3 welcome voucher</strong> for the Filo Shopee store
               </li>
               <li>
                 <strong>Starter project pack</strong>: 10 tested model files
@@ -379,7 +415,7 @@
                 reorder
               </li>
             </ul>
-            <div class="card" style="margin-top: 30px">
+            <div class="card mt-lg">
               <h3>Just have a question?</h3>
               <p>
                 Use the comments box and leave the marketing option unticked. We
@@ -387,7 +423,7 @@
                 store directly.
               </p>
             </div>
-            <div class="card" style="margin-top: 20px">
+            <div class="card mt-md">
               <h3>Why we ask for each field</h3>
               <p class="small">
                 <strong>Name and email:</strong> your account and voucher.
@@ -465,28 +501,27 @@
               >Filo<span class="logo-sub">Print</span></a
             >
             <p>
-              Filo One: the beginner 3D printer that arrives with filament in
-              the box. Then PLA+ refills, a new project every week and a
-              take-back scheme for your scraps.
+              Self-levelling 3D printers that arrive with filament in the box.
+              Then PLA+ refills, a new project every week and a take-back
+              scheme for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
-              class="btn btn-shopee btn-sm"
-              style="margin-top: 18px"
+              class="btn btn-shopee btn-sm footer-btn"
               href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=footer"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop on Shopee</a
             >
           </div>
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="printer.html">Filo One printer</a></li>
-              <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
+              <li><a href="printer.html">3D printers (Mini, One, Pro)</a></li>
+              <li><a href="bundles.html">Bundles &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
-              <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
               <li><a href="trade-in.html">Printer trade-in</a></li>
+              <li><a href="guide.html">Help &amp; FAQ</a></li>
             </ul>
           </div>
           <div>
@@ -522,5 +557,7 @@
         </p>
       </div>
     </footer>
+    <!-- Live countdown for the deal bar -->
+    <script src="js/countdown.js" defer></script>
   </body>
 </html>
