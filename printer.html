@@ -256,14 +256,25 @@
           aria-label="Open menu"
         />
         <ul class="nav-links">
-          <li><a href="printer.html" aria-current="page">Printer</a></li>
-          <li><a href="bundles.html">Kits</a></li>
-          <li><a href="product.html">Refills</a></li>
-          <li><a href="challenge.html">Challenge</a></li>
-          <li><a href="refila.html">Refila</a></li>
+          <li class="has-sub">
+            <a class="nav-parent is-current" href="printer.html">Products</a>
+            <ul class="sub" aria-label="Products">
+              <li>
+                <a href="printer.html" aria-current="page">3D printers</a>
+              </li>
+              <li><a href="product.html">Refills</a></li>
+              <li><a href="bundles.html">Bundles</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a class="nav-parent" href="refila.html">Community</a>
+            <ul class="sub" aria-label="Community">
+              <li><a href="refila.html">Refila</a></li>
+              <li><a href="challenge.html">Challenge</a></li>
+            </ul>
+          </li>
           <li><a href="rewards.html">Rewards</a></li>
           <li><a href="about.html">About</a></li>
-          <!-- Plain link now: Shopee is the one filled button on this page -->
           <li>
             <a class="btn btn-primary btn-sm" href="join.html"
               >Join Filo Club</a
@@ -271,6 +282,13 @@
           </li>
         </ul>
         <div class="nav-tools">
+          <a
+            class="help-btn"
+            href="guide.html"
+            title="Help: Kit Finder, setup guide and FAQs"
+            ><span aria-hidden="true">?</span
+            ><span class="sr-only">Help</span></a
+          >
           <label
             for="theme-toggle"
             class="theme-btn"
@@ -336,9 +354,103 @@
             <p class="small muted mt-sm">
               Most people buy a kit: the
               <a href="bundles.html">Starter Kit</a> adds 2 kg of filament for
-              S$30 more. SPayLater available at checkout.
+              S$30 more. SPayLater available at checkout. Need a smaller or
+              bigger printer? <a href="#range">Compare the Filo range</a>.
             </p>
           </div>
+        </div>
+      </section>
+
+      <!-- RANGE: three printers, same easy setup; links to trade-in -->
+      <section class="section alt" id="range">
+        <div class="container">
+          <span class="eyebrow">The Filo range</span>
+          <h2>Three printers. Same 15-minute setup.</h2>
+          <p class="lead">
+            Every Filo printer levels itself, prints over Wi-Fi and loads tested
+            Filo PLA+ settings. Pick the size that fits your desk and your
+            plans.
+          </p>
+          <div class="grid grid-3 mt-lg range-grid">
+            <article class="card range-card">
+              <div class="vol" aria-hidden="true">
+                <span style="--s: 0.6"></span>
+              </div>
+              <span class="tag">For kids and small desks</span>
+              <h3>Filo Mini</h3>
+              <p class="range-price">S$249</p>
+              <ul class="checklist">
+                <li>180 &times; 180 &times; 180 mm build volume</li>
+                <li>Up to 250 mm/s</li>
+                <li>PLA and PLA+</li>
+                <li>About 45 dB, fits on a study desk</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=range_mini"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo Mini on Shopee</a
+              >
+            </article>
+            <article class="card range-card featured">
+              <span class="range-badge">Most popular</span>
+              <div class="vol" aria-hidden="true">
+                <span style="--s: 0.75"></span>
+              </div>
+              <span class="tag">For most homes</span>
+              <h3>Filo One</h3>
+              <p class="range-price">S$349</p>
+              <ul class="checklist">
+                <li>220 &times; 220 &times; 250 mm build volume</li>
+                <li>Up to 300 mm/s, direct drive</li>
+                <li>PLA, PLA+, PETG and TPU</li>
+                <li>About 48 dB in quiet mode</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=range_one"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo One on Shopee</a
+              >
+            </article>
+            <article class="card range-card">
+              <div class="vol" aria-hidden="true">
+                <span style="--s: 1"></span>
+              </div>
+              <span class="tag">For makers and second printers</span>
+              <h3>Filo Pro</h3>
+              <p class="range-price">S$549</p>
+              <ul class="checklist">
+                <li>300 &times; 300 &times; 300 mm build volume</li>
+                <li>Up to 500 mm/s, enclosed chamber</li>
+                <li>Adds ABS and ASA for outdoor parts</li>
+                <li>Built-in camera to watch long prints</li>
+              </ul>
+              <a
+                class="btn btn-shopee"
+                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=range_pro"
+                target="_blank"
+                rel="noopener"
+                >Buy Filo Pro on Shopee</a
+              >
+            </article>
+          </div>
+          <div class="tradein-strip mt-lg">
+            <div>
+              <strong>Trading up?</strong> Get up to S$100 off any Filo printer
+              when you trade in your old one. Any brand, working or not.
+            </div>
+            <a class="btn btn-primary" href="trade-in.html"
+              >Check your trade-in credit</a
+            >
+          </div>
+          <p class="small muted mt-sm">
+            Filo Mini and Filo Pro are proposed additions to the range. Prices
+            shown are proposed launch prices. All three come with a 12-month
+            warranty, repaired in Singapore.
+          </p>
         </div>
       </section>
 
@@ -765,8 +877,65 @@
         </div>
       </section>
 
+      <!-- SECOND PRINTER: for makers who already own a printer (Marcus) -->
+      <section class="section alt" id="second-printer">
+        <div class="container">
+          <span class="eyebrow">Already printing every week?</span>
+          <h2>Make Filo One your second printer.</h2>
+          <p class="lead">
+            When your main printer is busy with a 9-hour job, the next idea
+            waits. A second printer means two jobs at once and no queue.
+          </p>
+          <div class="grid grid-4 mt-lg second-grid">
+            <article class="card">
+              <span class="tag">Double the output</span>
+              <h3>Two jobs at once.</h3>
+              <p>
+                Prototype on one printer while Filo One runs the next part or a
+                batch for your stall. A weekend gets twice as much done.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">No new workflow</span>
+              <h3>Fits what you already use.</h3>
+              <p>
+                Takes any 1.75&nbsp;mm PLA, PLA+, PETG or TPU, any brand. Send
+                files over Wi-Fi from your laptop, like you do now.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Built for long prints</span>
+              <h3>Same result from every roll.</h3>
+              <p>
+                Filo PLA+ loads a tested profile automatically. The runout
+                sensor and power-loss resume protect overnight jobs.
+              </p>
+            </article>
+            <article class="card">
+              <span class="tag">Maker Kit &middot; S$429</span>
+              <h3>5&nbsp;kg of PLA+ for S$80 more.</h3>
+              <p>
+                That&rsquo;s S$16 a kg. Then the Maker Refill Plan takes 15% off
+                every reorder, and Refila takes back your empty spools.
+              </p>
+            </article>
+          </div>
+          <div class="btn-row mt-lg">
+            <a
+              class="btn btn-shopee"
+              href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=printer_second"
+              target="_blank"
+              rel="noopener"
+              >Get the Maker Kit on Shopee</a
+            ><a class="btn btn-ghost" href="guide.html"
+              >Not sure? Take the Kit Finder</a
+            >
+          </div>
+        </div>
+      </section>
+
       <!-- TECHNICAL FAQ (buying questions live on the home page) -->
-      <section class="section alt">
+      <section class="section">
         <div class="container faq-wrap">
           <span class="eyebrow">Before you buy</span>
           <h2>Filo One questions, answered.</h2>
@@ -960,6 +1129,7 @@
               <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
               <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
+              <li><a href="trade-in.html">Printer trade-in</a></li>
             </ul>
           </div>
           <div>

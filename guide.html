@@ -114,11 +114,21 @@
           aria-label="Open menu"
         />
         <ul class="nav-links">
-          <li><a href="printer.html">Printer</a></li>
-          <li><a href="bundles.html">Kits</a></li>
-          <li><a href="product.html">Refills</a></li>
-          <li><a href="challenge.html">Challenge</a></li>
-          <li><a href="refila.html">Refila</a></li>
+          <li class="has-sub">
+            <a class="nav-parent" href="printer.html">Products</a>
+            <ul class="sub" aria-label="Products">
+              <li><a href="printer.html">3D printers</a></li>
+              <li><a href="product.html">Refills</a></li>
+              <li><a href="bundles.html">Bundles</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a class="nav-parent" href="refila.html">Community</a>
+            <ul class="sub" aria-label="Community">
+              <li><a href="refila.html">Refila</a></li>
+              <li><a href="challenge.html">Challenge</a></li>
+            </ul>
+          </li>
           <li><a href="rewards.html">Rewards</a></li>
           <li><a href="about.html">About</a></li>
           <li>
@@ -128,6 +138,14 @@
           </li>
         </ul>
         <div class="nav-tools">
+          <a
+            class="help-btn"
+            href="guide.html"
+            title="Help: Kit Finder, setup guide and FAQs"
+            aria-current="page"
+            ><span aria-hidden="true">?</span
+            ><span class="sr-only">Help</span></a
+          >
           <label
             for="theme-toggle"
             class="theme-btn"
@@ -171,6 +189,9 @@
               <div class="opts">
                 <input type="radio" name="exp" id="e-new" /><label for="e-new"
                   >Not yet</label
+                >
+                <input type="radio" name="exp" id="e-two" /><label for="e-two"
+                  >Yes, and I want a second one</label
                 >
                 <input type="radio" name="exp" id="e-pro" /><label for="e-pro"
                   >Yes, I just need filament</label
@@ -286,6 +307,74 @@
                 <a
                   class="btn btn-shopee"
                   href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=finder_silk"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy on Shopee</a
+                ><a class="btn btn-ghost" href="product.html"
+                  >Preview colours</a
+                >
+              </div>
+            </div>
+            <div class="result r-second-kids">
+              <span class="tag">Your match</span>
+              <h3>Filo One Family Kit, a printer for the kids</h3>
+              <p>
+                Keep your printer for your own projects and give the kids
+                theirs. Comes with six mini spools and a family project pack.
+              </p>
+              <p class="addon">
+                <strong>Also add:</strong> the Weekly plan for 12% off refills.
+              </p>
+              <div class="btn-row">
+                <a
+                  class="btn btn-shopee"
+                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=finder_second_kids"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy on Shopee</a
+                ><a class="btn btn-ghost" href="challenge.html"
+                  >See the kids&rsquo; challenges</a
+                >
+              </div>
+            </div>
+            <div class="result r-second-func">
+              <span class="tag">Your match</span>
+              <h3>Filo One Maker Kit as your second printer</h3>
+              <p>
+                Run a long job on your main printer while Filo One handles the
+                next part. It takes any 1.75&nbsp;mm filament and comes with
+                5&nbsp;kg of PLA+, a spare nozzle set and a Refila Bag.
+              </p>
+              <p class="addon">
+                <strong>Also add:</strong> the Maker Refill Plan for 15% off
+                every reorder.
+              </p>
+              <div class="btn-row">
+                <a
+                  class="btn btn-shopee"
+                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=finder_second_maker"
+                  target="_blank"
+                  rel="noopener"
+                  >Buy on Shopee</a
+                ><a class="btn btn-ghost" href="printer.html#second-printer"
+                  >Why add a second printer?</a
+                >
+              </div>
+            </div>
+            <div class="result r-second-deco">
+              <span class="tag">Your match</span>
+              <h3>Filo One Starter Kit for your gift prints</h3>
+              <p>
+                A printer that stays loaded with Silk colours, so gifts and
+                décor never wait behind your other jobs.
+              </p>
+              <p class="addon">
+                <strong>Also add:</strong> PLA+ in Silk Gold or Lilac.
+              </p>
+              <div class="btn-row">
+                <a
+                  class="btn btn-shopee"
+                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=finder_second_gift"
                   target="_blank"
                   rel="noopener"
                   >Buy on Shopee</a
@@ -546,6 +635,7 @@
               <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
               <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
+              <li><a href="trade-in.html">Printer trade-in</a></li>
             </ul>
           </div>
           <div>

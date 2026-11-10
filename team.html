@@ -111,11 +111,21 @@
           aria-label="Open menu"
         />
         <ul class="nav-links">
-          <li><a href="printer.html">Printer</a></li>
-          <li><a href="bundles.html">Kits</a></li>
-          <li><a href="product.html">Refills</a></li>
-          <li><a href="challenge.html">Challenge</a></li>
-          <li><a href="refila.html">Refila</a></li>
+          <li class="has-sub">
+            <a class="nav-parent" href="printer.html">Products</a>
+            <ul class="sub" aria-label="Products">
+              <li><a href="printer.html">3D printers</a></li>
+              <li><a href="product.html">Refills</a></li>
+              <li><a href="bundles.html">Bundles</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <a class="nav-parent" href="refila.html">Community</a>
+            <ul class="sub" aria-label="Community">
+              <li><a href="refila.html">Refila</a></li>
+              <li><a href="challenge.html">Challenge</a></li>
+            </ul>
+          </li>
           <li><a href="rewards.html">Rewards</a></li>
           <li><a href="about.html">About</a></li>
           <li>
@@ -125,6 +135,13 @@
           </li>
         </ul>
         <div class="nav-tools">
+          <a
+            class="help-btn"
+            href="guide.html"
+            title="Help: Kit Finder, setup guide and FAQs"
+            ><span aria-hidden="true">?</span
+            ><span class="sr-only">Help</span></a
+          >
           <label
             for="theme-toggle"
             class="theme-btn"
@@ -282,6 +299,7 @@
               <li><a href="bundles.html">Kits &amp; Refill Plan</a></li>
               <li><a href="product.html">PLA+ refills</a></li>
               <li><a href="guide.html">Kit Finder &amp; setup guide</a></li>
+              <li><a href="trade-in.html">Printer trade-in</a></li>
             </ul>
           </div>
           <div>

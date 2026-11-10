@@ -517,7 +517,8 @@ p + p {
   background: transparent;
 }
 
-.dark .btn-ghost {
+.dark .btn-ghost,
+.result .btn-ghost {
   border-color: #eef3ef;
   color: #eef3ef;
 }
@@ -1327,8 +1328,20 @@ tbody tr:hover {
 .finder:has(#g-deco:checked):has(#e-new:checked) .r-gift-kit,
 .finder:has(#g-kids:checked):has(#e-pro:checked) .r-family,
 .finder:has(#g-func:checked):has(#e-pro:checked) .r-maker,
-.finder:has(#g-deco:checked):has(#e-pro:checked) .r-silk {
+.finder:has(#g-deco:checked):has(#e-pro:checked) .r-silk,
+.finder:has(#g-kids:checked):has(#e-two:checked) .r-second-kids,
+.finder:has(#g-func:checked):has(#e-two:checked) .r-second-func,
+.finder:has(#g-deco:checked):has(#e-two:checked) .r-second-deco {
   display: block;
+}
+
+.result .addon {
+  margin-top: -4px;
+  font-size: 0.95rem;
+}
+
+.result .addon strong {
+  color: #e2be93;
 }
 
 /* ---------- FAQ (details/summary) ---------- */
@@ -4417,4 +4430,268 @@ tr:last-child th {
   font-weight: 700;
   line-height: 1.2;
   color: #e2be93;
+}
+
+/* ---------- Filo printer range (printer page) ---------- */
+.range-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.range-card.featured {
+  border: 2px solid var(--ink);
+}
+
+.range-card .vol {
+  height: 96px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.range-card .vol span {
+  display: block;
+  width: calc(var(--s) * 96px);
+  aspect-ratio: 1;
+  border-radius: 8px 8px 0 0;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--fil) 0 6px,
+    var(--mint) 6px 8px
+  );
+}
+
+.range-card h3 {
+  margin-top: 12px;
+}
+
+.range-card .range-price {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--brand-text);
+  margin: 2px 0 10px;
+}
+
+.range-card .checklist {
+  margin-bottom: 22px;
+}
+
+.range-card .btn {
+  margin-top: auto;
+}
+
+.range-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--on-brand);
+}
+
+.tradein-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  background: var(--amber-soft);
+  border: 1px dashed var(--line);
+}
+
+/* ---------- Trade-in page ---------- */
+.credit-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  box-shadow: var(--shadow);
+}
+
+.credit-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.credit-card th,
+.credit-card td {
+  text-align: left;
+  padding: 12px 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.credit-card th {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.credit-card td strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  color: var(--brand-text);
+}
+
+.credit-card tr:last-child td {
+  border-bottom: none;
+}
+
+.finder:has(input[name="cond"]:checked):has(input[name="model"]:checked)
+  .result-default {
+  display: none;
+}
+
+.finder:has(#c-work:checked):has(#m-mini:checked) .r-work-mini,
+.finder:has(#c-work:checked):has(#m-one:checked) .r-work-one,
+.finder:has(#c-work:checked):has(#m-pro:checked) .r-work-pro,
+.finder:has(#c-broken:checked):has(#m-mini:checked) .r-broken-mini,
+.finder:has(#c-broken:checked):has(#m-one:checked) .r-broken-one,
+.finder:has(#c-broken:checked):has(#m-pro:checked) .r-broken-pro {
+  display: block;
+}
+
+/* ---------- Main nav: CSS-only dropdowns + help button ---------- */
+.nav-links .has-sub {
+  position: relative;
+}
+
+.nav-links .nav-parent::after {
+  content: "\25BE";
+  margin-left: 6px;
+  font-size: 0.85em;
+}
+
+.nav-links a.is-current {
+  border-color: var(--brand-text);
+}
+
+.nav-links .sub {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -14px;
+  z-index: 60;
+  min-width: 190px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition:
+    opacity 0.15s,
+    transform 0.15s,
+    visibility 0.15s;
+}
+
+/* Invisible bridge so the menu stays open while the pointer moves down */
+.nav-links .sub::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.nav-links .has-sub:hover .sub,
+.nav-links .has-sub:focus-within .sub {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.nav-links .sub a {
+  display: block;
+  padding: 10px 12px;
+  border-bottom: 0;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-links .sub a:hover,
+.nav-links .sub a[aria-current="page"] {
+  background: var(--hover);
+  color: var(--brand-text);
+}
+
+.help-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: background 0.2s;
+}
+
+.help-btn:hover,
+.help-btn[aria-current="page"] {
+  background: var(--amber-soft);
+  color: var(--brand-text);
+}
+
+@media (max-width: 920px) {
+  .nav-links .nav-parent::after {
+    content: none;
+  }
+
+  .nav-links .sub {
+    position: static;
+    min-width: 0;
+    padding: 0 0 0 18px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .nav-links .sub::before {
+    content: none;
+  }
+
+  .nav-links .sub a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  .nav-links .sub a:hover,
+  .nav-links .sub a[aria-current="page"] {
+    background: transparent;
+  }
+
+  .nav-links a.is-current {
+    border-color: var(--line);
+    color: var(--brand-text);
+  }
 }
