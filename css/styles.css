@@ -427,9 +427,9 @@ p + p {
     border: 1px solid var(--line);
   }
 
-  .nav-burger span,
-  .nav-burger span::before,
-  .nav-burger span::after {
+  .nav-burger span:not(.sr-only),
+  .nav-burger span:not(.sr-only)::before,
+  .nav-burger span:not(.sr-only)::after {
     content: "";
     display: block;
     width: 20px;
@@ -439,12 +439,12 @@ p + p {
     transition: 0.2s;
   }
 
-  .nav-burger span::before {
+  .nav-burger span:not(.sr-only)::before {
     position: absolute;
     top: -6px;
   }
 
-  .nav-burger span::after {
+  .nav-burger span:not(.sr-only)::after {
     position: absolute;
     top: 6px;
   }
@@ -478,16 +478,16 @@ p + p {
     display: flex;
   }
 
-  .nav:has(.nav-toggle:checked) .nav-burger span {
+  .nav:has(.nav-toggle:checked) .nav-burger span:not(.sr-only) {
     background: transparent;
   }
 
-  .nav:has(.nav-toggle:checked) .nav-burger span::before {
+  .nav:has(.nav-toggle:checked) .nav-burger span:not(.sr-only)::before {
     top: 0;
     transform: rotate(45deg);
   }
 
-  .nav:has(.nav-toggle:checked) .nav-burger span::after {
+  .nav:has(.nav-toggle:checked) .nav-burger span:not(.sr-only)::after {
     top: 0;
     transform: rotate(-45deg);
   }
@@ -6952,4 +6952,13 @@ select {
   background-position: right 18px center;
   background-size: 16px;
   cursor: pointer;
+}
+
+/* Menu button: round, same style as the ? and theme buttons beside it */
+@media (max-width: 920px) {
+  .nav-burger {
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--ink);
+  }
 }

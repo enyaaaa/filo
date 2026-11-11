@@ -32,9 +32,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="canonical" href="https://www.filoprint.example/trade-in.html" />
-    <meta property="og:image" content="https://www.filoprint.example/assets/img/trade-in-box.webp" />
-    <meta property="og:url" content="https://www.filoprint.example/trade-in.html" />
+    <link rel="canonical" href="https://filo-print.vercel.app/trade-in.html" />
+    <meta
+      property="og:image"
+      content="https://filo-print.vercel.app/assets/img/trade-in-box.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://filo-print.vercel.app/trade-in.html"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Trade-in FAQ -->
     <script type="application/ld+json">
@@ -48,13 +54,13 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.filoprint.example/"
+                "item": "https://filo-print.vercel.app/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Printer trade-in",
-                "item": "https://www.filoprint.example/trade-in.html"
+                "item": "https://filo-print.vercel.app/trade-in.html"
               }
             ]
           },
@@ -251,9 +257,10 @@
             ><span class="i-sun" aria-hidden="true">&#9728;</span
             ><span class="sr-only">Switch theme</span></label
           >
-          <label for="nav-toggle" class="nav-burger" aria-hidden="true"
-            ><span></span
-          ></label>
+          <label for="nav-toggle" class="nav-burger"
+            ><span aria-hidden="true"></span
+            ><span class="sr-only">Menu</span></label
+          >
         </div>
       </nav>
     </header>
@@ -303,184 +310,186 @@
           <span class="eyebrow">Credit checker</span>
           <h2>What&rsquo;s your old printer worth?</h2>
           <div class="checker-grid mt-md">
-          <div
-            class="finder"
-            role="group"
-            aria-label="Trade-in credit checker"
-          >
-            <fieldset>
-              <legend>1. What are you trading in?</legend>
-              <div class="opts">
-                <input type="radio" name="cond" id="c-work" /><label
-                  for="c-work"
-                  >A working 3D printer</label
-                >
-                <input type="radio" name="cond" id="c-broken" /><label
-                  for="c-broken"
-                  >A broken or incomplete one</label
-                >
+            <div
+              class="finder"
+              role="group"
+              aria-label="Trade-in credit checker"
+            >
+              <fieldset>
+                <legend>1. What are you trading in?</legend>
+                <div class="opts">
+                  <input type="radio" name="cond" id="c-work" /><label
+                    for="c-work"
+                    >A working 3D printer</label
+                  >
+                  <input type="radio" name="cond" id="c-broken" /><label
+                    for="c-broken"
+                    >A broken or incomplete one</label
+                  >
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>2. Which Filo printer do you want?</legend>
+                <div class="opts">
+                  <input type="radio" name="model" id="m-mini" /><label
+                    for="m-mini"
+                    >Filo Mini</label
+                  >
+                  <input type="radio" name="model" id="m-one" /><label
+                    for="m-one"
+                    >Filo One</label
+                  >
+                  <input type="radio" name="model" id="m-pro" /><label
+                    for="m-pro"
+                    >Filo Pro</label
+                  >
+                </div>
+              </fieldset>
+              <div class="result-default">
+                Choose one answer for each question to see your credit.
               </div>
-            </fieldset>
-            <fieldset>
-              <legend>2. Which Filo printer do you want?</legend>
-              <div class="opts">
-                <input type="radio" name="model" id="m-mini" /><label
-                  for="m-mini"
-                  >Filo Mini</label
-                >
-                <input type="radio" name="model" id="m-one" /><label for="m-one"
-                  >Filo One</label
-                >
-                <input type="radio" name="model" id="m-pro" /><label for="m-pro"
-                  >Filo Pro</label
-                >
+              <div class="result r-work-mini">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$40 off Filo Mini</h3>
+                <p>
+                  For a working printer of any brand. Message our Shopee store
+                  with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
+                  you a private $40 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_mini"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo Mini on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
               </div>
-            </fieldset>
-            <div class="result-default">
-              Choose one answer for each question to see your credit.
+              <div class="result r-work-one">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$60 off Filo One</h3>
+                <p>
+                  For a working printer of any brand. Message our Shopee store
+                  with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
+                  you a private $60 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_one"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo One on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
+              </div>
+              <div class="result r-work-pro">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$100 off Filo Pro</h3>
+                <p>
+                  For a working printer of any brand. Message our Shopee store
+                  with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
+                  you a private $100 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_pro"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo Pro on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
+              </div>
+              <div class="result r-broken-mini">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$20 off Filo Mini</h3>
+                <p>
+                  For a broken or incomplete printer of any brand. Message our
+                  Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
+                  we&rsquo;ll send you a private $20 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_mini"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo Mini on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
+              </div>
+              <div class="result r-broken-one">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$30 off Filo One</h3>
+                <p>
+                  For a broken or incomplete printer of any brand. Message our
+                  Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
+                  we&rsquo;ll send you a private $30 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_one"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo One on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
+              </div>
+              <div class="result r-broken-pro">
+                <span class="tag">Your trade-in credit</span>
+                <h3>$50 off Filo Pro</h3>
+                <p>
+                  For a broken or incomplete printer of any brand. Message our
+                  Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
+                  we&rsquo;ll send you a private $50 voucher.
+                </p>
+                <div class="btn-row">
+                  <a
+                    class="btn btn-shopee"
+                    href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_pro"
+                    target="_blank"
+                    rel="noopener"
+                    >Buy Filo Pro on Shopee</a
+                  ><a class="btn btn-ghost" href="#how">How trade-in works</a>
+                </div>
+              </div>
             </div>
-            <div class="result r-work-mini">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$40 off Filo Mini</h3>
-              <p>
-                For a working printer of any brand. Message our Shopee store
-                with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
-                you a private $40 voucher.
+            <aside class="credit-card">
+              <span class="eyebrow">All credits at a glance</span>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">New printer</th>
+                    <th scope="col">Working</th>
+                    <th scope="col">Broken</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Filo Mini <span class="muted small">$249</span></td>
+                    <td><strong>$40</strong></td>
+                    <td><strong>$20</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Filo One <span class="muted small">$349</span></td>
+                    <td><strong>$60</strong></td>
+                    <td><strong>$30</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Filo Pro <span class="muted small">$549</span></td>
+                    <td><strong>$100</strong></td>
+                    <td><strong>$50</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="small muted mt-sm">
+                Credit comes as a private Shopee voucher. One trade-in per new
+                printer.
               </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_mini"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo Mini on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-            <div class="result r-work-one">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$60 off Filo One</h3>
-              <p>
-                For a working printer of any brand. Message our Shopee store
-                with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
-                you a private $60 voucher.
-              </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_one"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo One on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-            <div class="result r-work-pro">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$100 off Filo Pro</h3>
-              <p>
-                For a working printer of any brand. Message our Shopee store
-                with &ldquo;TRADE-IN&rdquo; and a photo, and we&rsquo;ll send
-                you a private $100 voucher.
-              </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_work_pro"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo Pro on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-            <div class="result r-broken-mini">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$20 off Filo Mini</h3>
-              <p>
-                For a broken or incomplete printer of any brand. Message our
-                Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
-                we&rsquo;ll send you a private $20 voucher.
-              </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_mini"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo Mini on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-            <div class="result r-broken-one">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$30 off Filo One</h3>
-              <p>
-                For a broken or incomplete printer of any brand. Message our
-                Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
-                we&rsquo;ll send you a private $30 voucher.
-              </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_one"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo One on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-            <div class="result r-broken-pro">
-              <span class="tag">Your trade-in credit</span>
-              <h3>$50 off Filo Pro</h3>
-              <p>
-                For a broken or incomplete printer of any brand. Message our
-                Shopee store with &ldquo;TRADE-IN&rdquo; and a photo, and
-                we&rsquo;ll send you a private $50 voucher.
-              </p>
-              <div class="btn-row">
-                <a
-                  class="btn btn-shopee"
-                  href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=tradein_broken_pro"
-                  target="_blank"
-                  rel="noopener"
-                  >Buy Filo Pro on Shopee</a
-                ><a class="btn btn-ghost" href="#how">How trade-in works</a>
-              </div>
-            </div>
-          </div>
-          <aside class="credit-card">
-            <span class="eyebrow">All credits at a glance</span>
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">New printer</th>
-                  <th scope="col">Working</th>
-                  <th scope="col">Broken</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Filo Mini <span class="muted small">$249</span></td>
-                  <td><strong>$40</strong></td>
-                  <td><strong>$20</strong></td>
-                </tr>
-                <tr>
-                  <td>Filo One <span class="muted small">$349</span></td>
-                  <td><strong>$60</strong></td>
-                  <td><strong>$30</strong></td>
-                </tr>
-                <tr>
-                  <td>Filo Pro <span class="muted small">$549</span></td>
-                  <td><strong>$100</strong></td>
-                  <td><strong>$50</strong></td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="small muted mt-sm">
-              Credit comes as a private Shopee voucher. One trade-in per new
-              printer.
-            </p>
-          </aside>
+            </aside>
           </div>
         </div>
       </section>
@@ -493,7 +502,8 @@
             <div class="step">
               <h3>Check your credit</h3>
               <p>
-                Use the checker above. Any filament 3D printer counts, from any brand.
+                Use the checker above. Any filament 3D printer counts, from any
+                brand.
               </p>
             </div>
             <div class="step">
@@ -542,15 +552,24 @@
             <ul class="accept-list">
               <li class="yes">
                 <strong>Any filament 3D printer</strong>
-                <span>The kind that melts plastic from a spool. Any brand or age, working or not.</span>
+                <span
+                  >The kind that melts plastic from a spool. Any brand or age,
+                  working or not.</span
+                >
               </li>
               <li class="no">
                 <strong>Not resin printers</strong>
-                <span>Leftover resin needs special handling, so we can&rsquo;t collect them yet.</span>
+                <span
+                  >Leftover resin needs special handling, so we can&rsquo;t
+                  collect them yet.</span
+                >
               </li>
               <li class="plus">
                 <strong>Your scraps too</strong>
-                <span>Add a full Refila Bag to the box and earn Filo Points for it.</span>
+                <span
+                  >Add a full Refila Bag to the box and earn Filo Points for
+                  it.</span
+                >
               </li>
             </ul>
           </div>
@@ -568,8 +587,9 @@
               </summary>
               <div>
                 <p>
-                  Yes. We accept any filament 3D printer (the kind that melts plastic from a spool) from any brand. Most trade-ins
-                  are older printers from other brands.
+                  Yes. We accept any filament 3D printer (the kind that melts
+                  plastic from a spool) from any brand. Most trade-ins are older
+                  printers from other brands.
                 </p>
               </div>
             </details>
@@ -586,8 +606,8 @@
               <summary>Can I use the credit on a bundle?</summary>
               <div>
                 <p>
-                  Yes. The voucher works on any Filo printer or bundle in our Shopee
-                  store. It&rsquo;s one trade-in per new printer.
+                  Yes. The voucher works on any Filo printer or bundle in our
+                  Shopee store. It&rsquo;s one trade-in per new printer.
                 </p>
               </div>
             </details>
@@ -595,8 +615,8 @@
               <summary>Do I need to pack the old printer?</summary>
               <div>
                 <p>
-                  Any sturdy box works. Remove the filament and the build plate if
-                  it comes off, and our courier takes care of the rest.
+                  Any sturdy box works. Remove the filament and the build plate
+                  if it comes off, and our courier takes care of the rest.
                 </p>
               </div>
             </details>
@@ -618,8 +638,8 @@
             <div>
               <h2>Trade up. Print tonight.</h2>
               <p>
-                Up to $100 off a Filo printer, plus a 12-month local warranty
-                on your new one.
+                Up to $100 off a Filo printer, plus a 12-month local warranty on
+                your new one.
               </p>
             </div>
             <div class="btn-row">
@@ -698,8 +718,8 @@
             >
             <p>
               Self-levelling 3D printers that arrive with filament in the box.
-              Then PLA+ refills, a new project every week and a take-back
-              scheme for your scraps.
+              Then PLA+ refills, a new project every week and a take-back scheme
+              for your scraps.
             </p>
             <p class="footer-slogan">Print more. Waste less.</p>
             <a
@@ -711,13 +731,30 @@
             >
             <ul class="footer-social" aria-label="Filo Print on social media">
               <li>
-                <a href="https://www.instagram.com/filoprint.sg" target="_blank" rel="noopener" aria-label="Instagram @filoprint.sg">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg>
+                <a
+                  href="https://www.instagram.com/filoprint.sg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram @filoprint.sg"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" />
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/@filoprint.sg" target="_blank" rel="noopener" aria-label="TikTok @filoprint.sg">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" /><path d="M14 3c.4 2.6 2.3 4.5 5 4.8" /></svg>
+                <a
+                  href="https://www.tiktok.com/@filoprint.sg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="TikTok @filoprint.sg"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" />
+                    <path d="M14 3c.4 2.6 2.3 4.5 5 4.8" />
+                  </svg>
                 </a>
               </li>
               <li class="footer-social-tag">#PrintWithFilo</li>
