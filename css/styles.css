@@ -6756,3 +6756,10 @@ h2 .brand {
   letter-spacing: 0.1em;
   color: var(--ink-soft);
 }
+
+/* Refila: one tray photo on top of each list */
+.bag-photo {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
