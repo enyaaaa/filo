@@ -7,17 +7,17 @@
     <title>Filo Print | Beginner 3D Printers with Filament, Singapore</title>
     <meta
       name="description"
-      content="Filo Print sells Filo Mini, Filo One and Filo Pro, self-levelling 3D printers, in bundles with filament, a free project every week and a take-back scheme for scraps. Shopee checkout."
+      content="Filo Mini, Filo One and Filo Pro: self-levelling 3D printers from $249, with filament in the box, a free project every week and scrap recycling."
     />
     <!-- TODO: replace the domain below with your real hosted URL -->
     <link rel="canonical" href="https://www.filoprint.example/" />
     <meta
       property="og:title"
-      content="Filo One | Beginner 3D Printer with Filament Included"
+      content="Filo Print | Beginner 3D Printers with Filament Included"
     />
     <meta
       property="og:description"
-      content="A self-levelling 3D printer that arrives with filament, 10 starter models and a new project every week."
+      content="Filo Mini, Filo One and Filo Pro: self-levelling 3D printers from $249, with filament in the box, a free project every week and scrap recycling."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.filoprint.example/" />
@@ -48,7 +48,7 @@
             "@type": "Organization",
             "name": "Filo Print",
             "url": "https://www.filoprint.example/",
-            "description": "Singapore concept brand selling the Filo One beginner 3D printer, Filo PLA+ filament, a Weekly Print Challenge and the Refila take-back scheme."
+            "description": "Singapore concept brand selling the Filo Mini, Filo One and Filo Pro self-levelling 3D printers, Filo PLA+ filament, a Weekly Print Challenge and the Refila take-back scheme."
           },
           {
             "@type": "WebSite",
@@ -214,131 +214,102 @@
     </header>
 
     <main id="main">
-      <!-- 1. VIDEO HERO: three reels playing side by side -->
+      <!-- 1. VIDEO HERO: headline, then a strip of five reels that all play
+           at once (js/reels.js plays them only while the strip is on screen).
+           Keep each reel ~2 MB: 540px wide, silent, H.264. -->
       <section class="reel-hero section dark" aria-labelledby="reel-hero-title">
-        <div class="container">
-          <div class="reel-hero-head">
-            <span class="eyebrow">Print more. Waste less.</span>
-            <h1 id="reel-hero-title">Magic starts <span>with you.</span></h1>
-            <p class="lead">
-              Keychains, gears, gifts, glow-in-the-dark stars. Here&rsquo;s what
-              people are printing at home right now.
-            </p>
-          </div>
-
-          <!-- VIDEOS: save the three Instagram reels as
-               assets/video/reel-1.mp4, reel-2.mp4 and reel-3.mp4.
-               Until a file exists, its tile shows the poster photo.
-               When a video is in, delete that tile's <span class="reel-soon">. -->
-          <ul class="reels">
-            <li class="reel">
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="assets/img/project-dino-keychains.webp"
-                aria-label="Reel: a dino keychain being 3D printed"
-              >
-                <source src="assets/video/reel-1.mp4" type="video/mp4" />
-              </video>
-              <img
-                class="reel-still"
-                src="assets/img/project-dino-keychains.webp"
-                alt=""
-                width="800"
-                height="537"
-                loading="lazy"
-              />
-              <span class="reel-soon">Video coming soon</span>
-              <a
-                class="reel-credit"
-                href="https://www.instagram.com/reel/DdBcgZbTI9q/"
-                target="_blank"
-                rel="noopener"
-                >Watch on Instagram<span class="sr-only"> (reel 1)</span></a
-              >
-            </li>
-            <li class="reel">
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="assets/img/project-planetary-gear.webp"
-                aria-label="Reel: a 3D-printed planetary gear turning"
-              >
-                <source src="assets/video/reel-2.mp4" type="video/mp4" />
-              </video>
-              <img
-                class="reel-still"
-                src="assets/img/project-planetary-gear.webp"
-                alt=""
-                width="800"
-                height="537"
-                loading="lazy"
-              />
-              <span class="reel-soon">Video coming soon</span>
-              <a
-                class="reel-credit"
-                href="https://www.instagram.com/reel/DZ2uPxFJwF9/"
-                target="_blank"
-                rel="noopener"
-                >Watch on Instagram<span class="sr-only"> (reel 2)</span></a
-              >
-            </li>
-            <li class="reel">
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="assets/img/project-glow-star-mobile.webp"
-                aria-label="Reel: a glow-in-the-dark star mobile being printed"
-              >
-                <source src="assets/video/reel-3.mp4" type="video/mp4" />
-              </video>
-              <img
-                class="reel-still"
-                src="assets/img/project-glow-star-mobile.webp"
-                alt=""
-                width="600"
-                height="894"
-                loading="lazy"
-              />
-              <span class="reel-soon">Video coming soon</span>
-              <a
-                class="reel-credit"
-                href="https://www.instagram.com/reel/DfI9b3fxjvW/"
-                target="_blank"
-                rel="noopener"
-                >Watch on Instagram<span class="sr-only"> (reel 3)</span></a
-              >
-            </li>
-          </ul>
-
-          <p class="reel-cta">
-            Want to print these?
-            <a href="projects.html">Get the free files <span aria-hidden="true">&rarr;</span></a>
+        <div class="container reel-hero-head">
+          <span class="eyebrow">Print more. Waste less.</span>
+          <h1 id="reel-hero-title">
+            Magic starts <span class="nowrap">with you.</span>
+          </h1>
+          <p class="lead">
+            Keychains, gears, gifts, glow-in-the-dark stars. Here&rsquo;s what
+            people are printing at home right now.
           </p>
-
-          <a class="scroll-cue" href="#filo-one">
-            <span>Scroll to find out more</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 4v15M5 12l7 7 7-7"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="projects.html"
+              >Get the free files</a
+            >
+            <a class="btn btn-ghost" href="#filo-one">Meet the printers</a>
+          </div>
         </div>
+
+        <ul class="reel-strip">
+          <li class="strip-reel">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/reel-1-poster.jpg"
+              aria-label="Reel by @mr.jodigo"
+            >
+              <source src="assets/video/reel-1.mp4" type="video/mp4" />
+            </video>
+            <span class="strip-credit">@mr.jodigo</span>
+          </li>
+          <li class="strip-reel">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/reel-2-poster.jpg"
+              aria-label="Reel by @af_inventions"
+            >
+              <source src="assets/video/reel-2.mp4" type="video/mp4" />
+            </video>
+            <span class="strip-credit">@af_inventions</span>
+          </li>
+          <li class="strip-reel">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/reel-3-poster.jpg"
+              aria-label="Reel by @gazzaladradesign"
+            >
+              <source src="assets/video/reel-3.mp4" type="video/mp4" />
+            </video>
+            <span class="strip-credit">@gazzaladradesign</span>
+          </li>
+          <li class="strip-reel">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/reel-4-poster.jpg"
+              aria-label="Reel by @factorian_designs @thangs3d"
+            >
+              <source src="assets/video/reel-4.mp4" type="video/mp4" />
+            </video>
+            <span class="strip-credit">@mr.jodigo</span>
+          </li>
+          <li class="strip-reel">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/reel-5-poster.jpg"
+              aria-label="Reel by @blissful_mom_journey @byfanny_3d"
+            >
+              <source src="assets/video/reel-5.mp4" type="video/mp4" />
+            </video>
+            <span class="strip-credit">@blissful_mom_journey @byfanny_3d</span>
+          </li>
+        </ul>
+        <p class="reel-credits container">
+          Reels shared with thanks to their creators on Instagram.
+        </p>
       </section>
 
       <!-- 2. THE FILO RANGE: printer carousel (Filo One, Filo Mini, Filo Pro).
@@ -416,11 +387,12 @@
                     &times; 25 cm build
                   </li>
                   <li class="badge">
-                    <span aria-hidden="true">&#10003;</span> PLA, PETG and TPU
+                    <span aria-hidden="true">&#10003;</span> Tough and bendy
+                    plastics too
                   </li>
                   <li class="badge">
-                    <span aria-hidden="true">&#10003;</span> About 48 dB quiet
-                    mode
+                    <span aria-hidden="true">&#10003;</span> Fridge-quiet (48
+                    dB)
                   </li>
                   <li class="badge">
                     <span aria-hidden="true">&#10003;</span> 12-month local
@@ -523,8 +495,8 @@
                 </h2>
                 <p class="lead">
                   A 30 cm build cube, up to 500 mm/s and an enclosed chamber for
-                  ABS and ASA outdoor parts. A built-in camera lets you check
-                  long prints from your phone.
+                  heat- and sun-proof outdoor parts. A built-in camera lets you
+                  check long prints from your phone.
                 </p>
                 <dl class="hero-price">
                   <div>
@@ -741,11 +713,11 @@
         <div class="container">
           <div class="split mb-md">
             <div>
-              <span class="eyebrow">Your first month with Filo One</span>
+              <span class="eyebrow">Your first month with Filo</span>
               <h2>Unbox on Friday. Printing every week after.</h2>
               <p class="lead">
                 Most printers end up in a cupboard. We plan your first month so
-                Filo One never does.
+                your printer never does.
               </p>
             </div>
             <img
@@ -768,7 +740,8 @@
                   minutes.
                 </p>
                 <a class="cal-link" href="printer.html#setup"
-                  >See the 15-min setup <span aria-hidden="true">&rarr;</span></a
+                  >See the 15-min setup
+                  <span aria-hidden="true">&rarr;</span></a
                 >
               </div>
             </li>
@@ -796,7 +769,8 @@
                   stamp.
                 </p>
                 <a class="cal-link" href="challenge.html"
-                  >This week&rsquo;s challenge <span aria-hidden="true">&rarr;</span></a
+                  >This week&rsquo;s challenge
+                  <span aria-hidden="true">&rarr;</span></a
                 >
               </div>
             </li>
@@ -834,7 +808,7 @@
             What will you print first?
           </h2>
           <p class="lead">
-            Filo One from $349, with filament in the box and a 12-month local
+            Filo printers from $249, with filament in the box and a 12-month local
             warranty. Join Filo Club for free and get $3 off your first order.
           </p>
           <div class="btn-row">
@@ -843,7 +817,7 @@
               href="https://shopee.sg/product/881733363/52055703982?keyword=filo%20one%203d%20printer&amp;utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=final_cta"
               target="_blank"
               rel="noopener"
-              >Buy Filo One on Shopee</a
+              >Shop Filo on Shopee</a
             >
             <a class="btn btn-light" href="join.html">Join Filo Club</a>
           </div>
@@ -931,6 +905,36 @@
               rel="noopener"
               >Shop on Shopee</a
             >
+            <ul class="footer-social" aria-label="Filo Print on social media">
+              <li>
+                <a
+                  href="https://www.instagram.com/filoprint.sg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram @filoprint.sg"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@filoprint.sg"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="TikTok @filoprint.sg"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" />
+                    <path d="M14 3c.4 2.6 2.3 4.5 5 4.8" />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-tag">#PrintWithFilo</li>
+            </ul>
           </div>
           <div>
             <h4>Shop</h4>
@@ -980,5 +984,7 @@
     <script src="js/countdown.js" defer></script>
     <!-- Printer carousel arrows and tabs -->
     <script src="js/carousel.js" defer></script>
+    <!-- Plays the hero reels only while they are on screen -->
+    <script src="js/reels.js" defer></script>
   </body>
 </html>

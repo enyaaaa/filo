@@ -3,7 +3,8 @@
    data-deadline="2026-11-30T23:59:59+08:00" (Singapore time).
 
    - With JavaScript: the static "Ends 30 Nov" text is swapped for a live
-     dd:hh:mm:ss timer, and the bar disappears once the deal is over.
+     dd:hh:mm:ss timer. Once the deal is over the bar switches to the
+     always-on Filo Club offer (see evergreen() below).
    - Without JavaScript: the static end date stays visible.
    Screen readers keep hearing the static end date (the ticking timer is
    aria-hidden), so they aren't interrupted every second. */
@@ -25,13 +26,24 @@
     return n < 10 ? "0" + n : String(n);
   }
 
+  function evergreen() {
+    bar.classList.remove("is-last-day");
+    bar.classList.add("is-evergreen");
+    bar.innerHTML =
+      '<span class="announce-text"><strong>Join Filo Club:</strong> ' +
+      "free $3 Shopee voucher and a new project every week</span>" +
+      '<a class="announce-btn" href="join.html">Join free ' +
+      '<span aria-hidden="true">&rarr;</span></a>';
+  }
+
   function tick() {
     var left = deadline - Date.now();
 
     if (left <= 0) {
-      // Deal over: remove the bar so nobody tries an expired code
-      bar.hidden = true;
+      // Deal over: swap to the always-on Filo Club offer, so the bar never
+      // shows an expired code and never disappears between deals
       clearInterval(id);
+      evergreen();
       return;
     }
 
