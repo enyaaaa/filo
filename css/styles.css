@@ -12,7 +12,8 @@
 
 /* ---------- Theme tokens ----------
    "Warm tech": sand + graphite. Follows the visitor's system setting;
-   the header toggle (#theme-toggle) switches to the other theme. */
+   the header toggle (#theme-toggle) switches to the other theme.
+   js/theme.js remembers the choice; .theme-flip applies it before paint. */
 :root {
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   color-scheme: light;
@@ -54,7 +55,8 @@
   --show-sun: none;
 }
 
-:root:has(#theme-toggle:checked) {
+:root:has(#theme-toggle:checked),
+:root.theme-flip {
   color-scheme: dark;
   --ink: #efe8dd;
   --ink-soft: #b5ac9f;
@@ -145,7 +147,8 @@
     --show-sun: inline;
   }
 
-  :root:has(#theme-toggle:checked) {
+  :root:has(#theme-toggle:checked),
+  :root.theme-flip {
     color-scheme: light;
     --ink: #1d1b18;
     --ink-soft: #4d4741;
