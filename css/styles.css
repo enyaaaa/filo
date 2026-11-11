@@ -29,6 +29,10 @@
   --brand-text: #6c4317;
   --tag-amber: #7a4600;
   --inverse: #1d1b18;
+  /* Dark sections: charcoal in light mode (already stands out on sand) */
+  --section-dark: #1d1b18;
+  --section-dark-glow: none;
+  --section-dark-line: var(--line);
   --hover: #faf6ef;
   --header-bg: rgba(231, 221, 204, 0.88);
   --shadow: 0 14px 34px rgba(60, 45, 25, 0.08);
@@ -65,6 +69,15 @@
   --brand-text: #e2be93;
   --tag-amber: #f2c487;
   --inverse: #0b0a09;
+  /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
+     top and tan edge lines, so they read apart from the near-black page */
+  --section-dark: #1a1410;
+  --section-dark-glow: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(226, 190, 147, 0.09),
+    transparent 70%
+  );
+  --section-dark-line: rgba(226, 190, 147, 0.22);
   --hover: #211e1a;
   --header-bg: rgba(17, 16, 14, 0.86);
   --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -102,6 +115,15 @@
     --brand-text: #e2be93;
     --tag-amber: #f2c487;
     --inverse: #0b0a09;
+    /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
+       top and tan edge lines, so they read apart from the near-black page */
+    --section-dark: #1a1410;
+    --section-dark-glow: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(226, 190, 147, 0.09),
+      transparent 70%
+    );
+    --section-dark-line: rgba(226, 190, 147, 0.22);
     --hover: #211e1a;
     --header-bg: rgba(17, 16, 14, 0.86);
     --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -138,6 +160,10 @@
     --brand-text: #6c4317;
     --tag-amber: #7a4600;
     --inverse: #1d1b18;
+    /* Dark sections: charcoal in light mode (already stands out on sand) */
+    --section-dark: #1d1b18;
+    --section-dark-glow: none;
+    --section-dark-line: var(--line);
     --hover: #faf6ef;
     --header-bg: rgba(231, 221, 204, 0.88);
     --shadow: 0 14px 34px rgba(60, 45, 25, 0.08);
@@ -2121,8 +2147,11 @@ th,
 
 .product-title {
   font-size: clamp(1.9rem, 3.6vw, 2.7rem);
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+}
+
+.product-title span {
+  color: var(--brand-text);
 }
 
 .spec-bars {
@@ -6126,5 +6155,604 @@ tr:last-child th {
 .accept-list span {
   display: block;
   font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+/* =========================================================
+   Refila page
+   ========================================================= */
+.page-hero h1 span {
+  color: var(--brand-text);
+}
+
+/* Points summary above the accepted / not accepted lists */
+.points-strip {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: 1.5px solid var(--brand-text);
+  border-radius: 12px;
+  background: radial-gradient(circle at 8% 50%, var(--glow), transparent 60%),
+    var(--card);
+  font-size: 1.02rem;
+}
+
+.points-strip strong {
+  color: var(--brand-text);
+}
+
+.points-strip span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.bag-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.bag-cols .accept-list {
+  margin-top: 10px;
+}
+
+@media (max-width: 820px) {
+  .bag-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Points chip next to an accepted item */
+.accept-list .pts {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 6px;
+  background: var(--amber-soft);
+  color: var(--brand-text);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 600;
+  vertical-align: 2px;
+}
+
+/* Dark sections use their own token so dark mode can tell them apart */
+.section.dark {
+  background-color: var(--section-dark);
+  background-image: var(--section-dark-glow);
+  border-block: 1px solid var(--section-dark-line);
+}
+
+/* Final CTA: section takes the photo's shape (about 16:9) so the ring of
+   prints isn't cropped; content stays centred inside it */
+.final-cta {
+  display: flex;
+  align-items: center;
+  min-height: min(56vw, 1000px);
+}
+
+.final-cta-inner {
+  width: min(var(--max), 100% - 40px);
+}
+
+/* Lighter at the edges so the prints show, darker behind the text */
+.final-cta::before {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03) 0 2px,
+      transparent 2px 10px
+    ),
+    radial-gradient(
+      ellipse 55% 60% at 50% 50%,
+      rgba(17, 16, 14, 0.82),
+      rgba(17, 16, 14, 0.45) 100%
+    );
+}
+
+/* =========================================================
+   Rewards page
+   ========================================================= */
+h2 .brand {
+  color: var(--brand-text);
+}
+
+/* Redeem: stamp card beside the voucher tickets */
+.ladders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.ladders .vouchers {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* Stamp card on its own dark panel, so it reads on any background */
+.stamp-panel.solid {
+  background: #1d1b18;
+  border-color: rgba(226, 190, 147, 0.25);
+}
+
+.stamp-panel.solid .stamp-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fffdf9;
+}
+
+.stamp-panel.solid .stamp-panel-head .mono {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #e2be93;
+}
+
+@media (max-width: 900px) {
+  .ladders {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Rewards: the Filo loop ---------- */
+.loop-wrap {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.loop-legend {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+  color: var(--ink-soft);
+}
+
+.loop-legend li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.loop-more {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Chips: stamps filled, points outlined */
+.chip {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chip-stamp {
+  background: var(--brand-text);
+  color: var(--on-brand);
+}
+
+.chip-pts {
+  border: 1.5px solid var(--brand-text);
+  color: var(--brand-text);
+}
+
+/* The diagram: a square stage with a dashed ring and four nodes on it */
+.loop {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.loop-ring {
+  position: absolute;
+  inset: 15%;
+  border: 2px dashed var(--line);
+  border-radius: 50%;
+  animation: loop-spin 14s linear infinite;
+}
+
+/* A dot travelling clockwise round the ring */
+.loop-dot {
+  position: absolute;
+  top: -7px;
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand-text);
+  box-shadow: 0 0 0 5px var(--glow);
+}
+
+@keyframes loop-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Clockwise chevrons between the nodes (45 degree points on the ring) */
+.loop-arrow {
+  position: absolute;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--brand-text);
+  transform: translate(-50%, -50%) rotate(var(--r));
+}
+
+.loop-arrow.a1 { left: 75.5%; top: 24.5%; --r: 45deg; }
+.loop-arrow.a2 { left: 75.5%; top: 75.5%; --r: 135deg; }
+.loop-arrow.a3 { left: 24.5%; top: 75.5%; --r: 225deg; }
+.loop-arrow.a4 { left: 24.5%; top: 24.5%; --r: 315deg; }
+
+.loop-hub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 150px;
+  aspect-ratio: 1;
+  align-content: center;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--brand-text);
+  box-shadow: 0 0 0 10px var(--glow);
+  text-align: center;
+}
+
+.loop-hub strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+}
+
+.loop-hub > span:not(.chip) {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.loop-node {
+  position: absolute;
+  width: 190px;
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.loop-node strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.loop-node small {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.loop-step {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-text);
+}
+
+.n-print { top: 0; left: 50%; transform: translateX(-50%); }
+.n-share { right: 0; top: 50%; transform: translateY(-50%); }
+.n-return { bottom: 0; left: 50%; transform: translateX(-50%); }
+.n-buy { left: 0; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 980px) {
+  .loop-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phones and small tablets: a simple flow-down diagram.
+   A vertical line runs down the left, each step has a numbered dot on it,
+   and a "repeat" note at the end closes the loop. */
+@media (max-width: 760px) {
+  .loop {
+    aspect-ratio: auto;
+    max-width: none;
+    display: grid;
+    gap: 14px;
+    padding-left: 34px;
+  }
+
+  /* the vertical line */
+  .loop::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    bottom: 34px;
+    width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--brand-text) 0 6px,
+      transparent 6px 12px
+    );
+    opacity: 0.6;
+  }
+
+  /* "...and repeat" closes the loop */
+  .loop::after {
+    content: "\21BB  And repeat, every week";
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--brand-text);
+    margin-left: -34px;
+    padding-left: 2px;
+  }
+
+  .loop-ring,
+  .loop-arrow {
+    display: none;
+  }
+
+  .loop .loop-hub,
+  .loop .loop-node,
+  .loop .n-print,
+  .loop .n-share,
+  .loop .n-return,
+  .loop .n-buy {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: auto;
+  }
+
+  .loop .loop-hub {
+    aspect-ratio: auto;
+    justify-items: start;
+    text-align: left;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+
+  .loop .loop-hub .chip {
+    justify-self: end;
+  }
+
+  /* numbered dot on the line for each step */
+  .loop .loop-node::before,
+  .loop .loop-hub::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--brand-text);
+    box-shadow: 0 0 0 4px var(--glow);
+  }
+
+  .loop .loop-node {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loop-ring {
+    animation: none;
+  }
+}
+
+/* Grid/flex children default to min-width:auto, so a wide table inside
+   pushes the whole column off-screen. Let them shrink so .table-wrap scrolls. */
+.inbox-cols > *,
+.split > *,
+.fold-body > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .fold-body .inbox-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Homepage: link to free projects under the reels */
+.section.dark .reel-cta {
+  margin-top: 56px;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #eef3ef;
+}
+
+.section.dark .reel-cta a {
+  font-weight: 600;
+  color: #e2be93;
+}
+
+.reel-cta + .scroll-cue {
+  margin-top: 28px !important;
+}
+
+/* Each calendar card ends with its own link, pinned to the bottom */
+.cal-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cal-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cal-card-body .cal-link {
+  margin-top: auto;
+  padding-top: 14px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--brand-text);
+}
+
+.cal-card-body .cal-link:hover {
+  text-decoration: underline;
+}
+
+/* Shorter photo beside the "first month" heading */
+.first-month .photo {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+@media (max-width: 760px) {
+  .section.dark .reel-cta {
+    margin-top: 28px;
+  }
+}
+
+/* =========================================================
+   Product (PLA+) page
+   ========================================================= */
+.colour-strip-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 32px;
+  margin-bottom: 22px;
+}
+
+.colour-strip-head h2 {
+  margin-bottom: 0;
+}
+
+.colour-strip-head p {
+  max-width: 42ch;
+}
+
+/* Reviews beside the strength bars: proper cards with stars */
+.product-reviews {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  gap: 12px;
+}
+
+.review-summary {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.review-summary strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.product-reviews .review {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--brand-text);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.product-reviews .review p {
+  font-size: 1rem;
+}
+
+.review-stars,
+.review-summary .stars {
+  color: var(--amber);
+  letter-spacing: 0.1em;
+}
+
+.product-reviews .review .review-stars {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+/* Product hero: one tidy buy box instead of a stack of lines */
+.buy-box {
+  margin-top: 26px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.option-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.option-label .colour-name {
+  margin-left: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+.buy-box .option-group {
+  margin-top: 14px;
+}
+
+.buy-box .price {
+  margin-top: 16px;
+}
+
+.buy-box .btn-row {
+  margin-top: 14px;
+}
+
+.buy-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.buy-badges {
+  margin-top: 18px;
+}
+
+.buy-box .option-group legend {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   color: var(--ink-soft);
 }

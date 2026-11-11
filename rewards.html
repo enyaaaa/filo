@@ -35,6 +35,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Rewards FAQ and breadcrumb for search and AI answers -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.filoprint.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Filo Rewards",
+                "item": "https://www.filoprint.example/rewards.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why aren't points added automatically on Shopee?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shopee handles checkout separately from our website. Registering your order number lets us link the purchase to your Filo Club account."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I combine a Filo voucher with Shopee vouchers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually, yes. Shopee platform vouchers and shop vouchers follow Shopee's own stacking rules, which are shown at checkout."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do points expire?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Points expire 12 months after you earn them. We'll email you a reminder 30 days before, if you've opted in to updates."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a Filo printer to earn?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Any printer counts for the Weekly Challenge and Refila returns. Points and rewards are spent in the Filo Shopee store."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -153,6 +215,7 @@
             <ul class="sub" aria-label="Community">
               <li><a href="refila.html">Refila</a></li>
               <li><a href="challenge.html">Challenge</a></li>
+              <li><a href="projects.html">Projects</a></li>
             </ul>
           </li>
           <li><a href="rewards.html" aria-current="page">Rewards</a></li>
@@ -191,8 +254,9 @@
       <section class="page-hero">
         <div class="container split">
           <div>
+            <p class="breadcrumb"><a href="index.html">Home</a> / Rewards</p>
             <span class="eyebrow">Filo Rewards</span>
-            <h1>Every print counts towards your next roll.</h1>
+            <h1>Every print counts <span>towards your next roll.</span></h1>
             <p class="lead">
               Join Filo Club free and get a
               <strong>$3 Shopee voucher</strong> and your
@@ -207,20 +271,84 @@
                 >See what you&rsquo;d earn</a
               >
             </div>
-            <p class="small muted mt-sm">
-              Two ways to earn: <strong>stamps</strong> come from the Weekly
-              Challenge and unlock free filament. <strong>Filo Points</strong>
-              come from returns and purchases and turn into Shopee vouchers.
-            </p>
           </div>
           <img
             class="photo"
             src="assets/img/join-welcome-pack.webp"
             alt="Filo Club welcome pack: Refila Bag, stamp card, $3 voucher and three small printed models"
-            width="1000"
-            height="671"
+            width="1400"
+            height="939"
             fetchpriority="high"
           />
+        </div>
+      </section>
+
+      <!-- HOW YOU EARN: the Filo loop. Everything you already do with your
+           printer feeds the loop; stamps (filled chips) and points (outlined
+           chips) are kept visually distinct. -->
+      <section class="section alt" id="earn">
+        <div class="container loop-wrap">
+          <div class="loop-intro">
+            <span class="eyebrow">Two ways to earn</span>
+            <h2>Print more. <span class="brand">Earn more.</span></h2>
+            <p class="lead">
+              Everything you already do with your printer feeds the Filo loop.
+            </p>
+            <ul class="loop-legend">
+              <li>
+                <span class="chip chip-stamp">Stamps</span>
+                unlock free filament: 4 = mini spool, 12 = 1 kg roll.
+              </li>
+              <li>
+                <span class="chip chip-pts">Points</span>
+                become Shopee vouchers: 200 = $5 off.
+              </li>
+            </ul>
+            <a class="loop-more" href="#redeem"
+              >See everything you can get <span aria-hidden="true">&darr;</span></a
+            >
+          </div>
+
+          <div class="loop" role="list" aria-label="The Filo loop: print, share, return, buy">
+            <div class="loop-ring" aria-hidden="true">
+              <span class="loop-dot"></span>
+            </div>
+            <span class="loop-arrow a1" aria-hidden="true">&rsaquo;</span>
+            <span class="loop-arrow a2" aria-hidden="true">&rsaquo;</span>
+            <span class="loop-arrow a3" aria-hidden="true">&rsaquo;</span>
+            <span class="loop-arrow a4" aria-hidden="true">&rsaquo;</span>
+
+            <div class="loop-hub">
+              <strong>Filo Club</strong>
+              <span>Join free</span>
+              <span class="chip chip-stamp">+1 stamp &amp; $3</span>
+            </div>
+
+            <div class="loop-node n-print" role="listitem">
+              <span class="loop-step">01 &middot; Print</span>
+              <strong>Make the Weekly Challenge</strong>
+              <span class="chip chip-stamp">+1 stamp</span>
+              <small>when you share a photo</small>
+            </div>
+            <div class="loop-node n-share" role="listitem">
+              <span class="loop-step">02 &middot; Share</span>
+              <strong>Show us your print</strong>
+              <span class="chip chip-pts">+30 pts</span>
+              <small>if it&rsquo;s featured</small>
+            </div>
+            <div class="loop-node n-return" role="listitem">
+              <span class="loop-step">03 &middot; Return</span>
+              <strong>Send back a Refila Bag</strong>
+              <span class="chip chip-pts">+50 pts / kg</span>
+              <small>+20 per empty Filo spool</small>
+            </div>
+            <div class="loop-node n-buy" role="listitem">
+              <span class="loop-step">04 &middot; Buy</span>
+              <strong>Reorder your PLA+</strong>
+              <span class="chip chip-pts">+10 pts / roll</span>
+              <small>register your Shopee order</small>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -317,51 +445,52 @@
         </div>
       </section>
 
-      <!-- DESIRE: a story, not a sum (example family, clearly labelled) -->
-      <section class="section alt">
-        <div class="container">
-          <span class="eyebrow">One family&rsquo;s first three months</span>
-          <h2>$50 of rewards, from printing they&rsquo;d do anyway.</h2>
-          <ol class="steps steps-3 mt-lg">
-            <li class="step">
-              <h3>Month 1: the box arrives</h3>
-              <p>
-                Hafiz&rsquo;s family unboxes Filo One + Refills and joins Filo Club.
-                A $3 voucher and their first stamp land straight away. The kids
-                print dino keychains that night.
-              </p>
-            </li>
-            <li class="step">
-              <h3>Month 2: Sundays become print day</h3>
-              <p>
-                A new challenge every week. Stamp 4 earns a free mini spool,
-                stamp 8 a $12 voucher. Their first Refila Bag of scraps and
-                spools goes back.
-              </p>
-            </li>
-            <li class="step">
-              <h3>Month 3: the free roll</h3>
-              <p>
-                Stamp 12 completes the card: a free 1&nbsp;kg roll. A second
-                Refila Bag and four registered rolls take them to 220 points, a
-                $5 voucher.
-              </p>
-            </li>
-          </ol>
-          <p class="small mt-md">
-            Total: $3 + mini spool ($7.90) + $12 + 1&nbsp;kg roll ($22.90) +
-            $5 = <strong>$50.80 in rewards</strong>.
-            <!-- <span class="sample-tag">Example</span> -->
-          </p>
-        </div>
-      </section>
-
-      <!-- Reference: what points turn into -->
-      <section class="section">
+      <!-- REDEEM: both reward ladders side by side -->
+      <section class="section alt" id="redeem">
         <div class="container">
           <span class="eyebrow">Redeem</span>
-          <h2>What your points turn into.</h2>
-          <ol class="vouchers mt-lg">
+          <h2>What you get. <span class="brand">Stamps and points.</span></h2>
+          <div class="ladders mt-lg">
+            <div class="stamp-panel solid">
+              <p class="stamp-panel-head">
+                <span>Your stamp card</span>
+                <span class="mono">Example: 5 / 12</span>
+              </p>
+              <ol
+                class="stamp-track"
+                aria-label="Example stamp card: 5 of 12 stamps collected, with rewards at 4, 8 and 12 stamps"
+              >
+                <li class="on"></li>
+                <li class="on"></li>
+                <li class="on"></li>
+                <li class="on prize"><b>4</b></li>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+                <li class="prize"><b>8</b></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="prize"><b>12</b></li>
+              </ol>
+              <ul class="stamp-rewards">
+                <li>
+                  <span class="num">4</span>
+                  <span><strong>Free 250 g mini spool</strong> Any colour</span>
+                </li>
+                <li>
+                  <span class="num">8</span>
+                  <span><strong>$12 Shopee voucher</strong> For any refill</span>
+                </li>
+                <li>
+                  <span class="num">12</span>
+                  <span><strong>Free 1 kg roll</strong> Then your card starts again</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="col-label">Filo Points</h3>
+              <ol class="vouchers">
             <li class="voucher">
               <div class="voucher-stub">
                 <div class="num">200</div>
@@ -393,16 +522,22 @@
               </div>
             </li>
           </ol>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- OVERCOME DOUBT: how it works + honest rules -->
-      <section class="section alt">
+      <section class="section">
         <div class="container split">
           <div>
             <span class="eyebrow">How redemption works</span>
             <h2>Points on our site, savings on Shopee.</h2>
             <ol class="checklist">
+              <li>
+                Paste your Shopee order number into your Filo Club account to
+                earn points on purchases.
+              </li>
               <li>Choose a reward in your Filo Club account.</li>
               <li>We email you a private Filo voucher code.</li>
               <li>
@@ -421,9 +556,11 @@
                 Why aren't points added automatically on Shopee?
               </summary>
               <div>
-                Shopee handles checkout separately from our website. Registering
+                <p>
+                  Shopee handles checkout separately from our website. Registering
                 your order number lets us link the purchase to your Filo Club
                 account.
+                </p>
               </div>
             </details>
             <details>
@@ -431,22 +568,28 @@
                 Can I combine a Filo voucher with Shopee vouchers?
               </summary>
               <div>
-                Usually, yes. Shopee platform vouchers and shop vouchers follow
+                <p>
+                  Usually, yes. Shopee platform vouchers and shop vouchers follow
                 Shopee's own stacking rules, which are shown at checkout.
+                </p>
               </div>
             </details>
             <details>
               <summary>Do points expire?</summary>
               <div>
-                Points expire 12 months after you earn them. We'll email you a
+                <p>
+                  Points expire 12 months after you earn them. We'll email you a
                 reminder 30 days before, if you've opted in to updates.
+                </p>
               </div>
             </details>
             <details>
-              <summary>Do I need a Filo One to earn?</summary>
+              <summary>Do I need a Filo printer to earn?</summary>
               <div>
-                No. Any printer counts for the Weekly Challenge and Refila
+                <p>
+                  No. Any printer counts for the Weekly Challenge and Refila
                 returns. Points and rewards are spent in the Filo Shopee store.
+                </p>
               </div>
             </details>
           </div>

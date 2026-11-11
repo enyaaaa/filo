@@ -33,6 +33,68 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Refila FAQ and breadcrumb for search and AI answers -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.filoprint.example/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Refila take-back",
+                "item": "https://www.filoprint.example/refila.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What counts as a scrap?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Supports, brims, rafts, purge lines and failed prints made from PLA or PLA+ of any brand. Leave out painted or glued prints, resin and other plastics."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a Filo printer to use Refila?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Refila takes PLA scraps and plastic spools from any printer. You just need a free Filo Club account so we can credit your points."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get my Filo Points?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Refila weighs and sorts your bag when it arrives, and we credit your points within 7 days. 200 points can be swapped for a $5 Shopee voucher on the Rewards page."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens to my scraps?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Filo spools are cleaned and refilled. PLA scraps are sorted by colour, shredded and re-extruded into recycled filament. We publish the totals every quarter."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -151,6 +213,7 @@
             <ul class="sub" aria-label="Community">
               <li><a href="refila.html" aria-current="page">Refila</a></li>
               <li><a href="challenge.html">Challenge</a></li>
+              <li><a href="projects.html">Projects</a></li>
             </ul>
           </li>
           <li><a href="rewards.html">Rewards</a></li>
@@ -188,21 +251,29 @@
       <section class="page-hero">
         <div class="container split">
           <div>
-            <span class="eyebrow"
-              >Filo Print &times; Refila &middot; recycling partnership</span
-            >
-            <h1>Bag it. Return it. Get rewarded.</h1>
+            <p class="breadcrumb"><a href="index.html">Home</a> / Refila</p>
+            <span class="eyebrow">Filo Print &times; Refila</span>
+            <h1>Bag it. Return it. <span>Get rewarded.</span></h1>
             <p class="lead">
-              Filo Print has teamed up with Refila, a recycling partner that
-              collects what your hobby leaves behind: empty spools, supports and
-              failed prints. You earn Filo Points for every return, and we tell
-              you exactly what happens next.
+              Send back your scraps and empty spools. They become new filament,
+              and you earn Filo Points.
             </p>
             <div class="btn-row">
               <a class="btn btn-primary" href="join.html"
-                >Request a free Refila Bag</a
+                >Get a free Refila Bag</a
               ><a class="btn btn-ghost" href="rewards.html">See rewards</a>
             </div>
+            <ul class="badges">
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Free bag
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> About $1.25 back per kg
+              </li>
+              <li class="badge">
+                <span aria-hidden="true">&#10003;</span> Points in 7 days
+              </li>
+            </ul>
           </div>
           <img
             class="photo"
@@ -210,141 +281,90 @@
             alt="A sage green Filo Print x Refila bag full of 3D printing scraps, with an empty spool beside it"
             width="1200"
             height="805"
+            fetchpriority="high"
           />
         </div>
       </section>
 
       <section class="section dark">
         <div class="container">
+          <span class="eyebrow">Four steps</span>
           <h2>How Refila works</h2>
           <div class="steps mt-lg">
             <div class="step">
               <h3>Get a bag</h3>
               <p>
-                Refila Bags come free with Filo Duo and Filo One + Refills, or you
-                can request one through our sign-up form.
+                Free when you join Filo Club, and included with every printer
+                bundle.
               </p>
             </div>
             <div class="step">
               <h3>Fill it</h3>
-              <p>
-                Collect PLA scraps and empty spools. A full bag holds around 1
-                kg of scraps.
-              </p>
+              <p>PLA scraps and empty spools. A full bag holds about 1 kg.</p>
             </div>
             <div class="step">
-              <h3>Send it</h3>
-              <p>
-                Drop it at a partner collection point or post it back. Maker
-                Printer bundles include a prepaid label.
-              </p>
+              <h3>Post it back</h3>
+              <p>Every bag comes with a prepaid label. No postage to pay.</p>
             </div>
             <div class="step">
               <h3>Earn</h3>
-              <p>
-                Refila weighs and sorts your bag, and we credit Filo Points to
-                your account within 7 days.
-              </p>
+              <p>Refila weighs your bag and your points land within 7 days.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="bag">
         <div class="container">
-          <h2>What goes in the bag?</h2>
-          <div class="tabs">
-            <input type="radio" name="t" id="t1" checked />
-            <input type="radio" name="t" id="t2" />
-            <input type="radio" name="t" id="t3" />
-            <div
-              class="tab-labels"
-              role="group"
-              aria-label="Accepted materials"
-            >
-              <label for="t1">&#10003; Accepted</label>
-              <label for="t2">&#10007; Not yet accepted</label>
-              <label for="t3">Points per item</label>
+          <span class="eyebrow">What goes in the bag</span>
+          <h2>Scraps in. Points out.</h2>
+          <p class="points-strip">
+            <strong>1 full bag</strong> of PLA scraps + <strong>2 Filo spools</strong>
+            &asymp; <strong>90 points</strong>, about <strong>$2.25 back</strong>.
+            <span>200 points = a $5 Shopee voucher.</span>
+          </p>
+          <div class="bag-cols">
+            <div>
+              <h3 class="col-label">Accepted</h3>
+              <ul class="accept-list">
+                <li class="yes">
+                  <strong>PLA &amp; PLA+ scraps <em class="pts">50 pts / kg</em></strong>
+                  <span>Supports, brims, purge lines and failed prints, any brand.</span>
+                </li>
+                <li class="yes">
+                  <strong>Empty Filo spools <em class="pts">20 pts each</em></strong>
+                  <span>Cleaned and refilled, so they&rsquo;re reused, not recycled.</span>
+                </li>
+                <li class="yes">
+                  <strong>Other plastic spools <em class="pts">10 pts each</em></strong>
+                  <span>Sorted for plastic recycling. Cardboard spools go in your blue bin.</span>
+                </li>
+              </ul>
             </div>
-            <div class="tab-panel p1">
-              <div class="grid grid-3">
-                <div class="card">
-                  <h3>PLA &amp; PLA+ scraps</h3>
-                  <p>
-                    Supports, brims, rafts, purge lines and failed prints, from
-                    any brand.
-                  </p>
-                </div>
-                <div class="card">
-                  <h3>Empty Filo spools</h3>
-                  <p>
-                    Refila cleans and inspects them, then we refill them, so
-                    they're reused, not recycled.
-                  </p>
-                </div>
-                <div class="card">
-                  <h3>Other brands' plastic spools</h3>
-                  <p>
-                    Accepted and sorted for plastic recycling. No points for
-                    cardboard spools; recycle those in your blue bin.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <h3 class="col-label">Not yet accepted</h3>
+              <ul class="accept-list">
+                <li class="no">
+                  <strong>PETG, ABS, TPU, nylon</strong>
+                  <span>Coming once the PLA stream is running smoothly.</span>
+                </li>
+                <li class="no">
+                  <strong>Resin prints</strong>
+                  <span>Resin can&rsquo;t be remelted. Follow your resin&rsquo;s disposal guide.</span>
+                </li>
+                <li class="no">
+                  <strong>Painted or glued prints</strong>
+                  <span>Paint and glue contaminate the plastic. Remove magnets and inserts too.</span>
+                </li>
+              </ul>
             </div>
-            <div class="tab-panel p2">
-              <div class="grid grid-3">
-                <div class="card">
-                  <h3>PETG, ABS, TPU, nylon</h3>
-                  <p>
-                    These need different processing. Refila will add them once
-                    the PLA stream is running smoothly.
-                  </p>
-                </div>
-                <div class="card">
-                  <h3>Resin prints</h3>
-                  <p>
-                    Resin can't be remelted. Please follow your resin's disposal
-                    instructions.
-                  </p>
-                </div>
-                <div class="card">
-                  <h3>Painted or glued prints</h3>
-                  <p>
-                    Paint and glue contaminate the material. Remove metal
-                    inserts, magnets and stickers too.
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div class="tradein-strip mt-lg">
+            <div>
+              <strong>Got a whole old printer?</strong> Trade it in for up to
+              $100 off a Filo printer. Any brand, working or not.
             </div>
-            <div class="tab-panel p3">
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Item</th>
-                      <th>Filo Points</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Empty Filo spool</td>
-                      <td>20 pts each ($0.50 back)</td>
-                    </tr>
-                    <tr>
-                      <td>Other brand plastic spool</td>
-                      <td>10 pts each ($0.25 back)</td>
-                    </tr>
-                    <tr>
-                      <td>PLA / PLA+ scraps</td>
-                      <td>50 pts per kg, weighed on arrival ($1.25 back)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="small muted mt-sm">
-                Cash values are based on redeeming 200 points for a $5 voucher.
-              </p>
-            </div>
+            <a class="btn btn-primary" href="trade-in.html">Check your credit</a>
           </div>
         </div>
       </section>
@@ -448,23 +468,62 @@
         </div>
       </section>
 
+      <section class="section">
+        <div class="container faq-wrap">
+          <span class="eyebrow">Refila questions</span>
+          <h2>Before you send a bag.</h2>
+          <div class="faq mt-md">
+            <details>
+              <summary>What counts as a scrap?</summary>
+              <div>
+                <p>
+                  Supports, brims, rafts, purge lines and failed prints made from PLA or PLA+ of any brand. Leave out painted or glued prints, resin and other plastics.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Do I need a Filo printer to use Refila?</summary>
+              <div>
+                <p>
+                  No. Refila takes PLA scraps and plastic spools from any printer. You just need a free Filo Club account so we can credit your points.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>How do I get my Filo Points?</summary>
+              <div>
+                <p>
+                  Refila weighs and sorts your bag when it arrives, and we credit your points within 7 days. 200 points can be swapped for a $5 Shopee voucher on the Rewards page.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>What happens to my scraps?</summary>
+              <div>
+                <p>
+                  Filo spools are cleaned and refilled. PLA scraps are sorted by colour, shredded and re-extruded into recycled filament. We publish the totals every quarter.
+                </p>
+              </div>
+            </details>
+          </div>
+          <p class="small muted mt-sm">
+            More answers on the <a href="guide.html#faq-refila">Help &amp; FAQ</a> page.
+          </p>
+        </div>
+      </section>
+
       <section class="section tight">
         <div class="container">
           <div class="cta-banner">
             <div>
               <h2>Start your first bag.</h2>
               <p>
-                Your Refila Bag comes free with Filo Duo and Filo One + Refills, or order one with your next refill. Every kg earns about $1.25 back.
+                Join Filo Club for a free Refila Bag with a prepaid label. Every
+                kg of scraps earns about $1.25 back.
               </p>
             </div>
             <div class="btn-row">
-              <a
-                class="btn btn-light"
-                href="https://shopee.sg/product/881733363/52055703982?utm_source=filo_site&amp;utm_medium=referral&amp;utm_campaign=refila_banner"
-                target="_blank"
-                rel="noopener"
-                >Get a Refila Bag on Shopee</a
-              >
+              <a class="btn btn-light" href="join.html">Get a free Refila Bag</a>
               <a class="btn btn-ghost" href="rewards.html">See what points buy</a>
             </div>
           </div>
