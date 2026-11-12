@@ -615,17 +615,23 @@
               Answer questions 1 and 2 to see your match.
             </div>
 
+            <!-- Every match is short: one line, three ticks, small perks and
+                 one Shopee button. Mini and One sit in .pf-pair: normally it
+                 changes nothing, but for "kids + small prints" both show side
+                 by side (pair-only tags and price note). -->
+            <div class="pf-pair">
             <div class="result r-pf-mini">
-              <span class="tag">Your match</span>
+              <span class="tag pf-solo">Your match</span>
+              <span class="tag pf-pair-only">Best match</span>
               <h3>Filo Mini &middot; $249</h3>
-              <p>
-                Small prints don&rsquo;t need a big machine. Filo Mini fits on a
-                study desk, runs at about 45 dB and handles keychains, figures
-                and game pieces with ease.
-              </p>
-              <p class="addon pf-tradein">
-                Upgrading? Trade in your old printer for
-                <strong>up to $40 off</strong>.
+              <p class="pf-short">Small prints on a study desk.</p>
+              <ul class="pf-ticks">
+                <li>Prints up to 18 cm</li>
+                <li>About 45 dB, very quiet</li>
+                <li>PLA and PLA+</li>
+              </ul>
+              <p class="pf-perk pf-tradein">
+                <b>Trade-in</b> Up to $40 off your old printer.
                 <a href="trade-in.html">Check your credit</a>
               </p>
               <div class="btn-row">
@@ -635,21 +641,24 @@
                   target="_blank"
                   rel="noopener"
                   >Buy Filo Mini on Shopee</a
-                ><a class="btn btn-ghost" href="#specs">Compare full specs</a>
+                ><a class="pf-link" href="#specs">Compare full specs &rarr;</a>
               </div>
             </div>
 
             <div class="result r-pf-one">
-              <span class="tag">Your match</span>
+              <span class="tag pf-solo">Your match</span>
+              <span class="tag pf-pair-only">Room to grow</span>
               <h3>Filo One &middot; $349</h3>
-              <p>
-                Our most popular printer. Big enough for almost every everyday
-                print, quiet enough for an HDB living room, and it also prints
-                bendy TPU and tough PETG.
-              </p>
-              <p class="addon pf-tradein">
-                Upgrading? Trade in your old printer for
-                <strong>up to $60 off</strong>.
+              <p class="pf-short pf-solo">Our most popular printer, for everyday prints.</p>
+              <p class="pf-short pf-pair-only">Bigger projects as the kids grow.</p>
+              <ul class="pf-ticks">
+                <li>Prints up to 25 cm</li>
+                <li>About 48 dB, fridge-quiet</li>
+                <li>Adds bendy TPU and tough PETG</li>
+              </ul>
+              <p class="pf-diff pf-pair-only">+$100 vs Filo Mini</p>
+              <p class="pf-perk pf-tradein">
+                <b>Trade-in</b> Up to $60 off your old printer.
                 <a href="trade-in.html">Check your credit</a>
               </p>
               <div class="btn-row">
@@ -659,25 +668,27 @@
                   target="_blank"
                   rel="noopener"
                   >Buy Filo One on Shopee</a
-                ><a class="btn btn-ghost" href="bundles.html"
-                  >Add filament with a bundle</a
-                >
+                ><a class="pf-link" href="bundles.html#one-refills">Save with a bundle &rarr;</a>
               </div>
+            </div>
             </div>
 
             <div class="result r-pf-pro">
               <span class="tag">Your match</span>
               <h3>Filo Pro &middot; $549</h3>
-              <p>
-                A 30 cm build cube and up to 500 mm/s for big or frequent jobs.
-                The enclosed chamber prints heat- and sun-proof plastics (ABS,
-                ASA), and the built-in camera lets you check long prints from
-                your phone.
-              </p>
-              <p class="addon pf-tradein">
-                Upgrading? Trade in your old printer for
-                <strong>up to $100 off</strong>.
+              <p class="pf-short">Big, fast prints for makers.</p>
+              <ul class="pf-ticks">
+                <li>Prints up to 30 cm, up to 500 mm/s</li>
+                <li>Enclosed: heat- and sun-proof ABS, ASA</li>
+                <li>Built-in camera to watch from your phone</li>
+              </ul>
+              <p class="pf-perk pf-tradein">
+                <b>Trade-in</b> Up to $100 off your old printer.
                 <a href="trade-in.html">Check your credit</a>
+              </p>
+              <p class="pf-perk">
+                <b>Filo Duo</b> Add $200 to get a Filo Mini too.
+                <a href="bundles.html#duo">See the Duo</a>
               </p>
               <div class="btn-row">
                 <a
@@ -686,7 +697,7 @@
                   target="_blank"
                   rel="noopener"
                   >Buy Filo Pro on Shopee</a
-                ><a class="btn btn-ghost" href="#specs">Compare full specs</a>
+                ><a class="pf-link" href="#specs">Compare full specs &rarr;</a>
               </div>
             </div>
           </div>
