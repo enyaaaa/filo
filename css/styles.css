@@ -5400,6 +5400,16 @@ tr:last-child th {
 }
 
 /* ---------- Folded sections (setup, everything you need) ---------- */
+/* Closed folds are compact bars, so their section needs far less air
+   than a full content section */
+.section.folds {
+  padding: 32px 0;
+}
+
+.section:has(+ .section.folds) {
+  padding-bottom: 48px;
+}
+
 .folds .fold + .fold {
   margin-top: 16px;
 }
@@ -6700,10 +6710,14 @@ h2 .brand {
 .reel-hero.section {
   padding: 64px 0 28px;
   overflow: hidden;
-  /* same blueprint grid as the other page heroes */
+  /* Follows the theme: sand in light mode, near-black in dark mode,
+     with the same blueprint grid as the other page heroes */
+  background-color: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
   background-image:
-    linear-gradient(rgba(255, 240, 220, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 240, 220, 0.04) 1px, transparent 1px);
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -6714,11 +6728,11 @@ h2 .brand {
 
 .reel-hero h1 {
   font-size: clamp(2.4rem, 5.6vw, 4.2rem);
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .reel-hero h1 span {
-  color: #e2be93;
+  color: var(--brand-text);
 }
 
 .reel-hero .lead {
@@ -6745,7 +6759,7 @@ h2 .brand {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   background: #1a1612;
   transition:
     border-color 0.3s,
