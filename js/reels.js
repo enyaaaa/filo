@@ -10,7 +10,7 @@
 
   function isShown(v) {
     // duplicate panels are hidden on phones; don't download or play them
-    return v.offsetParent !== null; 
+    return v.offsetParent !== null;
   }
 
   function playAll() {
