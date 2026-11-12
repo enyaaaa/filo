@@ -61,7 +61,8 @@
   --ink: #efe8dd;
   --ink-soft: #b5ac9f;
   --paper: #11100e;
-  --card: #221e1a;
+  --card: #2a251f;
+  --section-alt: #1a1714;
   --line: #4a4238;
   --mint: #3d3123;
   --amber-soft: #2c2316;
@@ -73,13 +74,13 @@
   --inverse: #0b0a09;
   /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
      top and tan edge lines, so they read apart from the near-black page */
-  --section-dark: #1a1410;
+  --section-dark: #2e2318;
   --section-dark-glow: radial-gradient(
     ellipse 80% 60% at 50% 0%,
-    rgba(226, 190, 147, 0.09),
+    rgba(226, 190, 147, 0.16),
     transparent 70%
   );
-  --section-dark-line: rgba(226, 190, 147, 0.22);
+  --section-dark-line: rgba(226, 190, 147, 0.3);
   --hover: #211e1a;
   --header-bg: rgba(17, 16, 14, 0.86);
   --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -107,7 +108,8 @@
     --ink: #efe8dd;
     --ink-soft: #b5ac9f;
     --paper: #11100e;
-    --card: #221e1a;
+    --card: #2a251f;
+    --section-alt: #1a1714;
     --line: #4a4238;
     --mint: #3d3123;
     --amber-soft: #2c2316;
@@ -119,13 +121,13 @@
     --inverse: #0b0a09;
     /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
        top and tan edge lines, so they read apart from the near-black page */
-    --section-dark: #1a1410;
+    --section-dark: #2e2318;
     --section-dark-glow: radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      rgba(226, 190, 147, 0.09),
+      rgba(226, 190, 147, 0.16),
       transparent 70%
     );
-    --section-dark-line: rgba(226, 190, 147, 0.22);
+    --section-dark-line: rgba(226, 190, 147, 0.3);
     --hover: #211e1a;
     --header-bg: rgba(17, 16, 14, 0.86);
     --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -154,6 +156,7 @@
     --ink-soft: #4d4741;
     --paper: #e7ddcc;
     --card: #fffdf9;
+    --section-alt: var(--card);
     --line: #c6b79f;
     --mint: #e2ccad;
     --amber-soft: #f8ecd9;
@@ -258,7 +261,7 @@ p + p {
 }
 
 .section.alt {
-  background: var(--card);
+  background: var(--section-alt, var(--card));
   border-block: 1px solid var(--line);
 }
 
@@ -5101,6 +5104,162 @@ tr:last-child th {
   }
 }
 
+/* Refila promo extras: big payback number, step icons and arrows,
+   and a slowly turning recycling badge on the photo */
+.refila-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.refila-stat strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  line-height: 1;
+  color: #e2be93;
+}
+
+.refila-stat span {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #c4cec8;
+}
+
+.refila-promo .loop-steps {
+  gap: 26px;
+}
+
+.refila-promo .loop-steps li {
+  position: relative;
+}
+
+/* arrow in the gap between steps */
+.refila-promo .loop-steps li:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  right: -21px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--amber);
+}
+
+.loop-steps .step-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 10px;
+  border-radius: 10px;
+  background: rgba(226, 190, 147, 0.14);
+}
+
+.step-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #e2be93;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.refila-visual {
+  position: relative;
+  margin: 0;
+}
+
+.recycle-badge {
+  position: absolute;
+  left: -22px;
+  top: -30px;
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: #1d1814;
+  border: 1px solid rgba(226, 190, 147, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.recycle-arrows {
+  position: absolute;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  animation: loop-spin 16s linear infinite;
+}
+
+.recycle-arrows .ra {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.recycle-arrows .ra1 { stroke: #f0a33a; fill: #f0a33a; }
+.recycle-arrows .ra2 { stroke: #e2be93; fill: #e2be93; }
+.recycle-arrows .ra3 { stroke: #9fb28a; fill: #9fb28a; }
+.recycle-arrows .ra { fill: none; }
+.recycle-arrows .rh { stroke: none; }
+
+.recycle-text {
+  position: relative;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #c4cec8;
+}
+
+.recycle-text b {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+@media (max-width: 520px) {
+  .refila-promo .loop-steps li:not(:last-child)::after {
+    content: "\2193";
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: -23px;
+    transform: translateX(-50%);
+  }
+
+  .recycle-badge {
+    left: auto;
+    right: -6px;
+    top: -34px;
+    width: 96px;
+    height: 96px;
+  }
+
+  .refila-visual {
+    margin-top: 40px;
+  }
+
+  .recycle-text {
+    font-size: 0.5rem;
+  }
+
+  .recycle-text b {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recycle-arrows {
+    animation: none;
+  }
+}
+
 /* ---------- 5. Printing plan CTA strip ---------- */
 .plan-cta {
   display: flex;
@@ -5397,6 +5556,16 @@ tr:last-child th {
 }
 
 /* ---------- Folded sections (setup, everything you need) ---------- */
+/* Closed folds are compact bars, so their section needs far less air
+   than a full content section */
+.section.folds {
+  padding: 32px 0;
+}
+
+.section:has(+ .section.folds) {
+  padding-bottom: 48px;
+}
+
 .folds .fold + .fold {
   margin-top: 16px;
 }
@@ -5637,6 +5806,52 @@ tr:last-child th {
 }
 
 /* The certification sits at the bottom of every card, lined up */
+/* Certification marks sit in the icon tiles: cream PNG cut-outs (the
+   safety section is dark in both themes) */
+.cert-mark {
+  display: block;
+  width: auto;
+  height: 46px;
+}
+
+.cert-rohs {
+  height: 56px;
+}
+
+/* Plain-English name under each mark, so beginners know what it means */
+.cert-name {
+  margin: -6px 0 10px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e2be93;
+}
+
+/* IMDA's equipment label is a text box, not a logo */
+.cert-imda {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1.5px solid #f5ecdd;
+  border-radius: 4px;
+  color: #f5ecdd;
+  line-height: 1.1;
+}
+
+.cert-imda small {
+  font-size: 0.52rem;
+  letter-spacing: 0.04em;
+}
+
+.cert-imda b {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
 .cert-chip {
   margin-top: auto;
   font-family: var(--mono);
@@ -5675,6 +5890,26 @@ tr:last-child th {
   .safe-icon svg {
     width: 40px;
     height: 40px;
+  }
+
+  .cert-mark {
+    height: 36px;
+  }
+
+  .cert-rohs {
+    height: 44px;
+  }
+
+  .cert-imda {
+    padding: 3px 6px;
+  }
+
+  .cert-imda small {
+    font-size: 0.46rem;
+  }
+
+  .cert-imda b {
+    font-size: 0.82rem;
   }
 }
 
@@ -5804,7 +6039,46 @@ tr:last-child th {
 }
 
 .page-hero .page-jump {
-  margin-top: 22px;
+  margin-top: 26px;
+  gap: 10px;
+}
+
+/* "On this page" jump links in a page hero: bigger brand pills with a
+   down arrow, so they read as buttons rather than tags */
+.page-hero .page-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 11px 18px;
+  border: 1.5px solid var(--brand-text);
+  border-radius: 999px;
+  color: var(--brand-text);
+  background: var(--amber-soft);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+.page-hero .page-jump a::after {
+  content: "\2193";
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.page-hero .page-jump a:hover,
+.page-hero .page-jump a:focus-visible {
+  background: var(--brand-text);
+  color: var(--on-brand);
+  transform: translateY(-2px);
+}
+
+.page-hero .page-jump a:hover::after {
+  transform: translateY(2px);
 }
 
 /* Bundle cards on bundles.html use h2 for the outline but look like card titles */
@@ -6234,19 +6508,26 @@ h2 .brand {
   }
 }
 
-/* Clockwise chevrons between the nodes (45 degree points on the ring) */
+/* Clockwise chevrons between the nodes, sitting exactly on the ring.
+   The ring has a radius of 35%, so its 45 degree points are at
+   50% ± 35% × 0.7071 = 74.75% / 25.25%.
+   Drawn with two borders (not the › glyph, whose ink is off-centre), then
+   nudged back so the chevron's visual middle sits on the line. */
 .loop-arrow {
   position: absolute;
-  font-size: 1.6rem;
-  line-height: 1;
-  color: var(--brand-text);
-  transform: translate(-50%, -50%) rotate(var(--r));
+  width: 11px;
+  height: 11px;
+  font-size: 0;
+  border-top: 2.5px solid var(--brand-text);
+  border-right: 2.5px solid var(--brand-text);
+  transform: translate(-50%, -50%) rotate(calc(var(--r) + 45deg))
+    translate(-2px, 2px);
 }
 
-.loop-arrow.a1 { left: 75.5%; top: 24.5%; --r: 45deg; }
-.loop-arrow.a2 { left: 75.5%; top: 75.5%; --r: 135deg; }
-.loop-arrow.a3 { left: 24.5%; top: 75.5%; --r: 225deg; }
-.loop-arrow.a4 { left: 24.5%; top: 24.5%; --r: 315deg; }
+.loop-arrow.a1 { left: 74.75%; top: 25.25%; --r: 45deg; }
+.loop-arrow.a2 { left: 74.75%; top: 74.75%; --r: 135deg; }
+.loop-arrow.a3 { left: 25.25%; top: 74.75%; --r: 225deg; }
+.loop-arrow.a4 { left: 25.25%; top: 25.25%; --r: 315deg; }
 
 .loop-hub {
   position: absolute;
@@ -6651,10 +6932,14 @@ h2 .brand {
 .reel-hero.section {
   padding: 64px 0 28px;
   overflow: hidden;
-  /* same blueprint grid as the other page heroes */
+  /* Follows the theme: sand in light mode, near-black in dark mode,
+     with the same blueprint grid as the other page heroes */
+  background-color: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
   background-image:
-    linear-gradient(rgba(255, 240, 220, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 240, 220, 0.04) 1px, transparent 1px);
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -6665,11 +6950,11 @@ h2 .brand {
 
 .reel-hero h1 {
   font-size: clamp(2.4rem, 5.6vw, 4.2rem);
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .reel-hero h1 span {
-  color: #e2be93;
+  color: var(--brand-text);
 }
 
 .reel-hero .lead {
@@ -6679,6 +6964,16 @@ h2 .brand {
 .reel-hero .btn-row {
   justify-content: center;
   margin-top: 26px;
+}
+
+/* Small credit line under the reel strip */
+.reel-credits {
+  margin-top: 16px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
 }
 
 /* Strip: rounded tiles with small gaps, like the cards across the site */
@@ -6696,7 +6991,7 @@ h2 .brand {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   background: #1a1612;
   transition:
     border-color 0.3s,
@@ -6963,5 +7258,131 @@ select {
     border-radius: 50%;
     background: var(--card);
     color: var(--ink);
+  }
+}
+
+/* =========================================================
+   Homepage certification ticker: marks roll past under the hero.
+   Dark band in both themes so the cream marks always show.
+   ========================================================= */
+.cert-ticker {
+  display: block;
+  overflow: hidden;
+  background: #1a1612;
+  border-block: 1px solid rgba(226, 190, 147, 0.22);
+  text-decoration: none;
+  color: #efe8dd;
+  position: relative;
+}
+
+/* soft fade at both edges, in the band's own colour */
+.cert-ticker::before,
+.cert-ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 80px;
+  pointer-events: none;
+}
+
+.cert-ticker::before {
+  left: 0;
+  background: linear-gradient(90deg, #1a1612, transparent);
+}
+
+.cert-ticker::after {
+  right: 0;
+  background: linear-gradient(270deg, #1a1612, transparent);
+}
+
+.cert-track {
+  display: flex;
+  width: max-content;
+  animation: cert-roll 38s linear infinite;
+}
+
+.cert-ticker:hover .cert-track,
+.cert-ticker:focus-visible .cert-track {
+  animation-play-state: paused;
+}
+
+.cert-run {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cert-run li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  white-space: nowrap;
+  border-right: 1px solid rgba(226, 190, 147, 0.16);
+}
+
+.cert-run img {
+  width: auto;
+  height: 30px;
+}
+
+.cert-run img[src*="rohs"] {
+  height: 38px;
+}
+
+.cert-run li > span:last-child {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e2be93;
+}
+
+.cert-imda-sm {
+  padding: 2px 6px;
+}
+
+.cert-imda-sm small {
+  font-size: 0.42rem;
+}
+
+.cert-imda-sm b {
+  font-size: 0.78rem;
+}
+
+.cert-glyph {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  border: 1.5px solid #f5ecdd;
+  border-radius: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #f5ecdd;
+}
+
+@keyframes cert-roll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-track {
+    animation: none;
+    width: auto;
+    overflow-x: auto;
+  }
+
+  .cert-run[aria-hidden="true"] {
+    display: none;
   }
 }
