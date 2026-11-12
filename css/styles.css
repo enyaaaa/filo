@@ -61,7 +61,8 @@
   --ink: #efe8dd;
   --ink-soft: #b5ac9f;
   --paper: #11100e;
-  --card: #221e1a;
+  --card: #2a251f;
+  --section-alt: #1a1714;
   --line: #4a4238;
   --mint: #3d3123;
   --amber-soft: #2c2316;
@@ -73,13 +74,13 @@
   --inverse: #0b0a09;
   /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
      top and tan edge lines, so they read apart from the near-black page */
-  --section-dark: #1a1410;
+  --section-dark: #2e2318;
   --section-dark-glow: radial-gradient(
     ellipse 80% 60% at 50% 0%,
-    rgba(226, 190, 147, 0.09),
+    rgba(226, 190, 147, 0.16),
     transparent 70%
   );
-  --section-dark-line: rgba(226, 190, 147, 0.22);
+  --section-dark-line: rgba(226, 190, 147, 0.3);
   --hover: #211e1a;
   --header-bg: rgba(17, 16, 14, 0.86);
   --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -107,7 +108,8 @@
     --ink: #efe8dd;
     --ink-soft: #b5ac9f;
     --paper: #11100e;
-    --card: #221e1a;
+    --card: #2a251f;
+    --section-alt: #1a1714;
     --line: #4a4238;
     --mint: #3d3123;
     --amber-soft: #2c2316;
@@ -119,13 +121,13 @@
     --inverse: #0b0a09;
     /* Dark sections in dark mode: warmer brown-black, a soft tan glow at the
        top and tan edge lines, so they read apart from the near-black page */
-    --section-dark: #1a1410;
+    --section-dark: #2e2318;
     --section-dark-glow: radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      rgba(226, 190, 147, 0.09),
+      rgba(226, 190, 147, 0.16),
       transparent 70%
     );
-    --section-dark-line: rgba(226, 190, 147, 0.22);
+    --section-dark-line: rgba(226, 190, 147, 0.3);
     --hover: #211e1a;
     --header-bg: rgba(17, 16, 14, 0.86);
     --shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
@@ -154,6 +156,7 @@
     --ink-soft: #4d4741;
     --paper: #e7ddcc;
     --card: #fffdf9;
+    --section-alt: var(--card);
     --line: #c6b79f;
     --mint: #e2ccad;
     --amber-soft: #f8ecd9;
@@ -258,7 +261,7 @@ p + p {
 }
 
 .section.alt {
-  background: var(--card);
+  background: var(--section-alt, var(--card));
   border-block: 1px solid var(--line);
 }
 
@@ -5804,7 +5807,46 @@ tr:last-child th {
 }
 
 .page-hero .page-jump {
-  margin-top: 22px;
+  margin-top: 26px;
+  gap: 10px;
+}
+
+/* "On this page" jump links in a page hero: bigger brand pills with a
+   down arrow, so they read as buttons rather than tags */
+.page-hero .page-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 11px 18px;
+  border: 1.5px solid var(--brand-text);
+  border-radius: 999px;
+  color: var(--brand-text);
+  background: var(--amber-soft);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+.page-hero .page-jump a::after {
+  content: "\2193";
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.page-hero .page-jump a:hover,
+.page-hero .page-jump a:focus-visible {
+  background: var(--brand-text);
+  color: var(--on-brand);
+  transform: translateY(-2px);
+}
+
+.page-hero .page-jump a:hover::after {
+  transform: translateY(2px);
 }
 
 /* Bundle cards on bundles.html use h2 for the outline but look like card titles */
@@ -6234,19 +6276,26 @@ h2 .brand {
   }
 }
 
-/* Clockwise chevrons between the nodes (45 degree points on the ring) */
+/* Clockwise chevrons between the nodes, sitting exactly on the ring.
+   The ring has a radius of 35%, so its 45 degree points are at
+   50% ± 35% × 0.7071 = 74.75% / 25.25%.
+   Drawn with two borders (not the › glyph, whose ink is off-centre), then
+   nudged back so the chevron's visual middle sits on the line. */
 .loop-arrow {
   position: absolute;
-  font-size: 1.6rem;
-  line-height: 1;
-  color: var(--brand-text);
-  transform: translate(-50%, -50%) rotate(var(--r));
+  width: 11px;
+  height: 11px;
+  font-size: 0;
+  border-top: 2.5px solid var(--brand-text);
+  border-right: 2.5px solid var(--brand-text);
+  transform: translate(-50%, -50%) rotate(calc(var(--r) + 45deg))
+    translate(-2px, 2px);
 }
 
-.loop-arrow.a1 { left: 75.5%; top: 24.5%; --r: 45deg; }
-.loop-arrow.a2 { left: 75.5%; top: 75.5%; --r: 135deg; }
-.loop-arrow.a3 { left: 24.5%; top: 75.5%; --r: 225deg; }
-.loop-arrow.a4 { left: 24.5%; top: 24.5%; --r: 315deg; }
+.loop-arrow.a1 { left: 74.75%; top: 25.25%; --r: 45deg; }
+.loop-arrow.a2 { left: 74.75%; top: 74.75%; --r: 135deg; }
+.loop-arrow.a3 { left: 25.25%; top: 74.75%; --r: 225deg; }
+.loop-arrow.a4 { left: 25.25%; top: 25.25%; --r: 315deg; }
 
 .loop-hub {
   position: absolute;
