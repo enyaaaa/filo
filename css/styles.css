@@ -6360,7 +6360,8 @@ tr:last-child th {
 .accept-list li::before {
   position: absolute;
   left: 16px;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   display: grid;
   place-items: center;
   width: 26px;
